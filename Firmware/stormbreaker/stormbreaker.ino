@@ -33,6 +33,9 @@ void setup() {
   Wire.onReceive(receiveDataWire);
   Wire.onRequest(transmitDataWire);
   Wire.begin(0x54);
+
+
+  setupBQ()
 }
 
 void loop() {
@@ -44,13 +47,20 @@ void loop() {
 
 }
 
+void setupBQ() {
+
+}
+
 
 void getBattVoltage() {
   uint8_t adcRegStatus = 0;
-  I2CRead(&bbi2c, bqAddr, *pu8Data, 0x0E);
+  I2CReadRegister(&bbi2c, bqAddr, 0x0E, *adcRegStatus, 0x8);
   adcRegStatus &= 0b1111111;
   battVolt = adcRegStatus / 50;
 }
+
+
+
 void receiveDataWire(int16_t numBytes) {
   
 }
