@@ -4466,6 +4466,7 @@
 				"In29.Cu" "In30.Cu"
 			)
 			(remove_unused_layers no)
+			(net 1 "GND")
 			(uuid "d1cc763d-6c1e-4c6e-9fdf-083e22d30ea3")
 		)
 		(pad "" thru_hole circle
@@ -4479,6 +4480,7 @@
 				"In29.Cu" "In30.Cu"
 			)
 			(remove_unused_layers no)
+			(net 1 "GND")
 			(uuid "01c25a80-09c3-4254-98f8-8874f14bf327")
 		)
 		(pad "1" thru_hole circle

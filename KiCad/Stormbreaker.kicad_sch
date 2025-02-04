@@ -3906,6 +3906,12 @@
 		(uuid "adb3976d-2ec9-4d1b-90d9-6b3597603646")
 	)
 	(junction
+		(at 114.3 83.82)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b93428d5-5086-4417-b57b-9cdf9c6e1afd")
+	)
+	(junction
 		(at 99.06 71.12)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4026,6 +4032,16 @@
 			(type default)
 		)
 		(uuid "05ae21c8-71e9-437f-8ba7-9bbcde176114")
+	)
+	(wire
+		(pts
+			(xy 114.3 83.82) (xy 124.46 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "06ea4f11-5d9a-4594-bf34-4a57bc289e18")
 	)
 	(wire
 		(pts
@@ -4516,6 +4532,16 @@
 			(type default)
 		)
 		(uuid "6e5950b7-b970-48cd-b3d3-184eda509296")
+	)
+	(wire
+		(pts
+			(xy 114.3 91.44) (xy 124.46 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7041b5b8-3b7c-466d-82ab-4668a5ca20f5")
 	)
 	(wire
 		(pts
@@ -6099,6 +6125,7 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical"
@@ -9184,6 +9211,77 @@
 			(project "Stormbreaker"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "#PWR03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Battery_Cell")
+		(at 124.46 88.9 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d734c31e-2d3a-47ce-8d9b-54c003111624")
+		(property "Reference" "BT2"
+			(at 128.27 85.7884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Battery_Cell"
+			(at 128.27 88.3284 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical"
+			(at 124.46 87.376 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 124.46 87.376 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Single-cell battery"
+			(at 124.46 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "da8ab013-d20e-4f16-836e-28a654c72c2d")
+		)
+		(pin "1"
+			(uuid "1f165f6c-4ff9-42a8-80c1-2a58178a6135")
+		)
+		(instances
+			(project "Stormbreaker"
+				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
+					(reference "BT2")
 					(unit 1)
 				)
 			)
