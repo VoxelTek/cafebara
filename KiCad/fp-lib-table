@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "Stormbreaker")(type "KiCad")(uri "${KIPRJMOD}/Footprints/Stormbreaker.pretty")(options "")(descr ""))
+)

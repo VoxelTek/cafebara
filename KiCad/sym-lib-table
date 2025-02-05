@@ -1,4 +1,5 @@
 (sym_lib_table
   (version 7)
   (lib (name "Stormbreaker")(type "KiCad")(uri "${KIPRJMOD}/Symbols/Stormbreaker.kicad_sym")(options "")(descr ""))
+  (lib (name "melonHD_module")(type "KiCad")(uri "${KIPRJMOD}/Symbols/melonHD_module.kicad_sym")(options "")(descr ""))
 )
