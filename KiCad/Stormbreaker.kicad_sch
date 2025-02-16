@@ -3498,322 +3498,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Simulation_SPICE:NMOS"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "Q"
-				(at 5.08 1.27 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "NMOS"
-				(at 5.08 -1.27 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" ""
-				(at 5.08 2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_MOSFETs"
-				(at 0 -12.7 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "N-MOSFET transistor, drain/source/gate"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Sim.Device" "NMOS"
-				(at 0 -17.145 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Sim.Type" "VDMOS"
-				(at 0 -19.05 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Sim.Pins" "1=D 2=G 3=S"
-				(at 0 -15.24 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "transistor NMOS N-MOS N-MOSFET simulation"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "NMOS_0_1"
-				(polyline
-					(pts
-						(xy 0.254 1.905) (xy 0.254 -1.905)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.254 0) (xy -2.54 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 2.286) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 0.508) (xy 0.762 -0.508)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 -1.27) (xy 0.762 -2.286)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 -1.778) (xy 3.302 -1.778) (xy 3.302 1.778) (xy 0.762 1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.016 0) (xy 2.032 0.381) (xy 2.032 -0.381) (xy 1.016 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(circle
-					(center 1.651 0)
-					(radius 2.794)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 2.54) (xy 2.54 1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 2.54 1.778)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(circle
-					(center 2.54 -1.778)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.794 0.508) (xy 2.921 0.381) (xy 3.683 0.381) (xy 3.81 0.254)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.302 0.381) (xy 2.921 -0.254) (xy 3.683 -0.254) (xy 3.302 0.381)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "NMOS_1_1"
-				(pin input line
-					(at -5.08 0 0)
-					(length 2.54)
-					(name "G"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 5.08 270)
-					(length 2.54)
-					(name "D"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 -5.08 90)
-					(length 2.54)
-					(name "S"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Switch:SW_Push"
 			(pin_numbers
 				(hide yes)
@@ -4585,6 +4269,12 @@
 		(uuid "0c624c91-ae31-46fa-bd14-3012f95ae2a8")
 	)
 	(junction
+		(at 205.74 74.93)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "14a12036-5680-4c0e-ab6a-7de1c2e26023")
+	)
+	(junction
 		(at 77.47 156.21)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4595,6 +4285,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "1cffc9f4-b44d-46c5-9c08-75b6d1fdde16")
+	)
+	(junction
+		(at 205.74 67.31)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "29141138-6db2-4e0c-ae7f-b669a461f350")
 	)
 	(junction
 		(at 59.69 173.99)
@@ -4699,6 +4395,12 @@
 		(uuid "719d9101-97b1-49d8-ab12-429466ed7cf8")
 	)
 	(junction
+		(at 124.46 83.82)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "74b7284b-4635-44af-95ad-b8ab0aec7818")
+	)
+	(junction
 		(at 273.05 58.42)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4759,6 +4461,12 @@
 		(uuid "ca32b053-ef64-4d6a-a30d-aba5987a45fb")
 	)
 	(junction
+		(at 240.03 20.32)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "cd196e98-ad15-4d5a-b008-b9d35a0ec61d")
+	)
+	(junction
 		(at 199.39 95.25)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4787,6 +4495,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f92f4db5-72d8-4152-afa1-d470d44d8c05")
+	)
+	(junction
+		(at 248.92 20.32)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fb9a015e-80cb-44eb-9bb3-a84164825980")
 	)
 	(no_connect
 		(at 76.2 96.52)
@@ -4904,6 +4618,16 @@
 	)
 	(wire
 		(pts
+			(xy 237.49 20.32) (xy 240.03 20.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "08aa4fc4-2515-4eac-9e3b-a408ce33f28b")
+	)
+	(wire
+		(pts
 			(xy 76.2 99.06) (xy 67.31 99.06)
 		)
 		(stroke
@@ -5011,6 +4735,16 @@
 			(type default)
 		)
 		(uuid "1dbc495f-cc64-495f-8ba9-d88cbdc5985c")
+	)
+	(wire
+		(pts
+			(xy 205.74 67.31) (xy 205.74 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1df636fa-1770-4d36-905d-8bb753fae67d")
 	)
 	(wire
 		(pts
@@ -5194,6 +4928,16 @@
 	)
 	(wire
 		(pts
+			(xy 205.74 66.04) (xy 205.74 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "490d2d42-57fc-47ea-8bf1-1ed75ddd0556")
+	)
+	(wire
+		(pts
 			(xy 154.94 53.34) (xy 160.02 53.34)
 		)
 		(stroke
@@ -5301,6 +5045,16 @@
 			(type default)
 		)
 		(uuid "6424e53f-137a-4e72-918a-ea2dcd04661c")
+	)
+	(wire
+		(pts
+			(xy 226.06 67.31) (xy 205.74 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "64d1cb6a-a744-496e-a6f4-d9a26c98a267")
 	)
 	(wire
 		(pts
@@ -5544,6 +5298,16 @@
 	)
 	(wire
 		(pts
+			(xy 240.03 20.32) (xy 248.92 20.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "99dd2bd6-a3b3-40d6-b0d8-53d0005919b5")
+	)
+	(wire
+		(pts
 			(xy 113.03 154.94) (xy 133.35 154.94)
 		)
 		(stroke
@@ -5621,6 +5385,16 @@
 			(type default)
 		)
 		(uuid "a56188ef-ed44-4e53-95e6-84ebcb9a67eb")
+	)
+	(wire
+		(pts
+			(xy 248.92 20.32) (xy 257.81 20.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a708147f-2757-486f-a7bc-7b6dabac7626")
 	)
 	(wire
 		(pts
@@ -5784,6 +5558,16 @@
 	)
 	(wire
 		(pts
+			(xy 124.46 83.82) (xy 133.35 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c52242e1-24c3-4ea4-a2ed-1bddf4094b6e")
+	)
+	(wire
+		(pts
 			(xy 109.22 85.09) (xy 109.22 83.82)
 		)
 		(stroke
@@ -5861,6 +5645,16 @@
 			(type default)
 		)
 		(uuid "d07d1f35-6561-4b5f-9828-534331f4196c")
+	)
+	(wire
+		(pts
+			(xy 172.72 110.49) (xy 172.72 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d5ce42bb-c6c5-43fc-83bd-65c1b4628c87")
 	)
 	(wire
 		(pts
@@ -6014,7 +5808,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 72.39) (xy 193.04 74.93)
+			(xy 193.04 68.58) (xy 193.04 74.93)
 		)
 		(stroke
 			(width 0)
@@ -6221,6 +6015,16 @@
 			(justify right bottom)
 		)
 		(uuid "f3ea89db-4b01-48c0-856c-3aa9e2b952d8")
+	)
+	(label "BATT"
+		(at 109.22 83.82 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "f5c18e76-945b-4888-9091-7b902e1cf9cc")
 	)
 	(global_label "SD_CMD"
 		(shape bidirectional)
@@ -6774,73 +6578,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 234.95 90.17 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "0d0ef722-cf50-4974-92ed-4f66b63776e9")
-		(property "Reference" "#PWR025"
-			(at 234.95 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 234.95 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 234.95 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 234.95 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 234.95 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "9d9ddab9-52be-40ae-bf70-110748ef9a0f")
-		)
-		(instances
-			(project "Stormbreaker"
-				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
-					(reference "#PWR025")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 172.72 110.49 0)
+		(at 172.72 114.3 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6849,7 +6587,7 @@
 		(fields_autoplaced yes)
 		(uuid "10e30e27-17f8-4f71-a5c7-a3de0b109468")
 		(property "Reference" "#PWR018"
-			(at 172.72 116.84 0)
+			(at 172.72 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6858,7 +6596,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 172.72 115.57 0)
+			(at 172.72 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6866,7 +6604,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 172.72 110.49 0)
+			(at 172.72 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6875,7 +6613,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 172.72 110.49 0)
+			(at 172.72 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6884,7 +6622,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 172.72 110.49 0)
+			(at 172.72 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6929,7 +6667,7 @@
 				)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
+		(property "Footprint" "TestPoint:TestPoint_Pad_D3.0mm"
 			(at 77.47 172.72 0)
 			(effects
 				(font
@@ -6963,6 +6701,140 @@
 			(project "Stormbreaker"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "TP4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 114.3 83.82 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "13b486d9-7a33-4fb0-be1e-ad8bebf433c4")
+		(property "Reference" "TP11"
+			(at 116.84 79.2479 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "BATT"
+			(at 116.84 81.7879 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D3.0mm"
+			(at 119.38 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 119.38 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 114.3 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "beded614-25cf-49a7-897a-5e4fcf754061")
+		)
+		(instances
+			(project "Stormbreaker"
+				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
+					(reference "TP11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 240.03 20.32 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "160451bc-cfec-4fe6-b93e-c4d6d2e224b4")
+		(property "Reference" "TP13"
+			(at 242.57 15.7479 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "VBUS"
+			(at 242.57 18.2879 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
+			(at 245.11 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 245.11 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 240.03 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fc80fbb9-2a37-455a-8b2a-51398381b25d")
+		)
+		(instances
+			(project "Stormbreaker"
+				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
+					(reference "TP13")
 					(unit 1)
 				)
 			)
@@ -7106,7 +6978,7 @@
 	)
 	(symbol
 		(lib_id "power:VBUS")
-		(at 257.81 20.32 0)
+		(at 237.49 20.32 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7115,7 +6987,7 @@
 		(fields_autoplaced yes)
 		(uuid "17f478f2-1dc8-435a-a682-ff9e2c7438cb")
 		(property "Reference" "#PWR026"
-			(at 257.81 24.13 0)
+			(at 237.49 24.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7124,7 +6996,7 @@
 			)
 		)
 		(property "Value" "VBUS"
-			(at 257.81 15.24 0)
+			(at 237.49 15.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7132,7 +7004,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 257.81 20.32 0)
+			(at 237.49 20.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7141,7 +7013,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 257.81 20.32 0)
+			(at 237.49 20.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7150,7 +7022,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VBUS\""
-			(at 257.81 20.32 0)
+			(at 237.49 20.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7302,6 +7174,73 @@
 			(project "Stormbreaker"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "#PWR04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 248.92 20.32 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "22827564-3eeb-44e6-8245-78f7c614ac00")
+		(property "Reference" "TP10"
+			(at 251.46 15.7479 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "VBUS"
+			(at 251.46 18.2879 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D3.0mm"
+			(at 254 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 254 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 248.92 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "dd062067-8164-4e84-8d3c-3072a1268727")
+		)
+		(instances
+			(project "Stormbreaker"
+				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
+					(reference "TP10")
 					(unit 1)
 				)
 			)
@@ -8171,6 +8110,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 133.35 83.82 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "43c27a1c-5b9a-4a45-921a-595537b1d5e7")
+		(property "Reference" "TP14"
+			(at 135.89 79.2479 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "BATT"
+			(at 135.89 81.7879 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D3.0mm"
+			(at 138.43 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 138.43 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 133.35 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "38abfe2f-c876-494a-95c9-50b56db042f1")
+		)
+		(instances
+			(project "Stormbreaker"
+				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
+					(reference "TP14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_Small")
 		(at 247.65 30.48 180)
 		(unit 1)
@@ -8235,106 +8241,6 @@
 			(project "Stormbreaker"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "R6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Simulation_SPICE:NMOS")
-		(at 232.41 85.09 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "44ca0f9c-3771-4d69-bb4b-d76b7fbd5c16")
-		(property "Reference" "Q2"
-			(at 238.76 83.8199 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "NMOS"
-			(at 238.76 86.3599 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 237.49 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_MOSFETs"
-			(at 232.41 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "N-MOSFET transistor, drain/source/gate"
-			(at 232.41 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "NMOS"
-			(at 232.41 102.235 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Type" "VDMOS"
-			(at 232.41 104.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=D 2=G 3=S"
-			(at 232.41 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "a1195340-c3ad-42c9-845b-729d91286492")
-		)
-		(pin "1"
-			(uuid "20e65a9c-d3da-4b15-babb-764345085946")
-		)
-		(pin "3"
-			(uuid "0bb2e926-b608-4682-81b2-4bd2f3c5b722")
-		)
-		(instances
-			(project ""
-				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
-					(reference "Q2")
 					(unit 1)
 				)
 			)
@@ -9006,6 +8912,73 @@
 			(project "Stormbreaker"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "TP9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 226.06 67.31 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5fb77d29-475b-419e-adb8-cbcbc79e8ff0")
+		(property "Reference" "TP15"
+			(at 231.14 66.0399 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "POWER_BTN"
+			(at 231.14 68.5799 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 226.06 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 226.06 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 226.06 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "334ad8f0-e744-425f-96fd-de5b8f7dc748")
+		)
+		(instances
+			(project "Stormbreaker"
+				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
+					(reference "TP15")
 					(unit 1)
 				)
 			)
@@ -9922,7 +9895,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 193.04 69.85 180)
+		(at 193.04 66.04 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9931,7 +9904,7 @@
 		(fields_autoplaced yes)
 		(uuid "9ed0fe94-eab5-42b3-b183-0a170078abe2")
 		(property "Reference" "R5"
-			(at 195.58 68.5799 0)
+			(at 195.58 64.7699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9940,7 +9913,7 @@
 			)
 		)
 		(property "Value" "1k"
-			(at 195.58 71.1199 0)
+			(at 195.58 67.3099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9949,7 +9922,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 193.04 69.85 0)
+			(at 193.04 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9958,7 +9931,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 193.04 69.85 0)
+			(at 193.04 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9967,7 +9940,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 193.04 69.85 0)
+			(at 193.04 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10332,6 +10305,73 @@
 			(project "Stormbreaker"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "TP1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 205.74 66.04 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b9cfa3b5-c00b-48e7-bca0-b784380519ce")
+		(property "Reference" "TP12"
+			(at 208.28 61.4679 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "POWER_BTN"
+			(at 208.28 64.0079 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 210.82 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 210.82 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 205.74 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "27881ac6-ca36-48a6-86a5-dac1e72b9cc5")
+		)
+		(instances
+			(project "Stormbreaker"
+				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
+					(reference "TP12")
 					(unit 1)
 				)
 			)
@@ -11178,7 +11218,7 @@
 	)
 	(symbol
 		(lib_id "power:VCC")
-		(at 193.04 67.31 0)
+		(at 193.04 63.5 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11187,7 +11227,7 @@
 		(fields_autoplaced yes)
 		(uuid "e68aef61-8281-44a0-aa17-4a24ae42dc43")
 		(property "Reference" "#PWR017"
-			(at 193.04 71.12 0)
+			(at 193.04 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11196,7 +11236,7 @@
 			)
 		)
 		(property "Value" "VCC"
-			(at 193.04 62.23 0)
+			(at 193.04 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11204,7 +11244,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 193.04 67.31 0)
+			(at 193.04 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11213,7 +11253,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 193.04 67.31 0)
+			(at 193.04 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11222,7 +11262,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 193.04 67.31 0)
+			(at 193.04 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
