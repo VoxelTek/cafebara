@@ -5084,6 +5084,18 @@
 		(uuid "d3a97873-da7e-4282-af18-c0b5882254af")
 	)
 	(junction
+		(at 189.23 60.96)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d3ddd427-c554-486d-a99b-fa3e5b16cf3c")
+	)
+	(junction
+		(at 189.23 69.85)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e4de5fc4-086c-44d9-b967-3b7c276c0c28")
+	)
+	(junction
 		(at 97.79 96.52)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5243,7 +5255,7 @@
 	)
 	(wire
 		(pts
-			(xy 187.96 69.85) (xy 198.12 69.85)
+			(xy 187.96 69.85) (xy 189.23 69.85)
 		)
 		(stroke
 			(width 0)
@@ -5500,6 +5512,16 @@
 			(type default)
 		)
 		(uuid "45354299-11df-43de-8996-777660f04cc7")
+	)
+	(wire
+		(pts
+			(xy 189.23 69.85) (xy 198.12 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "46c72316-9bee-4797-9b69-f9d35f8c51b3")
 	)
 	(wire
 		(pts
@@ -5853,6 +5875,16 @@
 	)
 	(wire
 		(pts
+			(xy 189.23 60.96) (xy 189.23 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8b356360-ca94-45c6-84c9-88110bfa379e")
+	)
+	(wire
+		(pts
 			(xy 135.89 97.79) (xy 157.48 97.79)
 		)
 		(stroke
@@ -6090,6 +6122,16 @@
 			(type default)
 		)
 		(uuid "bc969bb8-269d-4a86-8014-0427187aff8e")
+	)
+	(wire
+		(pts
+			(xy 187.96 82.55) (xy 201.93 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bcb6354c-ed93-4642-b5b8-ea2dd08a504c")
 	)
 	(wire
 		(pts
@@ -6540,6 +6582,16 @@
 			(type default)
 		)
 		(uuid "fe80aeca-7ff4-4a9d-98a3-21b6a405c2e5")
+	)
+	(label "LED"
+		(at 187.96 82.55 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "03e6983f-22b9-4ddb-8a02-8c67c2c9afbe")
 	)
 	(label "BQ_STAT"
 		(at 59.69 83.82 0)
@@ -7272,6 +7324,76 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R_Small")
+		(at 189.23 67.31 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0fabe667-5070-462e-a1e9-8f373578d0bd")
+		(property "Reference" "R7"
+			(at 191.77 66.0399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "1k"
+			(at 191.77 68.5799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 189.23 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 189.23 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 189.23 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "da519ed0-0b51-4102-a55d-6775d432e396")
+		)
+		(pin "1"
+			(uuid "9a7b45b4-e9c5-41d0-b5e1-065aba704f2e")
+		)
+		(instances
+			(project "Stormbreaker"
+				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
+					(reference "R7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 172.72 114.3 0)
 		(unit 1)
@@ -7332,6 +7454,72 @@
 			(project "Stormbreaker"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "#PWR018")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 201.93 82.55 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "14483482-d260-43cc-80e8-8cff115e7746")
+		(property "Reference" "TP10"
+			(at 203.9619 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "LED"
+			(at 206.5019 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 201.93 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 201.93 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 201.93 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ff31684d-88e5-44c2-bc12-661fd06ecdca")
+		)
+		(instances
+			(project "Stormbreaker"
+				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
+					(reference "TP10")
 					(unit 1)
 				)
 			)
