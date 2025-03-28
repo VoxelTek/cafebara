@@ -4952,12 +4952,6 @@
 		(uuid "4668c9db-5f16-40c4-8c3f-935cb443a662")
 	)
 	(junction
-		(at 201.93 92.71)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4b9a05d9-8e35-4a48-a23f-638a0e98c792")
-	)
-	(junction
 		(at 62.23 171.45)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5076,12 +5070,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ca32b053-ef64-4d6a-a30d-aba5987a45fb")
-	)
-	(junction
-		(at 199.39 95.25)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d3a97873-da7e-4282-af18-c0b5882254af")
 	)
 	(junction
 		(at 189.23 60.96)
@@ -5395,7 +5383,7 @@
 	)
 	(wire
 		(pts
-			(xy 199.39 95.25) (xy 214.63 95.25)
+			(xy 187.96 95.25) (xy 214.63 95.25)
 		)
 		(stroke
 			(width 0)
@@ -5612,26 +5600,6 @@
 			(type default)
 		)
 		(uuid "5679e6ea-744a-4868-b6b9-12384ca8e66a")
-	)
-	(wire
-		(pts
-			(xy 187.96 92.71) (xy 201.93 92.71)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5798b539-5cea-4e91-8ba0-09333a2bb9fd")
-	)
-	(wire
-		(pts
-			(xy 201.93 91.44) (xy 201.93 92.71)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "585b1c08-8e91-4b0a-9b97-323b4fc97ec5")
 	)
 	(wire
 		(pts
@@ -6295,16 +6263,6 @@
 	)
 	(wire
 		(pts
-			(xy 187.96 95.25) (xy 199.39 95.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d5d9d2f9-7485-42a5-a465-d6f9469441b1")
-	)
-	(wire
-		(pts
 			(xy 80.01 158.75) (xy 77.47 158.75)
 		)
 		(stroke
@@ -6555,16 +6513,6 @@
 	)
 	(wire
 		(pts
-			(xy 199.39 91.44) (xy 199.39 95.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fa4549d4-2ae7-4ab6-809e-42cfc0e1a06f")
-	)
-	(wire
-		(pts
 			(xy 135.89 96.52) (xy 135.89 97.79)
 		)
 		(stroke
@@ -6575,7 +6523,7 @@
 	)
 	(wire
 		(pts
-			(xy 201.93 92.71) (xy 214.63 92.71)
+			(xy 187.96 92.71) (xy 214.63 92.71)
 		)
 		(stroke
 			(width 0)
@@ -6743,6 +6691,28 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "SCL"
+		(shape output)
+		(at 116.84 123.19 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "313214ea-c484-4655-a02d-8c25af3bfbab")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 123.3328 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -7156,6 +7126,28 @@
 		(uuid "eda9e325-5900-4b05-9d87-26d0da827505")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 221.1228 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "SDA"
+		(shape bidirectional)
+		(at 116.84 125.73 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "f1af6481-114c-4a26-b3b3-68a196e2b966")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 123.3328 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9606,74 +9598,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 201.93 91.44 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5de18301-ab6e-40af-91a8-891e9c769403")
-		(property "Reference" "TP9"
-			(at 204.47 86.8679 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "SCL"
-			(at 204.47 89.4079 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 196.85 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 196.85 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 201.93 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "220c1040-0cdb-43b7-92ca-b510dc28129a")
-		)
-		(instances
-			(project "Stormbreaker"
-				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
-					(reference "TP9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C_Small")
 		(at 57.15 160.02 0)
 		(mirror y)
@@ -10982,72 +10906,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 199.39 91.44 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "addf292f-2cb5-46bc-84da-0c72203ee809")
-		(property "Reference" "TP8"
-			(at 196.85 89.4081 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "SDA"
-			(at 196.85 86.8681 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 204.47 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 204.47 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 199.39 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "35141317-016e-4f3f-a89f-933428510d0b")
-		)
-		(instances
-			(project "Stormbreaker"
-				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
-					(reference "TP8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C_Small")
 		(at 133.35 158.75 0)
 		(unit 1)
@@ -11278,7 +11136,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Connector_USB:USB_C_Receptacle_Amphenol_12401548E4-2A"
+		(property "Footprint" "Connector_USB:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal"
 			(at 269.24 35.56 0)
 			(effects
 				(font
@@ -12564,6 +12422,74 @@
 			(project "Stormbreaker"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "C7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x02")
+		(at 111.76 125.73 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fd052713-4eae-4e82-aa98-33c27f785196")
+		(property "Reference" "J5"
+			(at 111.76 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x02"
+			(at 111.76 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinSocket_1.00mm:PinSocket_1x02_P1.00mm_Vertical"
+			(at 111.76 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 111.76 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 111.76 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "071ec7a5-7ab3-49c1-9a51-0798b4c0bcc1")
+		)
+		(pin "1"
+			(uuid "4abe6eda-3297-4024-816a-0623c6320db8")
+		)
+		(instances
+			(project ""
+				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
+					(reference "J5")
 					(unit 1)
 				)
 			)
