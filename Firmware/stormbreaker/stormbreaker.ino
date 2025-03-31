@@ -34,7 +34,7 @@ bool triggeredSoftShutdown = false;
 float battVolt = 3.7;
 float minBattVolt = 2.7;
 
-float battVoltLevels[5] = {4.2, 3.7, 3.0, 2.8, 2.7}
+float battVoltLevels[5] = {4.2, 3.7, 3.0, 2.8, 2.7};
 
 bool powerError = false;
 
@@ -98,11 +98,10 @@ void setup() {
 void loop() {
   if (isPowered) {
     monitorBatt();
-    delay(5000);
   }
-
-
-
+  if (isCharging) {
+    chargingStatus();
+  }
 }
 
 void powerButton() {
@@ -118,6 +117,9 @@ void powerButton() {
         delay(200);
         if ((battVolt > minBattVolt) || isCharging) {
           consoleOn();
+        }
+        else {
+          powerLED(5);
         }
       }
     }
@@ -158,26 +160,36 @@ void chargingStatus() {
 
   if (chargeStatus == 0b00) {
     isCharging = false;
+    if (isPowered) {
+      monitorBatt();
+    }
+    else {
+      powerLED(0);
+    }
   }
   else {
     isCharging = true;
+    if (chargeStatus == 0b11) {
+      powerLED(7);
+    }
+    else {
+      powerLED(6);
+    }
   }
-  powerLED();
+  delay(500);
 }
 
 
 void powerLED(uint8_t mode) {
   /*
   0 = All LEDs off
-  1 = Full charge
-  2 = Medium charge
-  3 = Low charge
-  4 = About to run out
-  5 = Low-power shutdown
-  6 = Charging, low
-  7 = Charging, medium
-  8 = Charging, high
-  9 = Charging, full
+  1 = Full charge -- Green?
+  2 = Medium charge -- Yellow?
+  3 = Low charge -- Orange?
+  4 = About to run out -- Fast-breathing red?
+  5 = Low-power shutdown -- Couple red flashes
+  6 = Charging -- Slow-breathing blue 
+  7 = Charging, full -- Soft white/pink?
   */
 
 }
@@ -192,7 +204,7 @@ void consoleOn() {
   digitalWrite(PWR_ON, LOW);
   isPowered = true;
 
-  powerLED();
+  monitorBatt();
 }
 
 void consoleOff() {
@@ -205,7 +217,9 @@ void consoleOff() {
   digitalWrite(PWR_ON, HIGH);
   isPowered = false;
 
-  powerLED();
+  if (!isCharging) {
+    powerLED(0);
+  }
 }
 
 void enableShipping() {
@@ -288,21 +302,26 @@ void setLED(uint8_t r, uint8_t g, uint8_t b, bool enabled) {
 void monitorBatt() {
   getBattVoltage();
   delay(500);
-  if (battVolt < minBattVolt && !isCharging) {
+  if (isCharging || !isPowered) {
+    powerLED(0);
+    chargingStatus();
+    return;
+  }
+  if (battVolt < minBattVolt) {
     triggerShutdown(); // Battery too low, emergency shutdown
     powerLED(5);
     return;
   }
-  if ((battVolt <= battVoltLevels[0]) && (battVolt >= battVoltLevels[1])) {
+  if ((battVolt <= battVoltLevels[0]) && (battVolt > battVoltLevels[1])) {
     powerLED(1); // High charge
   }
-  else if ((battVolt <= battVoltLevels[1]) && (battVolt >= battVoltLevels[2])) {
+  else if ((battVolt <= battVoltLevels[1]) && (battVolt > battVoltLevels[2])) {
     powerLED(2); // Medium charge
   }
-  else if ((battVolt <= battVoltLevels[2]) && (battVolt >= battVoltLevels[3])) {
+  else if ((battVolt <= battVoltLevels[2]) && (battVolt > battVoltLevels[3])) {
     powerLED(3); // Low charge
   }
-  else if ((battVolt <= battVoltLevels[3]) && (battVolt >= battVoltLevels[4])) {
+  else if ((battVolt <= battVoltLevels[3]) && (battVolt > battVoltLevels[4])) {
     powerLED(4); // ABOUT TO RUN OUT
   }
 }
