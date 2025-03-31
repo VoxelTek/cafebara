@@ -29,9 +29,12 @@ bool isPowered = false;
 bool isCharging = false;
 
 bool buttonTriggered = false;
+bool triggeredSoftShutdown = false;
 
 float battVolt = 3.7;
 float minBattVolt = 2.7;
+
+float battVoltLevels[5] = {4.2, 3.7, 3.0, 2.8, 2.7}
 
 bool powerError = false;
 
@@ -94,8 +97,8 @@ void setup() {
 
 void loop() {
   if (isPowered) {
-    getBattVoltage();
-    delay(200);
+    monitorBatt();
+    delay(5000);
   }
 
 
@@ -108,18 +111,12 @@ void powerButton() {
     delay(200);
     if (digitalRead(BUTTON) == LOW) {
       if (isPowered) {
-        digitalWrite(SOFT_PWR, HIGH);
-        delay(30);
-        digitalWrite(SOFT_PWR, LOW);
-        delay(1500);
-        if (isPowered) {
-          consoleOff();
-        }
+        triggerShutdown();        
       }
       else {
         getBattVoltage();
         delay(200);
-        if (battVolt > minBattVolt) {
+        if ((battVolt > minBattVolt) || isCharging) {
           consoleOn();
         }
       }
@@ -132,9 +129,26 @@ void powerButton() {
   }
 }
 
+void triggerShutdown() {
+  if (!triggeredSoftShutdown) {
+    digitalWrite(SOFT_PWR, HIGH);
+    delay(30);
+    digitalWrite(SOFT_PWR, LOW);
+    triggeredSoftShutdown = true;
+    delay(2500);
+    if (isPowered) { // Wii did not shut itself down safely, time out and force a power-off
+      consoleOff();
+      triggeredSoftShutdown = false;
+    }
+  }
+}
+
 void softShutdown() {
-  delay(100);
-  consoleOff();
+  if (triggeredSoftShutdown) {
+    delay(100);
+    consoleOff();
+    triggeredSoftShutdown = false;
+  }
 }
 
 void chargingStatus() {
@@ -152,7 +166,19 @@ void chargingStatus() {
 }
 
 
-void powerLED() {
+void powerLED(uint8_t mode) {
+  /*
+  0 = All LEDs off
+  1 = Full charge
+  2 = Medium charge
+  3 = Low charge
+  4 = About to run out
+  5 = Low-power shutdown
+  6 = Charging, low
+  7 = Charging, medium
+  8 = Charging, high
+  9 = Charging, full
+  */
 
 }
 
@@ -257,4 +283,26 @@ void setLED(uint8_t r, uint8_t g, uint8_t b, bool enabled) {
     }
   }
 
+}
+
+void monitorBatt() {
+  getBattVoltage();
+  delay(500);
+  if (battVolt < minBattVolt && !isCharging) {
+    triggerShutdown(); // Battery too low, emergency shutdown
+    powerLED(5);
+    return;
+  }
+  if ((battVolt <= battVoltLevels[0]) && (battVolt >= battVoltLevels[1])) {
+    powerLED(1); // High charge
+  }
+  else if ((battVolt <= battVoltLevels[1]) && (battVolt >= battVoltLevels[2])) {
+    powerLED(2); // Medium charge
+  }
+  else if ((battVolt <= battVoltLevels[2]) && (battVolt >= battVoltLevels[3])) {
+    powerLED(3); // Low charge
+  }
+  else if ((battVolt <= battVoltLevels[3]) && (battVolt >= battVoltLevels[4])) {
+    powerLED(4); // ABOUT TO RUN OUT
+  }
 }
