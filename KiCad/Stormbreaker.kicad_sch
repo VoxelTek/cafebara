@@ -5024,6 +5024,12 @@
 		(uuid "7d0e858d-10ce-4694-bc9a-eafb0d11dbb1")
 	)
 	(junction
+		(at 180.34 53.34)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "82bdebad-3998-46b9-8ebf-7cce2ec5fca6")
+	)
+	(junction
 		(at 242.57 34.29)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5393,6 +5399,16 @@
 	)
 	(wire
 		(pts
+			(xy 214.63 80.01) (xy 214.63 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "295e78a5-d3de-44a7-b23f-98d666cc76f6")
+	)
+	(wire
+		(pts
 			(xy 189.23 53.34) (xy 189.23 60.96)
 		)
 		(stroke
@@ -5593,6 +5609,16 @@
 	)
 	(wire
 		(pts
+			(xy 189.23 68.58) (xy 189.23 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "55dcacff-f084-441c-a50d-ead699023da5")
+	)
+	(wire
+		(pts
 			(xy 106.68 95.25) (xy 97.79 95.25)
 		)
 		(stroke
@@ -5753,7 +5779,7 @@
 	)
 	(wire
 		(pts
-			(xy 195.58 60.96) (xy 200.66 60.96)
+			(xy 198.12 60.96) (xy 200.66 60.96)
 		)
 		(stroke
 			(width 0)
@@ -5843,7 +5869,7 @@
 	)
 	(wire
 		(pts
-			(xy 189.23 60.96) (xy 189.23 64.77)
+			(xy 189.23 60.96) (xy 189.23 63.5)
 		)
 		(stroke
 			(width 0)
@@ -5903,6 +5929,16 @@
 	)
 	(wire
 		(pts
+			(xy 214.63 85.09) (xy 229.87 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9cb6a644-7bc9-4b1e-ad16-f7cd9b41dfb7")
+	)
+	(wire
+		(pts
 			(xy 113.03 154.94) (xy 133.35 154.94)
 		)
 		(stroke
@@ -5933,7 +5969,7 @@
 	)
 	(wire
 		(pts
-			(xy 172.72 53.34) (xy 189.23 53.34)
+			(xy 172.72 53.34) (xy 180.34 53.34)
 		)
 		(stroke
 			(width 0)
@@ -6193,6 +6229,16 @@
 	)
 	(wire
 		(pts
+			(xy 187.96 80.01) (xy 214.63 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cb05598c-38a4-4801-b02e-2164d71a6ab3")
+	)
+	(wire
+		(pts
 			(xy 247.65 27.94) (xy 257.81 27.94)
 		)
 		(stroke
@@ -6373,23 +6419,23 @@
 	)
 	(wire
 		(pts
-			(xy 189.23 60.96) (xy 190.5 60.96)
+			(xy 180.34 53.34) (xy 189.23 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e6632f01-c5d4-4456-96f7-f12d675f66a1")
+	)
+	(wire
+		(pts
+			(xy 189.23 60.96) (xy 193.04 60.96)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "e7c50b5c-4369-4ebd-a8d0-14ef39c2b9f3")
-	)
-	(wire
-		(pts
-			(xy 229.87 85.09) (xy 187.96 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e9edb024-7e73-475e-b308-100831b47ccf")
 	)
 	(wire
 		(pts
@@ -7317,7 +7363,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 189.23 67.31 180)
+		(at 189.23 66.04 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7326,7 +7372,7 @@
 		(fields_autoplaced yes)
 		(uuid "0fabe667-5070-462e-a1e9-8f373578d0bd")
 		(property "Reference" "R7"
-			(at 191.77 66.0399 0)
+			(at 191.77 64.7699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7335,7 +7381,7 @@
 			)
 		)
 		(property "Value" "1k"
-			(at 191.77 68.5799 0)
+			(at 191.77 67.3099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7344,7 +7390,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 189.23 67.31 0)
+			(at 189.23 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7353,7 +7399,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 189.23 67.31 0)
+			(at 189.23 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7362,7 +7408,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 189.23 67.31 0)
+			(at 189.23 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8919,6 +8965,73 @@
 			(project "Stormbreaker"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "#PWR07")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 180.34 53.34 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "417d7b96-8997-44fd-b523-e098758d8dfd")
+		(property "Reference" "TP8"
+			(at 182.88 48.7679 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "VCC"
+			(at 182.88 51.3079 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm"
+			(at 185.42 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 185.42 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 180.34 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "250a3189-0d28-4b50-9954-e33b1761c713")
+		)
+		(instances
+			(project "Stormbreaker"
+				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
+					(reference "TP8")
 					(unit 1)
 				)
 			)
@@ -11880,7 +11993,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 193.04 60.96 270)
+		(at 195.58 60.96 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11889,7 +12002,7 @@
 		(fields_autoplaced yes)
 		(uuid "e0faa497-ed57-4519-b9f4-5d0d40a1ba55")
 		(property "Reference" "R8"
-			(at 193.04 55.88 90)
+			(at 195.58 55.88 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11897,7 +12010,7 @@
 			)
 		)
 		(property "Value" "100k"
-			(at 193.04 58.42 90)
+			(at 195.58 58.42 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11905,7 +12018,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 193.04 60.96 0)
+			(at 195.58 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11914,7 +12027,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 193.04 60.96 0)
+			(at 195.58 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11923,7 +12036,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 193.04 60.96 0)
+			(at 195.58 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
