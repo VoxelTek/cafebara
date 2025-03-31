@@ -191,7 +191,36 @@ void powerLED(uint8_t mode) {
   6 = Charging -- Slow-breathing blue 
   7 = Charging, full -- Soft white/pink?
   */
-
+  if (mode == 0) {
+    setLED(0, 0, 0, 0, false);
+  }
+  else if (mode == 1) {
+    setLED(0, 255, 0, 128, true);
+  }
+  else if (mode == 2) {
+    setLED(255, 255, 0, 128, true);
+  }
+  else if (mode == 3) {
+    setLED(255, 127, 0, 128, true);
+  }
+  else if (mode == 4) {
+    setLED(255, 0, 0, 128, true);
+  }
+  else if (mode == 5) {
+    for (int i = 0; i < 5; i++) {
+      setLED(255, 0, 0, 128, true);
+      delay(100);
+      setLED(0, 0, 0, 0, false);
+      delay(100);
+    }
+    powerLED(0);
+  }
+  else if (mode == 6) {
+    setLED(0, 0, 255, 64, true);
+  }
+  else if (mode == 7) {
+    setLED(255, 183, 197, 64, true);
+  }
 }
 
 void consoleOn() {
@@ -280,19 +309,20 @@ void transmitDataWire() {
 
 }
 
-void setLED(uint8_t r, uint8_t g, uint8_t b, bool enabled) {
+void setLED(uint8_t r, uint8_t g, uint8_t b, uint8_t bright, bool enabled) {
   if (!enabled) {
     pixels.clear();
   }
   else {
     for (int i = 0; i < NUMPIXELS; i++) {
 
-    // pixels.Color takes RGB values, from 0,0,0 up to 255,255,255
-    pixels.setPixelColor(i, pixels.Color(r, g, b)); // Moderately bright green color.
+      // pixels.Color takes RGB values, from 0,0,0 up to 255,255,255
+      pixels.setPixelColor(i, pixels.Color(r, g, b));
+      pixels.setBrightness(bright);
 
-    pixels.show(); // This sends the updated pixel color to the hardware.
+      pixels.show(); // This sends the updated pixel color to the hardware.
 
-    delay(100); // Delay for a period of time (in milliseconds).
+      delay(100); // Delay for a period of time (in milliseconds).
 
     }
   }
