@@ -1,2 +1,2 @@
 # Stormbreaker
-### A ripoff version of YveltalGriffin's Mjolnir
+### A ripoff of YveltalGriffin's Mjolnir
