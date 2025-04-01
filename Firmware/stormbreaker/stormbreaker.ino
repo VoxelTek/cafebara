@@ -145,7 +145,7 @@ void setup() {
   bbi2c.bWire = false;
   bbi2c.iSDA = SDA2;
   bbi2c.iSCL = SCL2;
-  I2CInit(&bbi2c, 100000L);
+  I2CInit(&bbi2c, 0xFFFF);
 
   Wire.onReceive(receiveDataWire);
   Wire.onRequest(transmitDataWire);
