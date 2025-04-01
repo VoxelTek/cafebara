@@ -334,7 +334,7 @@ void setupBQ() {
   I2CWriteRegister(&bbi2c, bqAddr, 0x04, reg04);
 
   /*REG05*/
-  unsigned char reg05 = ((preCurrent << 4) | termCurrent); // Set term charge current
+  unsigned char reg05 = ((preCurrent << 4) | (0b1111 & termCurrent)); // Set term charge current
   I2CWriteRegister(&bbi2c, bqAddr, 0x05, reg05);
 
   /*REG06*/
