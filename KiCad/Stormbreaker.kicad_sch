@@ -5399,16 +5399,6 @@
 	)
 	(wire
 		(pts
-			(xy 214.63 80.01) (xy 214.63 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "295e78a5-d3de-44a7-b23f-98d666cc76f6")
-	)
-	(wire
-		(pts
 			(xy 189.23 53.34) (xy 189.23 60.96)
 		)
 		(stroke
@@ -5489,6 +5479,16 @@
 	)
 	(wire
 		(pts
+			(xy 215.9 87.63) (xy 215.9 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3fc948a5-0aac-4e2d-a598-b143d3ed23da")
+	)
+	(wire
+		(pts
 			(xy 148.59 152.4) (xy 148.59 153.67)
 		)
 		(stroke
@@ -5559,7 +5559,7 @@
 	)
 	(wire
 		(pts
-			(xy 208.28 88.9) (xy 187.96 88.9)
+			(xy 215.9 87.63) (xy 187.96 87.63)
 		)
 		(stroke
 			(width 0)
@@ -5939,16 +5939,6 @@
 	)
 	(wire
 		(pts
-			(xy 214.63 85.09) (xy 229.87 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9cb6a644-7bc9-4b1e-ad16-f7cd9b41dfb7")
-	)
-	(wire
-		(pts
 			(xy 113.03 154.94) (xy 133.35 154.94)
 		)
 		(stroke
@@ -5969,7 +5959,7 @@
 	)
 	(wire
 		(pts
-			(xy 187.96 100.33) (xy 207.01 100.33)
+			(xy 187.96 100.33) (xy 220.98 100.33)
 		)
 		(stroke
 			(width 0)
@@ -6076,16 +6066,6 @@
 			(type default)
 		)
 		(uuid "b151ecda-e712-4f9e-833c-50133a6201e0")
-	)
-	(wire
-		(pts
-			(xy 187.96 88.9) (xy 187.96 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b1859176-cbb0-4be3-8391-da5a8fcc0e5a")
 	)
 	(wire
 		(pts
@@ -6246,16 +6226,6 @@
 			(type default)
 		)
 		(uuid "c892bfd2-fd50-48c8-9839-c270d296c984")
-	)
-	(wire
-		(pts
-			(xy 187.96 80.01) (xy 214.63 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cb05598c-38a4-4801-b02e-2164d71a6ab3")
 	)
 	(wire
 		(pts
@@ -6499,7 +6469,7 @@
 	)
 	(wire
 		(pts
-			(xy 187.96 102.87) (xy 207.01 102.87)
+			(xy 187.96 102.87) (xy 220.98 102.87)
 		)
 		(stroke
 			(width 0)
@@ -6628,7 +6598,7 @@
 		(uuid "300a39a4-392a-47ed-be14-3f5a74f9326b")
 	)
 	(label "ALERT"
-		(at 187.96 88.9 0)
+		(at 187.96 87.63 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6658,7 +6628,7 @@
 		(uuid "5c3a3ea5-2d29-4871-aeeb-a2e395fb3a78")
 	)
 	(label "Wii_SHUTDOWN"
-		(at 207.01 102.87 180)
+		(at 220.98 102.87 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6678,7 +6648,7 @@
 		(uuid "8142859d-c5d8-4d1a-ad8e-f2f17b74aeda")
 	)
 	(label "Wii_POWER"
-		(at 207.01 100.33 180)
+		(at 220.98 100.33 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6991,6 +6961,28 @@
 			)
 		)
 	)
+	(global_label "FAN_PWM"
+		(shape output)
+		(at 187.96 97.79 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "abbb7568-3edc-498a-9c56-3281f82160d3")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 199.5933 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "SD_D0"
 		(shape bidirectional)
 		(at 116.84 158.75 0)
@@ -7158,6 +7150,28 @@
 		(uuid "db77bca0-3df9-479e-856b-c8818f6e8356")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 48.9411 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "FAN_PWM"
+		(shape input)
+		(at 229.87 85.09 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "e0d6e62b-6688-4425-b067-75d5c9fd7a85")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 218.2367 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10625,7 +10639,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 208.28 88.9 0)
+		(at 215.9 86.36 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10633,7 +10647,7 @@
 		(dnp no)
 		(uuid "90596206-e642-40a3-9218-f4e9e6cccb04")
 		(property "Reference" "TP11"
-			(at 205.74 86.8681 0)
+			(at 213.36 84.3281 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10642,7 +10656,7 @@
 			)
 		)
 		(property "Value" "ALERT"
-			(at 205.74 84.3281 0)
+			(at 213.36 81.7881 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10651,7 +10665,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 213.36 88.9 0)
+			(at 220.98 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10660,7 +10674,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 213.36 88.9 0)
+			(at 220.98 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10669,7 +10683,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 208.28 88.9 0)
+			(at 215.9 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)

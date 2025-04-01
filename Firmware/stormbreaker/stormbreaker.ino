@@ -13,16 +13,15 @@
 #define SDA2 PIN_PC2
 #define SCL2 PIN_PC3
 
-#define FAN PIN_PA4
+#define FAN PIN_PB2
+
 #define LED PIN_PA5
 #define NUMPIXELS 2
 
 #define PWR_ON PIN_PA1 // Output
-
 #define BUTTON PIN_PA2
 
 #define TEMP_ALERT PIN_PA7
-
 
 #define SOFT_PWR PIN_PB3 //Out to Wii
 #define SOFT_SHUT PIN_PB4 //In from Wii
@@ -30,12 +29,14 @@
 #define STORM_I2C 0x50
 
 #define ADDR_VER 0x00
+
 #define ADDR_CHRGCURRENT 0x01
 #define ADDR_TERMCURRENT 0x02
 #define ADDR_PRECURRENT 0x03
 #define ADDR_CHRGVOLTAGE 0x04
+#define ADDR_FANSPEED 0x05
 
-byte ver = EEPROM.read(ADDR_VER);
+byte ver = 0x01;
 
 byte* requestedReg;
 
@@ -64,10 +65,19 @@ uint8_t bqAddr = 0x6A;
 
 byte maxCurrent = 0x3F; // 3.25A
 //byte chrgCurrent = 0b1000010; // 4224mA
+
+/*
 byte chrgCurrent = EEPROM.read(ADDR_CHRGCURRENT);
 byte preCurrent = EEPROM.read(ADDR_PRECURRENT);
 byte termCurrent = EEPROM.read(ADDR_TERMCURRENT);
 byte chrgVoltage = EEPROM.read(ADDR_CHRGVOLTAGE);
+*/
+
+byte chrgCurrent;
+byte preCurrent;
+byte termCurrent;
+byte chrgVoltage;
+byte fanSpeed;
 
 const bool ilimEnabled = false;
 
@@ -86,8 +96,29 @@ int I2CWriteRegister(BBI2C *pI2C, unsigned char iAddr, unsigned char reg, unsign
 }
 
 
+void firstTimeCheck() {
+  if (EEPROM.read(ADDR_VER) == 0) {
+    chrgCurrent = 0b1000010; // 4224mA
+    preCurrent = 0b0001;
+    termCurrent = 0b0011;
+    chrgVoltage = 0b010111;
+    fanSpeed = 0xFF;
+    writeToEEPROM();
+  }
+  else {
+    chrgCurrent = EEPROM.read(ADDR_CHRGCURRENT);
+    preCurrent = EEPROM.read(ADDR_PRECURRENT);
+    termCurrent = EEPROM.read(ADDR_TERMCURRENT);
+    chrgVoltage = EEPROM.read(ADDR_CHRGVOLTAGE);
+    fanSpeed = EEPROM.read(ADDR_FANSPEED);
+  }
+  EEPROM.write(ADDR_VER, ver);
+}
+
 
 void setup() {
+  firstTimeCheck();
+
   pinMode(BUTTON, INPUT_PULLUP);
   pinMode(CHRG_STAT, INPUT);
   pinMode(TEMP_ALERT, INPUT_PULLUP);
@@ -97,6 +128,7 @@ void setup() {
   pinMode(SOFT_SHUT, INPUT);
 
   pinMode(FAN, OUTPUT);
+  digitalWrite(FAN, LOW);
 
   pinMode(PWR_ON, OUTPUT);
   digitalWrite(PWR_ON, HIGH); // Makes sure console is off
@@ -105,7 +137,8 @@ void setup() {
   attachInterrupt(digitalPinToInterrupt(SOFT_SHUT), softShutdown, RISING);
   attachInterrupt(digitalPinToInterrupt(CHRG_STAT), chargingStatus, CHANGE);
   attachInterrupt(digitalPinToInterrupt(TEMP_ALERT), overTemp, FALLING);
-
+  
+  setFan(false);
 
 
   memset(&bbi2c, 0, sizeof(bbi2c));
@@ -157,6 +190,7 @@ void powerButton() {
         getBattVoltage();
         if (((battVolt > minBattVolt) || isCharging) && !isOverTemp && (pwrErrorStatus == 0x00)) { // Check that either the battery is charged enough, or console is charging, 
         // AND make sure there's no over-temp issues
+        // AND make sure there's no power errors
           consoleOn(); // Voltage is high enough or currently charging, turn on console
         }
         else {
@@ -239,6 +273,15 @@ void chargingStatus() {
   delay(100);
 }
 
+void setFan(bool active) {
+  if (active) {
+    analogWrite(FAN, fanSpeed);
+  }
+  else {
+    digitalWrite(FAN, LOW);
+  }
+}
+
 
 void powerLED(uint8_t mode) {
   /*
@@ -305,6 +348,8 @@ void consoleOn() {
   digitalWrite(PWR_ON, LOW);
   isPowered = true;
 
+  setFan(true);
+
   monitorBatt();
 }
 
@@ -316,6 +361,8 @@ void consoleOff() {
 
   digitalWrite(PWR_ON, HIGH);
   isPowered = false;
+
+  setFan(false);
 
   monitorBatt();
 }
@@ -360,6 +407,13 @@ void writeToEEPROM() {
   EEPROM.write(ADDR_PRECURRENT, preCurrent);
   EEPROM.write(ADDR_TERMCURRENT, termCurrent);
   EEPROM.write(ADDR_CHRGVOLTAGE, chrgVoltage);
+  EEPROM.write(ADDR_FANSPEED, fanSpeed);
+}
+
+void applyChanges() {
+  writeToEEPROM();
+  setFan(isPowered);
+  setupBQ();
 }
 
 
@@ -389,13 +443,13 @@ void receiveDataWire(int16_t numBytes) {
     break;
 
     case 0x02:
-      writeToEEPROM(); // Store current settings to EEPROM
+      applyChanges(); // Apply and store current settings
       isRequesting = false;
       return;
     break;
 
     case 0x04:
-      //fan
+      requestedReg = &fanSpeed;
     break;
 
     case 0x0B:
