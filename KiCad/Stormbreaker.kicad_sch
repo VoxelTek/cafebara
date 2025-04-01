@@ -5559,6 +5559,16 @@
 	)
 	(wire
 		(pts
+			(xy 208.28 88.9) (xy 187.96 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4dddcb8e-7e5c-415b-a900-4b2dd50f24e9")
+	)
+	(wire
+		(pts
 			(xy 154.94 53.34) (xy 160.02 53.34)
 		)
 		(stroke
@@ -6066,6 +6076,16 @@
 			(type default)
 		)
 		(uuid "b151ecda-e712-4f9e-833c-50133a6201e0")
+	)
+	(wire
+		(pts
+			(xy 187.96 88.9) (xy 187.96 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b1859176-cbb0-4be3-8391-da5a8fcc0e5a")
 	)
 	(wire
 		(pts
@@ -6606,6 +6626,16 @@
 			(justify left bottom)
 		)
 		(uuid "300a39a4-392a-47ed-be14-3f5a74f9326b")
+	)
+	(label "ALERT"
+		(at 187.96 88.9 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "52399129-8663-4d87-a815-6e9058d664c9")
 	)
 	(label "PA0"
 		(at 198.12 69.85 180)
@@ -10588,6 +10618,72 @@
 			(project ""
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "#PWR05")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 208.28 88.9 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "90596206-e642-40a3-9218-f4e9e6cccb04")
+		(property "Reference" "TP11"
+			(at 205.74 86.8681 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "ALERT"
+			(at 205.74 84.3281 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 213.36 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 213.36 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 208.28 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "da11a92c-0281-4abd-b789-b36bd58669c8")
+		)
+		(instances
+			(project "Stormbreaker"
+				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
+					(reference "TP11")
 					(unit 1)
 				)
 			)
