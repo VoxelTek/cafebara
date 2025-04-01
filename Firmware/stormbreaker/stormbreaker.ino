@@ -49,6 +49,8 @@ bool isCharging = false;
 bool buttonTriggered = false;
 bool triggeredSoftShutdown = false;
 
+bool isOverTemp = false;
+
 byte battVolt = 0b1000101; //~3.7V
 byte minBattVolt = 0b0010011; //~2.7
 
@@ -133,9 +135,11 @@ void loop() {
 }
 
 void overTemp() {
-  triggerShutdown();
+  consoleOff();
   powerLED(5);
-  enableShipping();
+  isOverTemp = true;
+  delay(120000);
+  isOverTemp = false;
 }
 
 void powerButton() {
@@ -148,12 +152,11 @@ void powerButton() {
       }
       else {
         getBattVoltage();
-        delay(200);
-        if ((battVolt > minBattVolt) || isCharging) {
+        if (((battVolt > minBattVolt) || isCharging) && !isOverTemp) {
           consoleOn(); // Voltage is high enough or currently charging, turn on console
         }
         else {
-          powerLED(5); // Flash light, battery too low
+          powerLED(5); // Flash light, battery too low OR over temp
         }
       }
     }
@@ -370,51 +373,65 @@ void receiveDataWire(int16_t numBytes) {
 
   byte reg = Wire.read();
 
+  switch (reg) {
+    case 0x00: // Get version
+      requestedReg = &ver;
+    break;
+
+    case 0x02:
+      writeToEEPROM();
+      isRequesting = false;
+    break;
+
+    case 0x04:
+      //fan
+    break;
+
+    case 0x0B:
+      enableShipping();
+    break;
+
+    case 0x10:
+      requestedReg = &chrgCurrent;
+    break;
+
+    case 0x11:
+      requestedReg = &termCurrent;
+    break;
+
+    case 0x12:
+      requestedReg = &preCurrent;
+    break;
+
+    case 0x13:
+      requestedReg = &chrgVoltage;
+    break;
+
+    case 0x15:
+      requestedReg = &chargeStatus;
+    break;
+
+    case 0x26:
+      requestedReg = &battVolt;
+    break;
+  }
+
   if (!Wire.available()) {
     isRequesting = true;
-
-    switch (reg) {
-      case 0x00: // Get version
-        requestedReg = &ver;
-      break;
-
-      case 0x04:
-        //fan
-      break;
-
-      case 0x0B:
-        enableShipping();
-      break;
-
-      case 0x10:
-        requestedReg = &chrgCurrent;
-      break;
-
-      case 0x11:
-        requestedReg = &termCurrent;
-      break;
-
-      case 0x12:
-        requestedReg = &preCurrent;
-      break;
-
-      case 0x13:
-        requestedReg = &chrgVoltage;
-      break;
-
-      case 0x15:
-        requestedReg = &chargeStatus;
-      break;
-
-      case 0x26:
-        requestedReg = &battVolt;
-      break;
-    }
+    return;
+  }
+  else {
+    isRequesting = false;
+    *requestedReg = Wire.read();
   }
 }
 
 void transmitDataWire() {
-
+  if (!isRequesting) {
+    return;
+  }
+  Wire.write(*requestedReg);
+  isRequesting = false;
 }
 
 void setLED(uint8_t r, uint8_t g, uint8_t b, uint8_t bright, bool enabled) {
