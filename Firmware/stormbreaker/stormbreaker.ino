@@ -126,11 +126,14 @@ void setup() {
 void loop() {
   if (isPowered) {
     monitorBatt();
-    delay(1500);
+    delay(2000);
   }
-  if (isCharging) {
+  else if (isCharging) {
     chargingStatus();
-    delay(1500);
+    delay(2000);
+  }
+  else {
+    delay(1000 * 15); // Not on, not charging, so do nothing, basically.
   }
 }
 
@@ -145,18 +148,19 @@ void overTemp() {
 void powerButton() {
   if (!buttonTriggered) {
     buttonTriggered = true; // Make sure other instances of this function don't run. They shouldn't anyway, but eh.
-    delay(250); // Wait in order to prevent debouncing
+    delay(750); // Wait in order to prevent bouncing and accidental presses
     if (digitalRead(BUTTON) == LOW) {
       if (isPowered) {
         triggerShutdown(); // Is it on? Turn it off.
       }
       else {
         getBattVoltage();
-        if (((battVolt > minBattVolt) || isCharging) && !isOverTemp) {
+        if (((battVolt > minBattVolt) || isCharging) && !isOverTemp && (pwrErrorStatus == 0x00)) { // Check that either the battery is charged enough, or console is charging, 
+        // AND make sure there's no over-temp issues
           consoleOn(); // Voltage is high enough or currently charging, turn on console
         }
         else {
-          powerLED(5); // Flash light, battery too low OR over temp
+          powerLED(5); // Flash red light, battery too low OR over temp
         }
       }
     }
@@ -169,7 +173,7 @@ void powerButton() {
 }
 
 void triggerShutdown() {
-  if (!triggeredSoftShutdown) {
+  if (!triggeredSoftShutdown && isPowered) {
     digitalWrite(SOFT_PWR, HIGH); // Trigger the soft shutdown sequence on the Wii
     delay(30);
     digitalWrite(SOFT_PWR, LOW);
@@ -179,6 +183,9 @@ void triggerShutdown() {
       consoleOff();
       triggeredSoftShutdown = false;
     }
+  }
+  else if (!isPowered) {
+    consoleOff(); // If some bug happens, and the console is on while this thinks it isn't, might as well make sure it's shut down
   }
 }
 
@@ -198,12 +205,15 @@ void chargingStatus() {
   unsigned char errorStat = 0x00;
   I2CReadRegister(&bbi2c, bqAddr, 0x0C, &errorStat, 0x8);
   pwrErrorStatus = errorStat;
-  if (pwrErrorStatus != 0x00) {
+  if (pwrErrorStatus != 0x00) { // Uh oh, *something* is wrong
     triggerShutdown();
     powerLED(5);
-    if (pwrErrorStatus & 0b00101000) {
-      enableShipping();
+    if (pwrErrorStatus & 0b00100000) { // oh jeez stuff is hot this is really bad
+      overTemp();
       return;
+    }
+    else if (pwrErrorStatus & 0b00001000) { // ???? the battery is TOO charged????
+      enableShipping();
     }
   }
 
@@ -214,6 +224,7 @@ void chargingStatus() {
     }
     else {
       powerLED(0); // Not on, not charging
+
     }
   }
   else {
@@ -320,7 +331,6 @@ void setupBQ() {
   unsigned char reg00 = ((maxCurrent) | (ilimEnabled << 6)); // Set max current and ILIM disabled.
   I2CWriteRegister(&bbi2c, bqAddr, 0x00, reg00);
 
-  
   /*REG02*/
   unsigned char reg02 = (0b00111100); // Disable D+/D- detection and such
   if (isPowered){
@@ -379,8 +389,9 @@ void receiveDataWire(int16_t numBytes) {
     break;
 
     case 0x02:
-      writeToEEPROM();
+      writeToEEPROM(); // Store current settings to EEPROM
       isRequesting = false;
+      return;
     break;
 
     case 0x04:
@@ -388,7 +399,8 @@ void receiveDataWire(int16_t numBytes) {
     break;
 
     case 0x0B:
-      enableShipping();
+      enableShipping(); // Don't need to bother doing anything, we'll be losing power soon anyway
+      delay(1000);
     break;
 
     case 0x10:
@@ -457,14 +469,15 @@ void setLED(uint8_t r, uint8_t g, uint8_t b, uint8_t bright, bool enabled) {
 void monitorBatt() {
   getBattVoltage();
   delay(100);
-  if (isCharging || !isPowered) { // If not turned on, or charging, let the chargingStatus function handle it
+  if (isCharging || !isPowered) { 
+    // If not turned on, or if charging, let the chargingStatus function handle it
     powerLED(0);
     chargingStatus();
     return;
   }
   if (battVolt < minBattVolt) {
     triggerShutdown(); // Battery too low, emergency shutdown
-    powerLED(5);
+    powerLED(5); // Show flashing red for error
     return;
   }
   if ((battVolt <= battVoltLevels[0]) && (battVolt > battVoltLevels[1])) {
