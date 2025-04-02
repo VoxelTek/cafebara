@@ -52,10 +52,14 @@ bool triggeredSoftShutdown = false;
 
 bool isOverTemp = false;
 
+byte battCharge;
+
 byte battVolt = 0b1000101; //~3.7V
 byte minBattVolt = 0b0010011; //~2.7
 
 byte battVoltLevels[5] = {0b01011111, 0b1000101, 0b0100010, 0b0011000, 0b0010011}; // 4.2, 3.7, 3.0, 2.8, 2.7
+
+byte battChrgLevels[9] = {minBattVolt, 0x1c, 0x26, 0x30, 0x39, 0x43, 0x4c, 0x56, 0x5f};
 
 byte pwrErrorStatus = 0x00;
 
@@ -118,6 +122,8 @@ void firstTimeCheck() {
 
 void setup() {
   firstTimeCheck();
+
+  //battChrgLevels = {chrgVoltage, 0x56, 0x4c, 0x43, 0x39, 0x30, 0x26, 0x1c};
 
   pinMode(BUTTON, INPUT_PULLUP);
   pinMode(CHRG_STAT, INPUT);
@@ -478,6 +484,11 @@ void receiveDataWire(int16_t numBytes) {
       requestedReg = &chargeStatus;
     break;
 
+    case 0x24:
+      battChargeStatus();
+      requestedReg = &battCharge;
+    break;
+
     case 0x26:
       requestedReg = &battVolt;
     break;
@@ -518,7 +529,26 @@ void setLED(uint8_t r, uint8_t g, uint8_t b, uint8_t bright, bool enabled) {
 
     }
   }
+}
 
+void battChargeStatus() {
+  if (chargeStatus == 0b11) {
+    battCharge = 0xff;
+    return;
+  }
+  getBattVoltage();
+  delay(100);
+  
+  float tmp;
+
+  for (int i = 0; i < 8; i++) {
+    if ((battVolt >= battChrgLevels[i]) && (battVolt < battChrgLevels[i+1])) {
+      tmp = i + ((battVolt - battChrgLevels[i])/ (battChrgLevels[i+1] - battChrgLevels[i]));
+      tmp *= 0x20;
+      battCharge = int(tmp);
+      return;
+    }
+  }
 }
 
 void monitorBatt() {

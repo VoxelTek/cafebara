@@ -45,7 +45,7 @@
 //#define CMD_BATDESIGNCAP        0x21
 //#define CMD_MAXVEMPTY           0x22
 //#define CMD_MAXCYCLES           0x23
-//#define CMD_BATSOC              0x24
+#define CMD_BATSOC              0x24
 //#define CMD_BATCURRENT          0x25
 #define CMD_BATVOLTAGE          0x26
 //#define CMD_TTE                 0x27
@@ -301,52 +301,34 @@ namespace STORMBREAKER {
         ret = i2c_read16(curPMSAddress, CMD_BATDESIGNCAP, &error);
         return ret;
     }
-
+    */
     float getSOC() {
         u8 error;
         static u64 lastTime = 0;
         static float ret = 0.0f;
 
-        if (!updateMutex)
-            LWP_MutexInit(&updateMutex, false);
-        LWP_MutexLock(updateMutex);
-        if (updating) {
-            LWP_MutexUnlock(updateMutex);
-            return ret;
-        }
-        LWP_MutexUnlock(updateMutex);
-
         if ((diff_msec(gettime(), lastTime) < PMS_POLLUPDATE_TIMEOUT) && lastTime) {
             return ret;
         }
         lastTime = gettime();
-        u16 soc = i2c_read16(curPMSAddress, CMD_BATSOC, &error);
-        ret = (float)soc / 256.0f;
+        u8 soc = i2c_read8(curPMSAddress, CMD_BATSOC, &error);
+        ret = (float)soc / 0xff;
         return ret;
     }
 
-    u16 getSOCRaw() {
+    u8 getSOCRaw() {
         u8 error;
         static u64 lastTime = 0;
-        static u16 ret = 0;
-
-        if (!updateMutex)
-            LWP_MutexInit(&updateMutex, false);
-        LWP_MutexLock(updateMutex);
-        if (updating) {
-            LWP_MutexUnlock(updateMutex);
-            return ret;
-        }
-        LWP_MutexUnlock(updateMutex);
+        static u8 ret = 0;
 
         if ((diff_msec(gettime(), lastTime) < PMS_POLLUPDATE_TIMEOUT) && lastTime) {
             return ret;
         }
         lastTime = gettime();
-        ret = i2c_read16(curPMSAddress, CMD_BATSOC, &error);
+        ret = i2c_read8(curPMSAddress, CMD_BATSOC, &error);
         return ret;
     }
-    */
+
 
     float getVCell() {
         u8 error;
@@ -392,10 +374,10 @@ namespace STORMBREAKER {
     }
     */
 
-    u16 getVCellRaw() {
+    u8 getVCellRaw() {
         u8 error;
         static u64 lastTime = 0;
-        static u16 ret = 0;
+        static u8 ret = 0;
 
         if ((diff_msec(gettime(), lastTime) < PMS_POLLUPDATE_TIMEOUT) && lastTime) {
             return ret;

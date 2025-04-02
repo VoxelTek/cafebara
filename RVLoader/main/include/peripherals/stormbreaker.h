@@ -13,8 +13,10 @@ namespace PMS2 {
     u16 getPreChargeCurrent();
     u16 getChargeVoltage();
     u8 getChargeStatus();
+    float getSOC();
+    u8 getSOCRaw();
     float getVCell();
-    u16 getVCellRaw();
+    u8 getVCellRaw();
     void setChargeCurrent(u16 v);
     void setTermCurrent(u16 v);
     void setPreChargeCurrent(u16 v);
