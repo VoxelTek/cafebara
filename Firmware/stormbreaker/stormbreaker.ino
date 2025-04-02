@@ -36,7 +36,7 @@
 #define ADDR_CHRGVOLTAGE 0x04
 #define ADDR_FANSPEED 0x05
 
-byte ver = 0x01;
+byte ver = 0x01; // v0.1 (ver / 10)
 
 byte* requestedReg;
 
@@ -375,7 +375,7 @@ void enableShipping() {
 
 void setupBQ() {
   /*REG00*/
-  unsigned char reg00 = ((maxCurrent) | (ilimEnabled << 6)); // Set max current and ILIM disabled.
+  unsigned char reg00 = ((maxCurrent) | (ilimEnabled << 6)); // Set max current and ILIM.
   I2CWriteRegister(&bbi2c, bqAddr, 0x00, reg00);
 
   /*REG02*/
@@ -445,6 +445,7 @@ void receiveDataWire(int16_t numBytes) {
     case 0x02:
       applyChanges(); // Apply and store current settings
       isRequesting = false;
+      Wire.read();
       return;
     break;
 
