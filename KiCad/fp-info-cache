@@ -1,4 +1,4 @@
-23029954113420999
+23033441271776514
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -87674,6 +87674,20 @@ GCT_USB4080-03-A_REVA1
 0
 34
 25
+Stormbreaker
+TestPoint_Pad_D0.75mm_Small
+SMD pad as test Point, diameter 1.0mm
+test point SMD pad
+0
+1
+1
+Stormbreaker
+TestPoint_Pad_D1.0mm_Small
+SMD pad as test Point, diameter 1.0mm
+test point SMD pad
+0
+1
+1
 Stormbreaker
 melonHD_SMT
 

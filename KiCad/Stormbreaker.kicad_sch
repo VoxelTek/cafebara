@@ -5606,8 +5606,16 @@
 		(uuid "3c03fa13-6ec5-48f9-93f3-73801b485f80")
 	)
 	(no_connect
+		(at 187.96 77.47)
+		(uuid "448adb60-02ee-46e6-9934-e17b9accee10")
+	)
+	(no_connect
 		(at 257.81 33.02)
 		(uuid "5027730f-cc19-4b16-baf2-5a640dc54578")
+	)
+	(no_connect
+		(at 157.48 95.25)
+		(uuid "5327780f-6703-4989-83fa-7a08dd821b9e")
 	)
 	(no_connect
 		(at 76.2 73.66)
@@ -5620,6 +5628,10 @@
 	(no_connect
 		(at 76.2 71.12)
 		(uuid "8dbd1449-9481-4c3b-87c7-93b86d055b85")
+	)
+	(no_connect
+		(at 187.96 105.41)
+		(uuid "910b23cd-3871-42a1-b2eb-c59ae4fd027c")
 	)
 	(no_connect
 		(at 229.87 134.62)
@@ -5636,6 +5648,14 @@
 	(no_connect
 		(at 76.2 93.98)
 		(uuid "a30a0ea4-ff8d-4c50-97a6-dc8d6e85f422")
+	)
+	(no_connect
+		(at 187.96 85.09)
+		(uuid "ac44e3df-2199-4bbc-b4fe-fd5a7a3591b1")
+	)
+	(no_connect
+		(at 187.96 80.01)
+		(uuid "ad636d0a-3d73-44c9-b83a-9fa7bb0b3819")
 	)
 	(no_connect
 		(at 49.53 63.5)
@@ -5980,6 +6000,16 @@
 			(type default)
 		)
 		(uuid "44a47137-8a39-460a-9b77-42a92a9c570c")
+	)
+	(wire
+		(pts
+			(xy 40.64 31.75) (xy 45.72 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "44e8bb4a-c060-4a31-b338-544ba9e74d21")
 	)
 	(wire
 		(pts
@@ -8326,7 +8356,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+		(property "Footprint" "Stormbreaker:TestPoint_Pad_D0.75mm_Small"
 			(at 201.93 87.63 0)
 			(effects
 				(font
@@ -8368,7 +8398,7 @@
 	(symbol
 		(lib_name "GND_1")
 		(lib_id "power:GND")
-		(at 45.72 31.75 0)
+		(at 45.72 36.83 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8377,7 +8407,7 @@
 		(fields_autoplaced yes)
 		(uuid "144ece9b-e03e-46dc-9159-c6a24429a16b")
 		(property "Reference" "#PWR034"
-			(at 45.72 38.1 0)
+			(at 45.72 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8386,7 +8416,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 45.72 36.83 0)
+			(at 45.72 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8394,7 +8424,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 45.72 31.75 0)
+			(at 45.72 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8403,7 +8433,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 45.72 31.75 0)
+			(at 45.72 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8412,7 +8442,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 45.72 31.75 0)
+			(at 45.72 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9255,7 +9285,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+		(property "Footprint" "Stormbreaker:TestPoint_Pad_D1.0mm_Small"
 			(at 171.45 130.81 0)
 			(effects
 				(font
@@ -10900,7 +10930,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+		(property "Footprint" "Stormbreaker:TestPoint_Pad_D1.0mm_Small"
 			(at 161.29 133.35 0)
 			(effects
 				(font
@@ -11033,7 +11063,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+		(property "Footprint" "Stormbreaker:TestPoint_Pad_D1.0mm_Small"
 			(at 57.15 176.53 0)
 			(effects
 				(font
@@ -11074,7 +11104,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 43.18 31.75 90)
+		(at 45.72 34.29 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11082,7 +11112,7 @@
 		(dnp no)
 		(uuid "7ad6e378-e343-4d0f-be7b-da6cad987b95")
 		(property "Reference" "C15"
-			(at 41.9162 29.21 0)
+			(at 43.18 35.5538 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11091,7 +11121,7 @@
 			)
 		)
 		(property "Value" "1μF"
-			(at 44.4562 29.21 0)
+			(at 43.18 33.0138 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11099,8 +11129,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 43.18 31.75 0)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 45.72 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11109,7 +11139,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 43.18 31.75 0)
+			(at 45.72 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11118,7 +11148,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 43.18 31.75 0)
+			(at 45.72 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11739,7 +11769,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+		(property "Footprint" "Stormbreaker:TestPoint_Pad_D0.75mm_Small"
 			(at 220.98 86.36 0)
 			(effects
 				(font
@@ -12366,7 +12396,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+		(property "Footprint" "Stormbreaker:TestPoint_Pad_D1.0mm_Small"
 			(at 64.77 176.53 0)
 			(effects
 				(font
