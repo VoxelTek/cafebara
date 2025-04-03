@@ -5843,7 +5843,7 @@
 	)
 	(wire
 		(pts
-			(xy 62.23 71.12) (xy 62.23 67.31)
+			(xy 54.61 71.12) (xy 54.61 67.31)
 		)
 		(stroke
 			(width 0)
@@ -5993,7 +5993,7 @@
 	)
 	(wire
 		(pts
-			(xy 19.05 81.28) (xy 38.1 81.28)
+			(xy 24.13 81.28) (xy 38.1 81.28)
 		)
 		(stroke
 			(width 0)
@@ -6583,7 +6583,7 @@
 	)
 	(wire
 		(pts
-			(xy 62.23 76.2) (xy 62.23 81.28)
+			(xy 54.61 76.2) (xy 54.61 81.28)
 		)
 		(stroke
 			(width 0)
@@ -6613,7 +6613,7 @@
 	)
 	(wire
 		(pts
-			(xy 19.05 71.12) (xy 19.05 81.28)
+			(xy 24.13 71.12) (xy 24.13 81.28)
 		)
 		(stroke
 			(width 0)
@@ -6693,7 +6693,7 @@
 	)
 	(wire
 		(pts
-			(xy 38.1 81.28) (xy 62.23 81.28)
+			(xy 38.1 81.28) (xy 54.61 81.28)
 		)
 		(stroke
 			(width 0)
@@ -6833,7 +6833,7 @@
 	)
 	(wire
 		(pts
-			(xy 26.67 71.12) (xy 19.05 71.12)
+			(xy 26.67 71.12) (xy 24.13 71.12)
 		)
 		(stroke
 			(width 0)
@@ -7173,7 +7173,7 @@
 	)
 	(wire
 		(pts
-			(xy 62.23 67.31) (xy 49.53 67.31)
+			(xy 54.61 67.31) (xy 49.53 67.31)
 		)
 		(stroke
 			(width 0)
@@ -9136,7 +9136,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "Conn_01x03"
+		(property "Value" "PROG"
 			(at 278.13 82.5499 0)
 			(effects
 				(font
@@ -10590,7 +10590,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 62.23 73.66 0)
+		(at 54.61 73.66 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10599,7 +10599,7 @@
 		(fields_autoplaced yes)
 		(uuid "6438fd5a-fcbb-4888-a495-9e4b891c2f52")
 		(property "Reference" "R12"
-			(at 64.77 72.3899 0)
+			(at 57.15 72.3899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10608,7 +10608,7 @@
 			)
 		)
 		(property "Value" "6.04k"
-			(at 64.77 74.9299 0)
+			(at 57.15 74.9299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10617,7 +10617,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 62.23 73.66 0)
+			(at 54.61 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10626,7 +10626,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 62.23 73.66 0)
+			(at 54.61 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10635,7 +10635,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 62.23 73.66 0)
+			(at 54.61 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14046,7 +14046,7 @@
 				)
 			)
 		)
-		(property "Value" "Conn_01x02"
+		(property "Value" "I2C"
 			(at 111.76 119.38 0)
 			(effects
 				(font
