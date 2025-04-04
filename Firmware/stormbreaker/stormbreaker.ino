@@ -187,7 +187,7 @@ void overTemp() {
 void powerButton() {
   if (!buttonTriggered) {
     buttonTriggered = true; // Make sure other instances of this function don't run. They shouldn't anyway, but eh.
-    delay(750); // Wait in order to prevent bouncing and accidental presses
+    delay(1250); // Wait in order to prevent bouncing and accidental presses
     if (digitalRead(BUTTON) == LOW) {
       if (isPowered) {
         triggerShutdown(); // Is it on? Turn it off.
