@@ -178,10 +178,12 @@ void loop() {
 
 void overTemp() {
   consoleOff();
+  analogWrite(FAN, 0xff); // fan at max speed, keep console cool
   powerLED(5);
   isOverTemp = true;
-  delay(120000);
+  delay(120 * 1000); // 2 min to cool down
   isOverTemp = false;
+  setFan(false); // disable cooling fan
 }
 
 void powerButton() {
@@ -306,23 +308,23 @@ void powerLED(uint8_t mode) {
     break;
 
     case 1:
-      setLED(0, 255, 0, 128, true);
+      setLED(0, 255, 0, 128, true); // Green
     break;
 
     case 2:
-      setLED(255, 255, 0, 128, true);
+      setLED(255, 255, 0, 128, true); // Yellow
     break;
 
     case 3:
-      setLED(255, 127, 0, 128, true);
+      setLED(255, 128, 0, 128, true); // Orange
     break;
 
     case 4:
-      setLED(255, 0, 0, 128, true);
+      setLED(255, 0, 0, 128, true); // Red
     break;
 
     case 5:
-      for (int i = 0; i < 5; i++) {
+      for (int i = 0; i < 5; i++) { // Flash red
         setLED(255, 0, 0, 128, true);
         delay(100);
         setLED(0, 0, 0, 0, false);
@@ -332,15 +334,15 @@ void powerLED(uint8_t mode) {
     break;
 
     case 6:
-      setLED(0, 0, 255, 64, true);
+      setLED(0, 0, 255, 64, true); // Dim blue
     break;
 
     case 7:
-      setLED(255, 183, 197, 64, true);
+      setLED(255, 183, 197, 64, true); // Dim sakura pink
     break;
 
     default:
-      powerLED(0);
+      powerLED(0); // off
     break;
   }
 }
@@ -490,6 +492,7 @@ void receiveDataWire(int16_t numBytes) {
     break;
 
     case 0x26:
+      getBattVoltage();
       requestedReg = &battVolt;
     break;
   }
