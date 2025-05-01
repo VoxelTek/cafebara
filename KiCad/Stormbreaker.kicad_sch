@@ -10764,7 +10764,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-3"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-523"
 			(at 240.03 82.55 0)
 			(effects
 				(font
@@ -10818,7 +10818,16 @@
 				(hide yes)
 			)
 		)
-		(property "Mouser" "https://au.mouser.com/ProductDetail/Diodes-Incorporated/DMN2310U-7?qs=xZ%2FP%252Ba9zWqY%252BAdKLxIytvQ%3D%3D"
+		(property "MouserOld" "https://au.mouser.com/ProductDetail/Diodes-Incorporated/DMN2310U-7?qs=xZ%2FP%252Ba9zWqY%252BAdKLxIytvQ%3D%3D"
+			(at 234.95 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "https://www.digikey.com.au/en/products/detail/good-ark-semiconductor/SSF2320Y/18667769"
 			(at 234.95 85.09 0)
 			(effects
 				(font
