@@ -181,7 +181,9 @@ void overTemp() {
   analogWrite(FAN, 0xff); // fan at max speed, keep console cool
   powerLED(5);
   isOverTemp = true;
-  delay(120 * 1000); // 2 min to cool down
+  for (int i = 0; i < 120; i++) { // 2 min to cool down
+    delay(1000);
+  }
   isOverTemp = false;
   setFan(false); // disable cooling fan
 }
