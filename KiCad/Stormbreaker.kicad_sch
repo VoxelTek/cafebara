@@ -7391,7 +7391,7 @@
 			)
 		)
 	)
-	(global_label "~{BT_ACTIVE}"
+	(global_label "BT_ACTIVE"
 		(shape output)
 		(at 190.5 78.74 0)
 		(fields_autoplaced yes)
@@ -7457,7 +7457,7 @@
 			)
 		)
 	)
-	(global_label "~{BT_ACTIVE}"
+	(global_label "BT_ACTIVE"
 		(shape input)
 		(at 200.66 110.49 0)
 		(fields_autoplaced yes)
