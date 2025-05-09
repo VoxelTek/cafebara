@@ -8952,7 +8952,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinSocket_1.00mm:PinSocket_1x03_P1.00mm_Vertical"
+		(property "Footprint" "Stormbreaker:UPDI Pads"
 			(at 275.59 81.28 0)
 			(effects
 				(font
