@@ -5588,6 +5588,10 @@
 		(uuid "19ee17b6-975f-4d60-a3fe-6f7cd1c5ee1a")
 	)
 	(no_connect
+		(at 187.96 80.01)
+		(uuid "2a7eb7c5-cd32-418f-814f-6ff541f78aee")
+	)
+	(no_connect
 		(at 49.53 73.66)
 		(uuid "3858f3bb-aabd-42cf-975f-6e6ae77a8ed4")
 	)
@@ -6045,16 +6049,6 @@
 	)
 	(wire
 		(pts
-			(xy 200.66 110.49) (xy 198.12 110.49)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "476e99b8-245f-47fd-a655-04a731c820a9")
-	)
-	(wire
-		(pts
 			(xy 77.47 173.99) (xy 80.01 173.99)
 		)
 		(stroke
@@ -6415,16 +6409,6 @@
 	)
 	(wire
 		(pts
-			(xy 187.96 78.74) (xy 187.96 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8a93cc58-7de6-4b9b-83ea-d93484a8e15c")
-	)
-	(wire
-		(pts
 			(xy 77.47 177.8) (xy 77.47 180.34)
 		)
 		(stroke
@@ -6502,16 +6486,6 @@
 			(type default)
 		)
 		(uuid "969700d8-9cff-45f0-9d2d-40e49a94bee3")
-	)
-	(wire
-		(pts
-			(xy 190.5 78.74) (xy 187.96 78.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9705c749-7cdc-4886-b02a-af8ac4337b5a")
 	)
 	(wire
 		(pts
@@ -7391,28 +7365,6 @@
 			)
 		)
 	)
-	(global_label "BT_ACTIVE"
-		(shape output)
-		(at 190.5 78.74 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "2523b932-243a-429b-9651-df13edd593f0")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 202.859 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "SD_DECT"
 		(shape output)
 		(at 229.87 134.62 180)
@@ -7448,28 +7400,6 @@
 		(uuid "313214ea-c484-4655-a02d-8c25af3bfbab")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 123.3328 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "BT_ACTIVE"
-		(shape input)
-		(at 200.66 110.49 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "41e2b64a-db9b-4f1f-a7f3-bae5c99e5228")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 213.019 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12707,72 +12637,6 @@
 			(project "Stormbreaker"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "C14")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 198.12 110.49 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "c7cbe015-0aae-4c93-9b65-b0c1b892e4c1")
-		(property "Reference" "TP12"
-			(at 200.66 112.5219 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "BT"
-			(at 200.66 115.0619 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Stormbreaker:TestPoint_Pad_D0.75mm_Small"
-			(at 193.04 110.49 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 193.04 110.49 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 198.12 110.49 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "92972d27-c77a-4c37-a9d9-f6ccf704cdfe")
-		)
-		(instances
-			(project "Stormbreaker"
-				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
-					(reference "TP12")
 					(unit 1)
 				)
 			)

@@ -8,6 +8,8 @@
 
 #include <EEPROM.h>
 
+#include <avr/sleep.h>
+
 #define CHRG_STAT PIN_PC0
 
 #define SDA2 PIN_PC2
@@ -55,7 +57,7 @@ bool isOverTemp = false;
 byte battCharge;
 
 byte battVolt = 0b1000101; //~3.7V
-byte minBattVolt = 0b0010011; //~2.7
+const byte minBattVolt = 0b0010011; //~2.7
 
 byte battVoltLevels[5] = {0b01011111, 0b1000101, 0b0100010, 0b0011000, 0b0010011}; // 4.2, 3.7, 3.0, 2.8, 2.7
 
@@ -65,7 +67,7 @@ byte pwrErrorStatus = 0x00;
 
 byte chargeStatus = 0b00;
 
-uint8_t bqAddr = 0x6A;
+const uint8_t bqAddr = 0x6A;
 
 byte maxCurrent = 0x3F; // 3.25A
 //byte chrgCurrent = 0b1000010; // 4224mA
@@ -107,7 +109,7 @@ void firstTimeCheck() {
     termCurrent = 0b0011;
     chrgVoltage = 0b010111;
     fanSpeed = 0xFF;
-    writeToEEPROM();
+    writeToEEPROM(); 
   }
   else {
     chrgCurrent = EEPROM.read(ADDR_CHRGCURRENT);
@@ -121,7 +123,18 @@ void firstTimeCheck() {
 
 
 void setup() {
-  firstTimeCheck();
+  ADCPowerOptions(ADC_DISABLE);
+  set_sleep_mode(SLEEP_MODE_PWR_DOWN);
+  sleep_enable();
+
+  // Set unused pins to outputs
+  pinMode(PIN_PA3, OUTPUT);
+  pinMode(PIN_PA4, OUTPUT);
+  pinMode(PIN_PA6, OUTPUT);
+  pinMode(PIN_PB5, OUTPUT);
+  pinMode(PIN_PC1, OUTPUT);
+
+  firstTimeCheck(); // Get settings from EEPROM
 
   //battChrgLevels = {chrgVoltage, 0x56, 0x4c, 0x43, 0x39, 0x30, 0x26, 0x1c};
 
@@ -139,12 +152,12 @@ void setup() {
   pinMode(PWR_ON, OUTPUT);
   digitalWrite(PWR_ON, HIGH); // Makes sure console is off
 
-  attachInterrupt(digitalPinToInterrupt(BUTTON), powerButton, FALLING);
+  attachInterrupt(digitalPinToInterrupt(BUTTON), powerButton, LOW);
   attachInterrupt(digitalPinToInterrupt(SOFT_SHUT), softShutdown, RISING);
   attachInterrupt(digitalPinToInterrupt(CHRG_STAT), chargingStatus, CHANGE);
-  attachInterrupt(digitalPinToInterrupt(TEMP_ALERT), overTemp, FALLING);
+  attachInterrupt(digitalPinToInterrupt(TEMP_ALERT), overTemp, LOW);
   
-  setFan(false);
+  setFan(false); // Turn off fan
 
 
   memset(&bbi2c, 0, sizeof(bbi2c));
@@ -165,14 +178,14 @@ void setup() {
 void loop() {
   if (isPowered) {
     monitorBatt();
-    delay(2000);
+    delay(500);
   }
   else if (isCharging) {
     chargingStatus();
-    delay(2000);
+    delay(500);
   }
   else {
-    delay(1000 * 15); // Not on, not charging, so do nothing, basically.
+    sleep_cpu();
   }
 }
 
@@ -198,7 +211,8 @@ void powerButton() {
       }
       else {
         getBattVoltage();
-        if (((battVolt > minBattVolt) || isCharging) && !isOverTemp && (pwrErrorStatus == 0x00)) { // Check that either the battery is charged enough, or console is charging, 
+        if (((battVolt > minBattVolt) || isCharging) && !isOverTemp && (pwrErrorStatus == 0x00)) { 
+        // Check that either the battery is charged enough, or console is charging, 
         // AND make sure there's no over-temp issues
         // AND make sure there's no power errors
           consoleOn(); // Voltage is high enough or currently charging, turn on console
@@ -211,7 +225,7 @@ void powerButton() {
     while (digitalRead(BUTTON) == LOW) { // Wait for button to stop being pressed
       delay(100);
     }
-    delay(250); // Debounce protection
+    delay(250); // Debounce protection...kinda
     buttonTriggered = false;
   }
 }
