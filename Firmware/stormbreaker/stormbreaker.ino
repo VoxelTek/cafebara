@@ -190,7 +190,7 @@ void loop() {
 }
 
 void overTemp() {
-  consoleOff();
+  triggerShutdown(); // Trigger shutdown process
   analogWrite(FAN, 0xff); // fan at max speed, keep console cool
   powerLED(5);
   isOverTemp = true;
@@ -203,8 +203,8 @@ void overTemp() {
 
 void powerButton() {
   if (!buttonTriggered) {
-    buttonTriggered = true; // Make sure other instances of this function don't run. They shouldn't anyway, but eh.
-    delay(1250); // Wait in order to prevent bouncing and accidental presses
+    buttonTriggered = true; // Make sure other instances of this function don't run. They shouldn't, hopefully, but eh.
+    delay(1000); // Wait in order to prevent bouncing and accidental presses
     if (digitalRead(BUTTON) == LOW) {
       if (isPowered) {
         triggerShutdown(); // Is it on? Turn it off.
@@ -237,13 +237,13 @@ void triggerShutdown() {
     digitalWrite(SOFT_PWR, LOW);
     triggeredSoftShutdown = true;
     delay(2500);
-    if (isPowered && triggeredSoftShutdown) { // Wii did not shut itself down safely, time out and force a power-off
+    if (isPowered && triggeredSoftShutdown) { // Wii did not shut itself down safely, timeout and force a power-off
       consoleOff();
       triggeredSoftShutdown = false;
     }
   }
   else if (!isPowered) {
-    consoleOff(); // If some bug happens, and the console is on while this thinks it isn't, might as well make sure it's shut down
+    consoleOff(); // If some bug happens, and the console is on while this thinks it isn't, might as well make sure it's shut down.
   }
 }
 
@@ -369,10 +369,10 @@ void consoleOn() {
   // Continuous battery voltage reading if console is on
   I2CWriteRegister(&bbi2c, bqAddr, 0x02, reg02);
 
-  digitalWrite(PWR_ON, LOW);
+  digitalWrite(PWR_ON, LOW); // Activate MOSFET
   isPowered = true;
 
-  setFan(true);
+  setFan(true); // Enable fan,
 
   monitorBatt();
 }
@@ -383,7 +383,7 @@ void consoleOff() {
   // Disable continuous battery voltage reading
   I2CWriteRegister(&bbi2c, bqAddr, 0x02, reg02);
 
-  digitalWrite(PWR_ON, HIGH);
+  digitalWrite(PWR_ON, HIGH); // Deactivate MOSFET
   isPowered = false;
 
   setFan(false);
