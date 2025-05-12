@@ -46,18 +46,18 @@ bool isRequesting = false; // Has the Wii sent a byte to request data?
 
 BBI2C bbi2c;
 
-bool isPowered = false;
-bool isCharging = false;
+bool isPowered = false; // Is the Wii powered?
+bool isCharging = false; // Is the BQ charging the batteries?
 
-bool buttonTriggered = false;
-bool triggeredSoftShutdown = false;
+bool buttonTriggered = false; // Has the button been triggered?
+bool triggeredSoftShutdown = false; // Did we trigger the soft shutdown?
 
 bool isOverTemp = false;
 
 byte battCharge;
 
 byte battVolt = 0b1000101; //~3.7V
-const byte minBattVolt = 0b0010011; //~2.7
+const byte minBattVolt = 0b0010011; //~2.7V
 
 byte battVoltLevels[5] = {0b01011111, 0b1000101, 0b0100010, 0b0011000, 0b0010011}; // 4.2, 3.7, 3.0, 2.8, 2.7
 
@@ -103,7 +103,7 @@ int I2CWriteRegister(BBI2C *pI2C, unsigned char iAddr, unsigned char reg, unsign
 
 
 void firstTimeCheck() {
-  if (EEPROM.read(ADDR_VER) == 0) {
+  if (EEPROM.read(ADDR_VER) == 0) { // Check if there's no data in the EEPROM
     chrgCurrent = 0b1000010; // 4224mA
     preCurrent = 0b0001;
     termCurrent = 0b0011;
@@ -123,9 +123,9 @@ void firstTimeCheck() {
 
 
 void setup() {
-  ADCPowerOptions(ADC_DISABLE);
-  set_sleep_mode(SLEEP_MODE_PWR_DOWN);
-  sleep_enable();
+  ADCPowerOptions(ADC_DISABLE); // We don't need the ADC, turn it off
+  set_sleep_mode(SLEEP_MODE_PWR_DOWN); // Set sleep to low power mode
+  sleep_enable(); // Enable sleeping, don't activate sleep yet though
 
   // Set unused pins to outputs
   pinMode(PIN_PA3, OUTPUT);
@@ -185,7 +185,7 @@ void loop() {
     delay(500);
   }
   else {
-    sleep_cpu();
+    sleep_cpu(); // The console isn't on, nor is it charging. Enter sleep to save power.
   }
 }
 
@@ -201,8 +201,8 @@ void overTemp() {
   setFan(false); // disable cooling fan
 }
 
-void powerButton() {
-  if (!buttonTriggered) {
+void powerButton() { // Power button has been pressed
+  if (!buttonTriggered && digitalRead(BUTTON) == LOW) {
     buttonTriggered = true; // Make sure other instances of this function don't run. They shouldn't, hopefully, but eh.
     delay(1000); // Wait in order to prevent bouncing and accidental presses
     if (digitalRead(BUTTON) == LOW) {
@@ -265,7 +265,6 @@ void chargingStatus() {
   pwrErrorStatus = errorStat;
   if (pwrErrorStatus != 0x00) { // Uh oh, *something* is wrong
     triggerShutdown();
-    powerLED(5);
     if (pwrErrorStatus & 0b00100000) { // oh jeez stuff is hot this is really bad
       overTemp();
       return;

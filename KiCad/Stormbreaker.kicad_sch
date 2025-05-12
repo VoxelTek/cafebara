@@ -6359,16 +6359,6 @@
 	)
 	(wire
 		(pts
-			(xy 237.49 78.74) (xy 237.49 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "83b3bcb1-ac92-4399-ab5b-733d41caf9db")
-	)
-	(wire
-		(pts
 			(xy 265.43 81.28) (xy 270.51 81.28)
 		)
 		(stroke
@@ -6796,16 +6786,6 @@
 			(type default)
 		)
 		(uuid "c6798295-f090-40b5-b84f-384bbbcbb697")
-	)
-	(wire
-		(pts
-			(xy 242.57 78.74) (xy 237.49 78.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c892bfd2-fd50-48c8-9839-c270d296c984")
 	)
 	(wire
 		(pts
@@ -10260,7 +10240,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 242.57 78.74 270)
+		(at 237.49 80.01 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10269,7 +10249,7 @@
 		(fields_autoplaced yes)
 		(uuid "5971f501-182c-421c-b8b7-e7c659f2973d")
 		(property "Reference" "TP4"
-			(at 247.65 77.4699 90)
+			(at 240.03 75.4379 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10278,7 +10258,7 @@
 			)
 		)
 		(property "Value" "FAN"
-			(at 247.65 80.0099 90)
+			(at 240.03 77.9779 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10287,7 +10267,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 242.57 83.82 0)
+			(at 242.57 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10296,7 +10276,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 242.57 83.82 0)
+			(at 242.57 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10305,7 +10285,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 242.57 78.74 0)
+			(at 237.49 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
