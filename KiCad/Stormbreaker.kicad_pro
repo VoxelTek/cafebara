@@ -38,8 +38,8 @@
         "other_text_upright": false,
         "pads": {
           "drill": 0.0,
-          "height": 0.64,
-          "width": 0.54
+          "height": 2.5,
+          "width": 2.5
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -73,18 +73,6 @@
         ],
         [
           "courtyards_overlap|127095938|57521533|120af204-d248-4086-a4d0-d07e165576f2|46ae9b05-972c-461f-a70d-c2f934bf27f2",
-          ""
-        ],
-        [
-          "courtyards_overlap|145375000|60785000|2bbab47e-7728-46a3-8763-2ed9986c29d2|6105928a-923b-44ec-b815-518be9739789",
-          ""
-        ],
-        [
-          "courtyards_overlap|145655000|44775000|bbb3a626-5c61-4d86-8b6a-256d642adfdf|f9444fb0-44bb-4c2d-8c51-c66f9c7dcc8c",
-          ""
-        ],
-        [
-          "courtyards_overlap|150554999|55875000|2bbab47e-7728-46a3-8763-2ed9986c29d2|fbea15a1-40da-4398-bb43-84addb232c56",
           ""
         ]
       ],
