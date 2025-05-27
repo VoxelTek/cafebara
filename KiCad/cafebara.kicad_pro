@@ -479,7 +479,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "Stormbreaker.kicad_pro",
+    "filename": "cafebara.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -621,7 +621,7 @@
       "plot": "./Gerbers",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "Stormbreaker.step",
+      "step": "cafebara.step",
       "svg": "",
       "vrml": ""
     },
