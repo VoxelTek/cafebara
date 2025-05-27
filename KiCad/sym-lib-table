@@ -1,6 +1,6 @@
 (sym_lib_table
   (version 7)
-  (lib (name "Stormbreaker")(type "KiCad")(uri "${KIPRJMOD}/Symbols/Stormbreaker.kicad_sym")(options "")(descr ""))
+  (lib (name "cafebara")(type "KiCad")(uri "${KIPRJMOD}/Symbols/cafebara.kicad_sym")(options "")(descr ""))
   (lib (name "melonHD_module")(type "KiCad")(uri "${KIPRJMOD}/Symbols/melonHD_module.kicad_sym")(options "")(descr ""))
   (lib (name "Bistro2")(type "KiCad")(uri "${KIPRJMOD}/Symbols/Bistro2.kicad_sym")(options "")(descr ""))
   (lib (name "ISL9110IRTAZ")(type "KiCad")(uri "${KIPRJMOD}/Symbols/ISL9110IRTAZ.kicad_sym")(options "")(descr ""))
