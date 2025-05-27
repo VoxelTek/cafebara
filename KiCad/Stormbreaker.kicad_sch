@@ -5203,6 +5203,12 @@
 		(uuid "b8bb7e69-b5c8-457d-b046-5ba6128c53aa")
 	)
 	(junction
+		(at 229.87 78.74)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c635ae98-3801-4f69-8951-eac5a96550d7")
+	)
+	(junction
 		(at 330.2 133.35)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6004,6 +6010,16 @@
 	)
 	(wire
 		(pts
+			(xy 229.87 78.74) (xy 217.17 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a49a7a48-1666-4a9f-aa95-bce44619effc")
+	)
+	(wire
+		(pts
 			(xy 359.41 154.94) (xy 361.95 154.94)
 		)
 		(stroke
@@ -6034,7 +6050,7 @@
 	)
 	(wire
 		(pts
-			(xy 229.87 78.74) (xy 217.17 78.74)
+			(xy 242.57 78.74) (xy 229.87 78.74)
 		)
 		(stroke
 			(width 0)
@@ -6686,7 +6702,7 @@
 	)
 	(global_label "EN"
 		(shape output)
-		(at 229.87 78.74 0)
+		(at 242.57 78.74 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6696,7 +6712,7 @@
 		)
 		(uuid "3f4be303-7bcf-4111-bf62-643ea7c05db2")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 235.3347 78.74 0)
+			(at 248.0347 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9688,6 +9704,72 @@
 			(project "Stormbreaker"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "TP4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 229.87 78.74 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6327cbef-049f-4e4c-8876-2b1f4d7b804f")
+		(property "Reference" "TP3"
+			(at 232.41 80.7719 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "EN"
+			(at 232.41 83.3119 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Stormbreaker:TestPoint_Pad_D1.0mm_Small"
+			(at 224.79 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 224.79 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 229.87 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ae0efe4c-60e7-4b97-adb4-d2bf3d3296cc")
+		)
+		(instances
+			(project "Stormbreaker"
+				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
+					(reference "TP3")
 					(unit 1)
 				)
 			)
