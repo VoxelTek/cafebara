@@ -394,7 +394,7 @@
 					)
 				)
 			)
-			(pin open_collector line
+			(pin output line
 				(at 11.43 -3.81 180)
 				(length 2.54)
 				(name "P_{GOOD}"
