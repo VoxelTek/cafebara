@@ -31,7 +31,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.onsemi.com/pdf/datasheet/fan49100-d.pdf"
+		(property "Datasheet" "https://www.onsemi.com/download/data-sheet/pdf/fan49100-d.pdf"
 			(at 0 12.446 0)
 			(effects
 				(font
