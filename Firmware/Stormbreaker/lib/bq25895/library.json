@@ -1,0 +1,22 @@
+{
+  "name": "bq25895",
+  "version": "0.0.1",
+  "description": "The BQ25895 IC, from Texas Instruments, is a battery management controller capable of delivering high currents and a wide charging voltage range. This driver exposes the register access.",
+  "keywords": "battery, power, bq25895, ti, i2c",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/voxeltek/bq25895.git"
+  },
+  "authors":
+  [
+    {
+      "name": "VoxelTek",
+      "email": "voxeltek@poto.cafe",
+      "maintainer": true
+    }
+  ],
+  "license": "MIT",
+  "frameworks": "*",
+  "platforms": "*"
+}
