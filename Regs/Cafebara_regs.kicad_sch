@@ -4905,6 +4905,28 @@
 			)
 		)
 	)
+	(global_label "EN"
+		(shape output)
+		(at 161.29 30.48 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "e68c990d-8ca9-408e-a181-02e2e78630d3")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 155.8253 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(symbol
 		(lib_id "power:+5V")
 		(at 270.51 124.46 0)
@@ -5106,72 +5128,6 @@
 			(project "Cafebara_regs"
 				(path "/f90fb1fb-a242-4f20-8a51-2c53666311a4"
 					(reference "C17")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+1V1")
-		(at 146.05 97.79 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "021587ed-818e-4dbb-b265-e63eab396cd4")
-		(property "Reference" "#PWR016"
-			(at 146.05 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+1V15"
-			(at 146.05 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 146.05 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 146.05 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+1V15\""
-			(at 146.05 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "73964c8f-bafd-456c-be4a-8e1f94fcfb02")
-		)
-		(instances
-			(project "Cafebara_regs"
-				(path "/f90fb1fb-a242-4f20-8a51-2c53666311a4"
-					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -5440,72 +5396,6 @@
 			(project "Cafebara_regs"
 				(path "/f90fb1fb-a242-4f20-8a51-2c53666311a4"
 					(reference "#PWR032")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 162.56 96.52 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "0b0afa94-fd21-4262-999b-c92ba8eb2e30")
-		(property "Reference" "#PWR013"
-			(at 162.56 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 162.56 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 162.56 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 162.56 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 162.56 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "58415e13-6b8d-4aaf-9fc5-383566304708")
-		)
-		(instances
-			(project "Cafebara_regs"
-				(path "/f90fb1fb-a242-4f20-8a51-2c53666311a4"
-					(reference "#PWR013")
 					(unit 1)
 				)
 			)
@@ -7307,72 +7197,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 161.29 27.94 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "41fc80ec-0701-4838-87dd-bca9ec577e55")
-		(property "Reference" "#PWR04"
-			(at 161.29 34.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 161.29 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 161.29 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 161.29 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 161.29 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "d5065a15-8c8c-44ce-ad75-637927452c57")
-		)
-		(instances
-			(project "Cafebara_regs"
-				(path "/f90fb1fb-a242-4f20-8a51-2c53666311a4"
-					(reference "#PWR04")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+3.3V")
 		(at 100.33 168.91 0)
 		(unit 1)
@@ -7598,7 +7422,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 224.79 64.77 0)
 			(effects
 				(font
@@ -7869,7 +7693,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 226.06 35.56 0)
 			(effects
 				(font
@@ -8587,73 +8411,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 161.29 27.94 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "65866925-2ee2-4454-83d5-be5db21fee29")
-		(property "Reference" "TP2"
-			(at 163.83 23.3679 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "GND"
-			(at 163.83 25.9079 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Plated_Hole_D2.0mm"
-			(at 166.37 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 166.37 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 161.29 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a1f32e6e-da84-4e46-81b3-cb92adaad418")
-		)
-		(instances
-			(project "Cafebara_regs"
-				(path "/f90fb1fb-a242-4f20-8a51-2c53666311a4"
-					(reference "TP2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 22.86 102.87 0)
 		(unit 1)
@@ -8721,7 +8478,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 146.05 26.67 270)
+		(at 161.29 30.48 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8730,7 +8487,7 @@
 		(fields_autoplaced yes)
 		(uuid "6783c20e-299e-4e3c-b62b-cbba36deaec9")
 		(property "Reference" "TP1"
-			(at 151.13 25.3999 90)
+			(at 166.37 29.2099 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8738,8 +8495,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "+1V"
-			(at 151.13 27.9399 90)
+		(property "Value" "EN"
+			(at 166.37 31.7499 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8747,8 +8504,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Plated_Hole_D2.0mm"
-			(at 146.05 31.75 0)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
+			(at 161.29 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8757,7 +8514,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 146.05 31.75 0)
+			(at 161.29 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8766,7 +8523,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 146.05 26.67 0)
+			(at 161.29 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9560,7 +9317,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 262.89 64.77 0)
 			(effects
 				(font
@@ -9812,73 +9569,6 @@
 			(project "Cafebara_regs"
 				(path "/f90fb1fb-a242-4f20-8a51-2c53666311a4"
 					(reference "C10")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 146.05 97.79 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9c682f58-bdd9-4c97-871d-d86a1412261b")
-		(property "Reference" "TP4"
-			(at 151.13 96.5199 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "+1.15V"
-			(at 151.13 99.0599 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Plated_Hole_D2.0mm"
-			(at 146.05 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 146.05 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 146.05 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "5b258387-a3be-48f7-9ae7-a6c30eddc836")
-		)
-		(instances
-			(project "Cafebara_regs"
-				(path "/f90fb1fb-a242-4f20-8a51-2c53666311a4"
-					(reference "TP4")
 					(unit 1)
 				)
 			)
@@ -10390,7 +10080,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 259.08 35.56 0)
 			(effects
 				(font
@@ -10427,73 +10117,6 @@
 			(project "Cafebara_regs"
 				(path "/f90fb1fb-a242-4f20-8a51-2c53666311a4"
 					(reference "C23")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 162.56 96.52 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a84a8e5a-c9b0-4538-8676-0cfb968fc059")
-		(property "Reference" "TP3"
-			(at 165.1 91.9479 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "GND"
-			(at 165.1 94.4879 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Plated_Hole_D2.0mm"
-			(at 167.64 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 167.64 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 162.56 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "74f6790c-3f05-4d3e-8ccf-02e176ac85b3")
-		)
-		(instances
-			(project "Cafebara_regs"
-				(path "/f90fb1fb-a242-4f20-8a51-2c53666311a4"
-					(reference "TP3")
 					(unit 1)
 				)
 			)
@@ -11408,72 +11031,6 @@
 			(project "Cafebara_regs"
 				(path "/f90fb1fb-a242-4f20-8a51-2c53666311a4"
 					(reference "R4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+1V0")
-		(at 146.05 26.67 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "c4268af5-36e3-41c9-896c-f9bdc3d1b033")
-		(property "Reference" "#PWR03"
-			(at 146.05 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+1V0"
-			(at 146.05 21.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 146.05 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 146.05 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+1V0\""
-			(at 146.05 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "07c74596-4895-4334-b83a-d31f9c20a5ec")
-		)
-		(instances
-			(project "Cafebara_regs"
-				(path "/f90fb1fb-a242-4f20-8a51-2c53666311a4"
-					(reference "#PWR03")
 					(unit 1)
 				)
 			)
