@@ -1,4 +1,4 @@
-24490065167331948
+24495345297649466
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -98706,6 +98706,27 @@ test point SMD pad
 0
 1
 1
+cafebara
+UFDFPN_RMC
+
+M24C02-RMC6TG 
+0
+9
+9
+cafebara
+UFDFPN_RMC6TG_STM-L
+
+M24C02-RMC6TG 
+0
+9
+9
+cafebara
+UFDFPN_RMC6TG_STM-M
+
+M24C02-RMC6TG 
+0
+9
+9
 cafebara
 UPDI Pads
 
