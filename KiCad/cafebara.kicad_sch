@@ -6751,6 +6751,12 @@
 		(uuid "5b2d9cbc-03f2-4044-bd1b-3c856447c323")
 	)
 	(junction
+		(at -168.91 99.06)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5b344d83-9ed8-4bfd-8a4a-a4a8ada67282")
+	)
+	(junction
 		(at 62.23 156.21)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6839,6 +6845,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a4ea7394-0ad3-438f-8d40-61ae1eeeeba1")
+	)
+	(junction
+		(at -168.91 93.98)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a85a822b-595a-4939-9655-403c8f13042c")
 	)
 	(junction
 		(at 77.47 173.99)
@@ -7011,6 +7023,16 @@
 	(no_connect
 		(at 217.17 60.96)
 		(uuid "ce035da1-66c0-4e80-bbae-9046fe178500")
+	)
+	(wire
+		(pts
+			(xy -168.91 99.06) (xy -158.75 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "01d593cf-f76c-4eca-a711-ceb9691211ca")
 	)
 	(wire
 		(pts
@@ -8081,6 +8103,16 @@
 			(type default)
 		)
 		(uuid "abcbc6fd-e65f-44cb-ba49-724a7224726d")
+	)
+	(wire
+		(pts
+			(xy -168.91 93.98) (xy -158.75 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aef29fa1-92c6-474e-87ef-fa40f8cba3f4")
 	)
 	(wire
 		(pts
@@ -11734,6 +11766,76 @@
 			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "BT1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at -158.75 96.52 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "21e893ca-8631-485a-b54a-566e3568b9c7")
+		(property "Reference" "C10"
+			(at -161.29 95.2562 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10uF"
+			(at -161.29 97.7962 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at -158.75 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at -158.75 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at -158.75 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7643f6d1-2cc1-45cf-b65d-a6bf2186259f")
+		)
+		(pin "2"
+			(uuid "cc2ce30b-a630-4ab9-94bb-43a5a7b8d046")
+		)
+		(instances
+			(project "cafebara"
+				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
+					(reference "C10")
 					(unit 1)
 				)
 			)
