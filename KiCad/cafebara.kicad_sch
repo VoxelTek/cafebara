@@ -542,12 +542,12 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Connector:Micro_SD_Card_Det2"
+		(symbol "Connector:Micro_SD_Card_Det1"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "J"
-				(at -16.51 17.78 0)
+			(property "Reference" "J1"
+				(at 0.635 21.59 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -555,15 +555,14 @@
 				)
 			)
 			(property "Value" "Micro_SD_Card_Det2"
-				(at 16.51 17.78 0)
+				(at 0.635 19.05 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify right)
 				)
 			)
-			(property "Footprint" ""
+			(property "Footprint" "Connector_Card:microSD_HC_Hirose_DM3D-SF"
 				(at 52.07 17.78 0)
 				(effects
 					(font
@@ -581,7 +580,16 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Micro SD Card Socket with two card detection pins"
+			(property "Description" "Micro SD Card Socket with one card detection pin"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Model" "DM3D-SF(41)"
 				(at 0 0 0)
 				(effects
 					(font
@@ -608,7 +616,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "Micro_SD_Card_Det2_0_1"
+			(symbol "Micro_SD_Card_Det1_0_1"
 				(polyline
 					(pts
 						(xy -8.89 -8.89) (xy -8.89 11.43) (xy -1.27 11.43) (xy 2.54 15.24) (xy 3.81 15.24) (xy 3.81 13.97)
@@ -723,7 +731,7 @@
 					)
 				)
 			)
-			(symbol "Micro_SD_Card_Det2_1_1"
+			(symbol "Micro_SD_Card_Det1_1_1"
 				(pin bidirectional line
 					(at -22.86 10.16 0)
 					(length 3.81)
@@ -869,27 +877,9 @@
 					)
 				)
 				(pin passive line
-					(at -22.86 -10.16 0)
-					(length 3.81)
-					(name "DET_A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
 					(at -22.86 -12.7 0)
 					(length 3.81)
-					(name "DET_B"
+					(name "DET"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -907,6 +897,25 @@
 				(pin passive line
 					(at 20.32 -12.7 180)
 					(length 3.81)
+					(name "SHIELD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 20.32 -12.7 180)
+					(length 3.81)
+					(hide yes)
 					(name "SHIELD"
 						(effects
 							(font
@@ -3110,6 +3119,168 @@
 					(at 0 -2.54 90)
 					(length 2.54)
 					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Device:C_Polarized_Small"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0.254 1.778 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C_Polarized_Small"
+				(at 0.254 -2.032 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Polarized capacitor, small symbol"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "CP_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "C_Polarized_Small_0_1"
+				(rectangle
+					(start -1.524 0.6858)
+					(end 1.524 0.3048)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.524 -0.3048)
+					(end 1.524 -0.6858)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 1.524) (xy -0.762 1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.016 1.27) (xy -1.016 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_Polarized_Small_1_1"
+				(pin passive line
+					(at 0 2.54 270)
+					(length 1.8542)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 1.8542)
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -6514,12 +6685,6 @@
 		(uuid "04cefe69-52eb-413a-b3c3-00fc578f1213")
 	)
 	(junction
-		(at -96.52 96.52)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "12e88419-50eb-44ef-9244-2e4212d4158d")
-	)
-	(junction
 		(at 224.79 66.04)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6646,6 +6811,12 @@
 		(uuid "8f605ed8-873a-48e8-bdb8-f8291d2498ff")
 	)
 	(junction
+		(at -96.52 96.52)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a03a906c-1a3e-4d9d-9aec-a659fa9e7fde")
+	)
+	(junction
 		(at 113.03 34.29)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6765,19 +6936,9 @@
 		(color 0 0 0 0)
 		(uuid "f04b6915-3778-43bf-b443-9182f65cee6f")
 	)
-	(junction
-		(at 224.79 156.21)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f9f96866-3a75-4c0f-ab9a-b7427962c13f")
-	)
 	(no_connect
 		(at -137.16 96.52)
 		(uuid "07d84e65-5309-4097-8466-8fd6ab47ba91")
-	)
-	(no_connect
-		(at 217.17 78.74)
-		(uuid "0f0ac0ad-6253-4160-b6fc-c9f73363b86a")
 	)
 	(no_connect
 		(at -137.16 127)
@@ -6834,6 +6995,10 @@
 	(no_connect
 		(at 34.29 34.29)
 		(uuid "b2c31e52-a7e0-4b26-83f9-d496d9a7b72c")
+	)
+	(no_connect
+		(at 217.17 73.66)
+		(uuid "bf6c46bc-df1e-477d-a410-cf0291f26994")
 	)
 	(no_connect
 		(at -137.16 121.92)
@@ -6969,16 +7134,6 @@
 	)
 	(wire
 		(pts
-			(xy 224.79 156.21) (xy 237.49 156.21)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "15929b80-5726-4b40-836e-c1a95d7661cf")
-	)
-	(wire
-		(pts
 			(xy 50.8 116.84) (xy 54.61 116.84)
 		)
 		(stroke
@@ -6989,7 +7144,7 @@
 	)
 	(wire
 		(pts
-			(xy 219.71 73.66) (xy 217.17 73.66)
+			(xy 219.71 78.74) (xy 217.17 78.74)
 		)
 		(stroke
 			(width 0)
@@ -7089,7 +7244,7 @@
 	)
 	(wire
 		(pts
-			(xy 224.79 156.21) (xy 224.79 160.02)
+			(xy 224.79 146.05) (xy 224.79 160.02)
 		)
 		(stroke
 			(width 0)
@@ -7399,6 +7554,16 @@
 	)
 	(wire
 		(pts
+			(xy -96.52 96.52) (xy -87.63 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5a4d35bd-6b87-4c1f-a061-e9f4773cd492")
+	)
+	(wire
+		(pts
 			(xy 80.01 171.45) (xy 77.47 171.45)
 		)
 		(stroke
@@ -7446,16 +7611,6 @@
 			(type default)
 		)
 		(uuid "655977ce-9fdc-4045-b876-82c3827adab0")
-	)
-	(wire
-		(pts
-			(xy -96.52 96.52) (xy -87.63 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6611f92d-dc5a-4983-b21a-50a271c6f872")
 	)
 	(wire
 		(pts
@@ -8189,16 +8344,6 @@
 	)
 	(wire
 		(pts
-			(xy 224.79 146.05) (xy 224.79 156.21)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cf85f022-096f-4f9a-8d56-907650d778e8")
-	)
-	(wire
-		(pts
 			(xy -106.68 120.65) (xy -115.57 120.65)
 		)
 		(stroke
@@ -8899,7 +9044,7 @@
 	)
 	(global_label "SD_DECT"
 		(shape output)
-		(at 237.49 153.67 180)
+		(at 237.49 156.21 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8909,7 +9054,7 @@
 		)
 		(uuid "267c60f0-fc1f-452e-8669-aed145d41181")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 226.4011 153.67 0)
+			(at 226.4011 156.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9801,7 +9946,7 @@
 	)
 	(global_label "~{ALERT}"
 		(shape input)
-		(at 219.71 73.66 0)
+		(at 219.71 78.74 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -9811,7 +9956,7 @@
 		)
 		(uuid "b107165f-06c7-4209-aae9-615c3086c44c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 228.1985 73.66 0)
+			(at 228.1985 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10502,6 +10647,85 @@
 			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "TP10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Polarized_Small")
+		(at -96.52 99.06 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0940c6a0-2864-4919-816a-8b6c63ad14b5")
+		(property "Reference" "C19"
+			(at -100.33 97.2438 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100uF"
+			(at -100.33 99.7838 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_Tantalum_SMD:CP_EIA-3216-10_Kemet-I"
+			(at -96.52 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at -96.52 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Polarized capacitor, small symbol"
+			(at -96.52 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "https://www.digikey.com.au/en/products/detail/vishay-sprague/TL8A0107M6R3C/3883158"
+			(at -96.52 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "835a79c6-56e3-4a2e-9865-fcd3348d97f8")
+		)
+		(pin "1"
+			(uuid "d869965b-1a25-470a-b5f6-72cbf2f70bda")
+		)
+		(instances
+			(project ""
+				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
+					(reference "C19")
 					(unit 1)
 				)
 			)
@@ -11881,7 +12105,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 148.59 158.75 0)
 			(effects
 				(font
@@ -12732,76 +12956,6 @@
 			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "#PWR041")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Small")
-		(at -96.52 99.06 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "400a6c93-d2c8-454b-afca-b055fc86b726")
-		(property "Reference" "C10"
-			(at -99.06 97.7962 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "22uF"
-			(at -99.06 100.3362 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at -96.52 99.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at -96.52 99.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor, small symbol"
-			(at -96.52 99.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "5be9d354-00d6-4de2-8e56-596cfdd7cc5d")
-		)
-		(pin "2"
-			(uuid "f017b1dd-22fc-4268-9f85-844690a17b21")
-		)
-		(instances
-			(project "cafebara"
-				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
-					(reference "C10")
 					(unit 1)
 				)
 			)
@@ -14326,7 +14480,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:Micro_SD_Card_Det2")
+		(lib_id "Connector:Micro_SD_Card_Det1")
 		(at 260.35 143.51 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -14369,7 +14523,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Micro SD Card Socket with two card detection pins"
+		(property "Description" "Micro SD Card Socket with one card detection pin"
 			(at 260.35 143.51 0)
 			(effects
 				(font
@@ -14418,7 +14572,7 @@
 			(uuid "59270371-a19d-4241-9c66-64eff02eed4a")
 		)
 		(pin "11"
-			(uuid "97821219-59d4-45e7-93b4-b2f7ad8ada76")
+			(uuid "194a7106-27ff-4ec0-98fb-e01fd9449017")
 		)
 		(instances
 			(project ""
