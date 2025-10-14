@@ -6733,6 +6733,12 @@
 		(uuid "35e45652-0769-494a-8970-145162f37285")
 	)
 	(junction
+		(at -90.17 109.22)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "39d0a78f-edf9-454b-9655-61f28cca0891")
+	)
+	(junction
 		(at 194.31 128.27)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6785,6 +6791,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6fb38f37-3323-4ba4-a2b7-5672ce91f917")
+	)
+	(junction
+		(at -90.17 116.84)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "70a882e2-c73c-465b-a866-a50d2010abd8")
 	)
 	(junction
 		(at 232.41 68.58)
@@ -7516,6 +7528,16 @@
 	)
 	(wire
 		(pts
+			(xy -80.01 110.49) (xy -80.01 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "49c1df93-5eb8-4641-9aa8-b25c2feb0436")
+	)
+	(wire
+		(pts
 			(xy 128.27 53.34) (xy 147.32 53.34)
 		)
 		(stroke
@@ -8013,6 +8035,16 @@
 			(type default)
 		)
 		(uuid "9f176dfc-330f-4d1c-afcc-21ccb7036df4")
+	)
+	(wire
+		(pts
+			(xy -80.01 116.84) (xy -90.17 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9f6762d0-3709-45ad-b8a4-d5b384883de5")
 	)
 	(wire
 		(pts
@@ -8596,6 +8628,16 @@
 	)
 	(wire
 		(pts
+			(xy -80.01 115.57) (xy -80.01 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ef0bed64-143b-4cd4-b548-c75433a78973")
+	)
+	(wire
+		(pts
 			(xy 190.5 120.65) (xy 193.04 120.65)
 		)
 		(stroke
@@ -8623,6 +8665,16 @@
 			(type default)
 		)
 		(uuid "f4aea196-4fe0-4241-a98f-79de4ea98bd9")
+	)
+	(wire
+		(pts
+			(xy -80.01 109.22) (xy -90.17 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f58d8365-cc88-44a8-b3bf-02d095e154c9")
 	)
 	(wire
 		(pts
@@ -9360,7 +9412,7 @@
 			)
 		)
 	)
-	(global_label "~{INT}"
+	(global_label "~{BQ_INT}"
 		(shape input)
 		(at 186.69 66.04 180)
 		(fields_autoplaced yes)
@@ -9372,7 +9424,7 @@
 		)
 		(uuid "5755289a-5a40-4fe8-94ab-bea24a6a8ea7")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 180.8019 66.04 0)
+			(at 177.2338 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9822,7 +9874,7 @@
 			)
 		)
 	)
-	(global_label "~{INT}"
+	(global_label "~{BQ_INT}"
 		(shape output)
 		(at -137.16 119.38 180)
 		(fields_autoplaced yes)
@@ -9834,7 +9886,7 @@
 		)
 		(uuid "a1b96e26-a4c0-4559-8c41-a805d1578adc")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at -143.0481 119.38 0)
+			(at -146.6162 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15697,6 +15749,75 @@
 			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "#PWR031")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at -80.01 113.03 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "af8c7c2f-c151-446d-aecc-39a735640b9f")
+		(property "Reference" "C20"
+			(at -77.47 111.7662 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10uF"
+			(at -77.47 114.3062 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at -80.01 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at -80.01 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at -80.01 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "16995f5a-abfd-4c68-a6c0-3ba7396c98dd")
+		)
+		(pin "2"
+			(uuid "afefdd28-4036-4ab7-84c2-a2369688b47e")
+		)
+		(instances
+			(project "cafebara"
+				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
+					(reference "C20")
 					(unit 1)
 				)
 			)
