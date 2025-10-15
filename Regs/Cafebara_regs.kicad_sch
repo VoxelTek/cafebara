@@ -3371,16 +3371,16 @@
 		(uuid "078717e5-53e3-46bf-b4a7-4ceb8b2125c4")
 	)
 	(junction
-		(at 31.75 102.87)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "0a0a45bc-649d-4c56-8c39-a3ae2d0521c1")
-	)
-	(junction
 		(at 22.86 97.79)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "13602359-2f2f-437c-a0a5-52d81074c05b")
+	)
+	(junction
+		(at 31.75 102.87)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "14667266-4363-4549-88b2-af3c1ded81e8")
 	)
 	(junction
 		(at 246.38 101.6)
@@ -3411,6 +3411,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "1f4960e6-15b1-4cbd-8d3d-bd051fe0d439")
+	)
+	(junction
+		(at 31.75 97.79)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2000ee6b-a09b-4519-b3de-0772e7007335")
 	)
 	(junction
 		(at 100.33 168.91)
@@ -3527,16 +3533,16 @@
 		(uuid "711f7603-c101-49d1-b8d4-1c7b5a25489b")
 	)
 	(junction
+		(at 34.29 26.67)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "83d2a18a-d2b8-4da7-9a31-f5b1158c011f")
+	)
+	(junction
 		(at 81.28 57.15)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8bc2ef79-a4c0-49c5-b890-9abdb3efe1c4")
-	)
-	(junction
-		(at 33.02 31.75)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8da3fc96-3c91-47b3-904f-4337add0c4b1")
 	)
 	(junction
 		(at 105.41 100.33)
@@ -3573,6 +3579,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b3f1d65b-fa00-43cf-9e4d-156963c5a3ad")
+	)
+	(junction
+		(at 34.29 31.75)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b71c9e08-1c17-4989-afac-a058f77e0167")
 	)
 	(junction
 		(at 36.83 111.76)
@@ -3629,18 +3641,6 @@
 		(uuid "e5169c96-71d5-4557-9782-34513724f9ff")
 	)
 	(junction
-		(at 33.02 26.67)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "eae46f49-95a4-4049-a806-f15a5332c0ad")
-	)
-	(junction
-		(at 31.75 97.79)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "efb3470a-cd48-408f-afca-74a56f7be20d")
-	)
-	(junction
 		(at 224.79 62.23)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3655,16 +3655,6 @@
 	(no_connect
 		(at 217.17 104.14)
 		(uuid "d36642af-216e-4548-ae71-c940fd949bfc")
-	)
-	(wire
-		(pts
-			(xy 31.75 102.87) (xy 40.64 102.87)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "02fe3f50-c63a-40f0-9fe2-6f7c78b773b6")
 	)
 	(wire
 		(pts
@@ -3898,13 +3888,23 @@
 	)
 	(wire
 		(pts
-			(xy 24.13 31.75) (xy 33.02 31.75)
+			(xy 24.13 31.75) (xy 34.29 31.75)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "5abcd39b-0bd8-4102-9683-0b237a3b37ca")
+	)
+	(wire
+		(pts
+			(xy 31.75 102.87) (xy 40.64 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "665eaf47-9be7-4c34-b5e8-b4d86d1f2e50")
 	)
 	(wire
 		(pts
@@ -3935,6 +3935,16 @@
 			(type default)
 		)
 		(uuid "6c4afb6f-026a-4c2c-ab54-bcd505dbfb65")
+	)
+	(wire
+		(pts
+			(xy 34.29 26.67) (xy 40.64 26.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6c883a2c-be53-4600-99ed-1df9e86f460b")
 	)
 	(wire
 		(pts
@@ -4028,6 +4038,16 @@
 	)
 	(wire
 		(pts
+			(xy 34.29 31.75) (xy 40.64 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7f3a5285-28cc-4db8-8178-9c1aa0029c86")
+	)
+	(wire
+		(pts
 			(xy 41.91 40.64) (xy 49.53 40.64)
 		)
 		(stroke
@@ -4055,16 +4075,6 @@
 			(type default)
 		)
 		(uuid "85c2e503-0518-4672-b136-c643957a1751")
-	)
-	(wire
-		(pts
-			(xy 31.75 97.79) (xy 40.64 97.79)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8b3c7b64-5493-40ab-b447-897dad860e43")
 	)
 	(wire
 		(pts
@@ -4158,16 +4168,6 @@
 	)
 	(wire
 		(pts
-			(xy 33.02 31.75) (xy 40.64 31.75)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a692832f-25b7-4190-8111-2bd6a6926285")
-	)
-	(wire
-		(pts
 			(xy 248.92 106.68) (xy 259.08 106.68)
 		)
 		(stroke
@@ -4245,16 +4245,6 @@
 			(type default)
 		)
 		(uuid "c065e09b-5128-410a-a9b6-84a9e8db864f")
-	)
-	(wire
-		(pts
-			(xy 33.02 26.67) (xy 40.64 26.67)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c17dfa52-9ae5-4d76-8fcc-8b3991b868eb")
 	)
 	(wire
 		(pts
@@ -4368,6 +4358,16 @@
 	)
 	(wire
 		(pts
+			(xy 162.56 99.06) (xy 165.1 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dcd9ac9e-1218-43d2-bafe-7daa3bee09d0")
+	)
+	(wire
+		(pts
 			(xy 81.28 57.15) (xy 83.82 57.15)
 		)
 		(stroke
@@ -4408,7 +4408,7 @@
 	)
 	(wire
 		(pts
-			(xy 24.13 26.67) (xy 33.02 26.67)
+			(xy 24.13 26.67) (xy 34.29 26.67)
 		)
 		(stroke
 			(width 0)
@@ -4445,6 +4445,16 @@
 			(type default)
 		)
 		(uuid "ee26c9c6-e21d-4490-920c-0a7a9843ecb3")
+	)
+	(wire
+		(pts
+			(xy 31.75 97.79) (xy 40.64 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ef6e3649-a535-4288-97e7-f60f114f44a7")
 	)
 	(wire
 		(pts
@@ -4937,6 +4947,28 @@
 		(uuid "9c599e2c-2c41-4806-8608-7579570cf489")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 232.0253 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "EN"
+		(shape input)
+		(at 162.56 99.06 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "aae25ae8-77c0-46a0-aef9-f43f84dba99a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 157.0953 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5575,6 +5607,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+5V")
+		(at 247.65 120.65 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0cbe6ecd-8491-4f82-a080-d0ae5b36a347")
+		(property "Reference" "#PWR04"
+			(at 247.65 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 247.65 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 247.65 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 247.65 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 247.65 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "92b48720-d094-4f1a-803e-5efa4d066f51")
+		)
+		(instances
+			(project "Cafebara_regs"
+				(path "/f90fb1fb-a242-4f20-8a51-2c53666311a4"
+					(reference "#PWR04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 180.34 135.89 0)
 		(unit 1)
@@ -5635,6 +5733,72 @@
 			(project "Cafebara_regs"
 				(path "/f90fb1fb-a242-4f20-8a51-2c53666311a4"
 					(reference "#PWR03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 165.1 104.14 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0e95e9bf-6251-4680-8289-49d33cceb015")
+		(property "Reference" "#PWR016"
+			(at 165.1 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 165.1 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 165.1 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 165.1 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 165.1 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ed463215-318e-490c-96d7-16d22da40f24")
+		)
+		(instances
+			(project "Cafebara_regs"
+				(path "/f90fb1fb-a242-4f20-8a51-2c53666311a4"
+					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -7569,6 +7733,85 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C_Polarized_Small")
+		(at 34.29 29.21 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "45245dd1-6c4b-4a89-9ad9-d592a30a35ee")
+		(property "Reference" "C2"
+			(at 36.83 27.3938 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100uF"
+			(at 36.83 29.9338 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_Tantalum_SMD:CP_EIA-3216-10_Kemet-I"
+			(at 34.29 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 34.29 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Polarized capacitor, small symbol"
+			(at 34.29 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "https://www.digikey.com.au/en/products/detail/vishay-sprague/TL8A0107M6R3C/3883158"
+			(at 34.29 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f2f1a6d5-9bef-4e1d-a277-2c74a8de17f4")
+		)
+		(pin "2"
+			(uuid "1784d1ae-e3e5-44fa-9f73-7e2bbc2e79a6")
+		)
+		(instances
+			(project ""
+				(path "/f90fb1fb-a242-4f20-8a51-2c53666311a4"
+					(reference "C2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 107.95 137.16 0)
 		(unit 1)
@@ -7629,6 +7872,85 @@
 			(project "Cafebara_regs"
 				(path "/f90fb1fb-a242-4f20-8a51-2c53666311a4"
 					(reference "#PWR023")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Polarized_Small")
+		(at 247.65 123.19 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "46a704c7-8b23-4eb5-ab53-350cc13589de")
+		(property "Reference" "C31"
+			(at 250.19 121.3738 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100uF"
+			(at 250.19 123.9138 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_Tantalum_SMD:CP_EIA-3216-10_Kemet-I"
+			(at 247.65 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 247.65 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Polarized capacitor, small symbol"
+			(at 247.65 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "https://www.digikey.com.au/en/products/detail/vishay-sprague/TL8A0107M6R3C/3883158"
+			(at 247.65 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "806eb0c6-dd3d-4da5-8ac1-88cfd1c608b4")
+		)
+		(pin "2"
+			(uuid "70a39d12-eee5-4d51-ab12-fd85ba82ec58")
+		)
+		(instances
+			(project "Cafebara_regs"
+				(path "/f90fb1fb-a242-4f20-8a51-2c53666311a4"
+					(reference "C31")
 					(unit 1)
 				)
 			)
@@ -9052,6 +9374,76 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R_Small")
+		(at 165.1 101.6 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "709787c0-6492-4e39-a531-fbba2bc7ed5e")
+		(property "Reference" "R12"
+			(at 167.64 100.3299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10k"
+			(at 167.64 102.8699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 165.1 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 165.1 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 165.1 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "8cfc1c24-8deb-409c-b621-899b7effc2d3")
+		)
+		(pin "1"
+			(uuid "b9d99134-5775-48ec-8cd1-dd273c72ea8d")
+		)
+		(instances
+			(project "Cafebara_regs"
+				(path "/f90fb1fb-a242-4f20-8a51-2c53666311a4"
+					(reference "R12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Small")
 		(at 109.22 63.5 0)
 		(unit 1)
@@ -9322,6 +9714,72 @@
 			(project "Cafebara_regs"
 				(path "/f90fb1fb-a242-4f20-8a51-2c53666311a4"
 					(reference "C7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 247.65 125.73 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7ed80be2-2d7a-48b2-92ff-dcb277ddab97")
+		(property "Reference" "#PWR013"
+			(at 247.65 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 247.65 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 247.65 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 247.65 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 247.65 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "305b3825-a759-4035-bb75-5863d3840230")
+		)
+		(instances
+			(project "Cafebara_regs"
+				(path "/f90fb1fb-a242-4f20-8a51-2c53666311a4"
+					(reference "#PWR013")
 					(unit 1)
 				)
 			)
@@ -9763,7 +10221,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 22.86 100.33 0)
 			(effects
 				(font
@@ -10293,6 +10751,85 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C_Polarized_Small")
+		(at 31.75 100.33 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a7aba842-1862-4561-a380-6931ae26e6ed")
+		(property "Reference" "C11"
+			(at 34.29 98.5138 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100uF"
+			(at 34.29 101.0538 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_Tantalum_SMD:CP_EIA-3216-10_Kemet-I"
+			(at 31.75 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 31.75 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Polarized capacitor, small symbol"
+			(at 31.75 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "https://www.digikey.com.au/en/products/detail/vishay-sprague/TL8A0107M6R3C/3883158"
+			(at 31.75 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e0b59468-db19-450f-93e9-86787ea80fba")
+		)
+		(pin "2"
+			(uuid "eec9185c-cf46-43ff-bace-4f0555dabe0f")
+		)
+		(instances
+			(project "Cafebara_regs"
+				(path "/f90fb1fb-a242-4f20-8a51-2c53666311a4"
+					(reference "C11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Small")
 		(at 259.08 35.56 0)
 		(unit 1)
@@ -10357,85 +10894,6 @@
 			(project "Cafebara_regs"
 				(path "/f90fb1fb-a242-4f20-8a51-2c53666311a4"
 					(reference "C23")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Small")
-		(at 31.75 100.33 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ab92796d-5eb5-4992-8fee-aa35da72d5b7")
-		(property "Reference" "C11"
-			(at 34.29 99.0662 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "47uF"
-			(at 34.29 101.6062 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 31.75 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 31.75 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 31.75 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Mouser" "https://au.mouser.com/ProductDetail/KYOCERA-AVX/KGM21AR51A476MU?qs=sGAEpiMZZMuMW9TJLBQkXqLYvz3DzaXfhCiDO3TXOes%3D"
-			(at 31.75 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "2bf8ef6b-c6d6-4d3d-b2cd-5fd2bf332d31")
-		)
-		(pin "2"
-			(uuid "3f71ff26-8f75-44e3-a7ee-2962102f02ec")
-		)
-		(instances
-			(project "Cafebara_regs"
-				(path "/f90fb1fb-a242-4f20-8a51-2c53666311a4"
-					(reference "C11")
 					(unit 1)
 				)
 			)
@@ -11128,85 +11586,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Small")
-		(at 33.02 29.21 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "c2fa74a7-ec0e-4f44-96b8-41f48a3e14f4")
-		(property "Reference" "C2"
-			(at 35.56 27.9462 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "47uF"
-			(at 35.56 30.4862 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 33.02 29.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 33.02 29.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 33.02 29.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Mouser" "https://au.mouser.com/ProductDetail/KYOCERA-AVX/KGM21AR51A476MU?qs=sGAEpiMZZMuMW9TJLBQkXqLYvz3DzaXfhCiDO3TXOes%3D"
-			(at 33.02 29.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f95cd106-e93b-469b-8693-cb907f6cc637")
-		)
-		(pin "2"
-			(uuid "cf7fc997-51ec-4a0f-b34d-f1e04d16bd4c")
-		)
-		(instances
-			(project "Cafebara_regs"
-				(path "/f90fb1fb-a242-4f20-8a51-2c53666311a4"
-					(reference "C2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R_Small")
 		(at 106.68 36.83 0)
 		(unit 1)
@@ -11370,7 +11749,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 24.13 29.21 0)
 			(effects
 				(font
