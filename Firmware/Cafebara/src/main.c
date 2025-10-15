@@ -9,21 +9,19 @@
 #include <util/delay.h>
 
 #include "aled.h"         // Include several of loopj's useful utility libraries
-#include "i2c_target.h"   // Partially modified to suit Stormbreaker
+#include "i2c_target.h"   // Partially modified to suit Cafebara
 #include "button.h"
 #include "console.h"
 #include "rtc.h"
 #include "gpio.h"
 
-#include "i2c_bitbang.h"  // Based on i2c_wii.c from Thundervolt
-
 #include "bq25895.h"      // Based on jefflongo's BQ24292i driver
 
 #define BAUD_RATE 115200
 
-#define STORM_I2C 0x50
+#define CAFEBARA_I2C 0x50
 
-#define HUSB238A_ADDR 0x42
+//#define HUSB238A_ADDR 0x42
 
 #define ADDR_VER          0x00
 #define ADDR_CHRGCURRENT  0x02
@@ -32,13 +30,23 @@
 #define ADDR_CHRGVOLTAGE  0x08
 #define ADDR_FANSPEED     0x0A
 
+/*
+TODO: 
+- Strip out code for chips no longer present (e.g. HUSB238A)
+- Remove I2C target code
+- Remove I2C bitbang code...?
+- Transition bitbang code to hardware I2C
+- Maybe implement I2C communication with Pi Zero 2W? (battery level, settings configuration)
+- Adjust pins
+*/
+
 const uint8_t ver = 0x03;   // v0.3 (ver / 10)
 
-bool isPowered = false;     // Is the Wii powered?
+bool isPowered = false;     // Is the Wii U powered?
 bool isCharging = false;    // Is the BQ charging the batteries?
-bool isOverTemp = false;    // Is the Wii (or an IC) too hot?
+bool isOverTemp = false;    // Is the Wii U (or an IC) too hot?
 
-bool triggeredSoftShutdown = false; // Did we trigger the soft shutdown?
+bool isUSBCVideo = false;
 
 uint8_t battCharge = 0x00;  // 0x00-0xFF, representing 0-100% charge
 uint16_t battVolt = 3700;
@@ -95,6 +103,7 @@ bq25895_t bq = {
 };
 
 // Hardware I2C read
+/*
 int handle_register_read(uint8_t reg_addr, uint8_t *value) {
   switch (reg_addr) {
     case 0x00: // Get version
@@ -218,11 +227,7 @@ int handle_register_write(uint8_t reg_addr, uint8_t value) {
   }
   return 0;
 }
-
-void setupHUSB(pdVoltage voltage) {
-  i2c_bb_reg_write_byte(HUSB238A_ADDR, 0x08, (voltage << 4));
-  i2c_bb_reg_write_byte(HUSB238A_ADDR, 0x09, 0b00001);
-}
+*/
 
 bool setup() {
   button_init(&pwr_button, BUTTON.port, BUTTON.num, NULL, buttonHeld);
@@ -247,28 +252,24 @@ bool setup() {
   gpio_input(TEMP_ALERT);
   gpio_config(TEMP_ALERT, PORT_PULLUPEN_bm | PORT_ISC_FALLING_gc);
 
-  gpio_input(SOFT_SHUT);
-  gpio_config(SOFT_SHUT, PORT_ISC_RISING_gc);
+  gpio_input(HPD);
+  gpio_config(HPD, PORT_ISC_BOTHEDGES_gc);
 
-  gpio_set_low(SOFT_PWR);
-  gpio_output(SOFT_PWR);
 
   gpio_output(FAN);
   initFan();
   setFan(false, 0x00); // Turn off fan initially
 
-  gpio_set_high(PWR_ON); // Makes sure console is off
-  gpio_output(PWR_ON);
+  gpio_set_low(PWR_EN); // Makes sure console is off
+  gpio_output(PWR_EN);
 
-  i2c_target_init(STORM_I2C, handle_register_read, handle_register_write);  // Init hardware I2C
+  //i2c_target_init(CAFEBARA_I2C, handle_register_read, handle_register_write);  // Init hardware I2C
 
   led_init();
 
-  i2c_bb_configure(I2C_BB_MODE_FAST); // Speed isn't actually configured here, hardcoded to I2C_MODE_FAST
-  if (!bq25895_is_present(&bq) || !i2c_bb_detect(HUSB238A_ADDR)) {  // Check that both the HUSB and BQ are present on the bus
+  if (!bq25895_is_present(&bq)) {  // Check that both the HUSB and BQ are present on the bus
     return false;
   }
-  setupHUSB(PD_VOLTAGE_12V);
   setupBQ();
   
   return true;
@@ -276,22 +277,16 @@ bool setup() {
 
 void loop() {
   button_update(&pwr_button, rtc_millis());
-  if (isPowered) {
-    monitorBatt();
-    _delay_ms(500);
-  }
-  else if (isCharging) {
-    chargingStatus();
-    _delay_ms(500);
-  }
-  else if (gpio_read(BUTTON) != false) {
+  chargingStatus();
+  if (gpio_read(BUTTON) != false) {
     rtc_deinit();
     sleep_cpu(); // The console isn't on, nor is it charging. Enter sleep to save power.
   }
+  _delay_ms(500);
 }
 
 void overTemp() {
-  triggerShutdown(); // Trigger shutdown process
+  consoleOff(); // Trigger shutdown process
   setFan(true, 0xff); // Fan at full-speed, to cool down console
   powerLED(5);
   isOverTemp = true;
@@ -303,7 +298,7 @@ void overTemp() {
 
 void buttonHeld() {
   if (isPowered) {
-    triggerShutdown(); // Is console on? Turn it off.
+    consoleOff(); // Is console on? Turn it off.
   }
   else {
     getBattVoltage();
@@ -322,38 +317,12 @@ void buttonHeld() {
   }
 }
 
-void triggerShutdown() {
-  if (!triggeredSoftShutdown && isPowered) {
-    gpio_set_high(SOFT_PWR); // Trigger the soft shutdown sequence on the Wii
-    _delay_ms(50);
-    gpio_set_low(SOFT_PWR);
-    powerLED(0);
-    triggeredSoftShutdown = true;
-    _delay_ms(2500); // Wait for softShutdown() function
-    if (isPowered && triggeredSoftShutdown) { // Wii did not shut itself down safely, timeout and force a power-off
-      consoleOff();
-      triggeredSoftShutdown = false;
-    }
-  }
-  else if (!isPowered) {
-    consoleOff(); // If some bug happens, and the console is on while this thinks it isn't, might as well make sure it's shut down.
-  }
-}
-
-void softShutdown() {
-  if (gpio_read(SOFT_SHUT) == true) { // Check that the pin is actually high
-    _delay_ms(100);
-    consoleOff();
-    triggeredSoftShutdown = false;
-  }
-}
-
 void chargingStatus() {
   bq25895_is_charger_connected(&bq, &isCharging);
   bq25895_get_charge_state(&bq, &chargeStatus);
   bq25895_check_faults(&bq, &pwrErrorStatus);
   if (pwrErrorStatus != BQ_FAULT_NONE) { // Uh oh, *something* is wrong
-    triggerShutdown();
+    consoleOff();
     powerLED(5);
     if (pwrErrorStatus & BQ_FAULT_THERM) { // oh jeez stuff is hot this is really bad
       overTemp();
@@ -376,6 +345,7 @@ void chargingStatus() {
   }
   else {
     isCharging = true;
+    checkHPDstatus();
     if (chargeStatus == BQ_STATE_TERMINATED) { // Finished charging
       powerLED(7);
     }
@@ -462,7 +432,7 @@ void powerLED(uint8_t mode) {
 void consoleOn() {
   bq25895_set_adc_cont(&bq, true);
 
-  gpio_set_low(PWR_ON); // Activate MOSFET
+  gpio_set_high(PWR_EN); // Activate regs
   isPowered = true;
 
   setFan(true, fanSpeed); // Enable fan
@@ -473,7 +443,7 @@ void consoleOn() {
 void consoleOff() {
   bq25895_set_adc_cont(&bq, false);
 
-  gpio_set_high(PWR_ON); // Deactivate MOSFET
+  gpio_set_low(PWR_EN); // Deactivate regs
   isPowered = false;
 
   setFan(false, 0x00);
@@ -482,7 +452,7 @@ void consoleOff() {
 }
 
 void enableShipping() {
-  triggerShutdown();
+  consoleOff();
   bq25895_set_batfet_enabled(&bq, false);
 }
 
@@ -569,7 +539,7 @@ void monitorBatt() {
     return;
   }
   if (battVolt < minBattVolt) {
-    triggerShutdown(); // Battery too low, emergency shutdown
+    consoleOff(); // Battery too low, emergency shutdown
     powerLED(5); // Show flashing red for error
     return;
   }
@@ -587,6 +557,10 @@ void monitorBatt() {
   }
 }
 
+void checkHPDstatus() {
+  isUSBCVideo = gpio_read(HPD);
+}
+
 int main() {
   if (!setup()) {
     return 0;
@@ -600,15 +574,15 @@ int main() {
 ISR(PORTA_PORT_vect) {
   rtc_init();
   button_update(&pwr_button, rtc_millis());
-  if (gpio_read_intflag(TEMP_ALERT) || !gpio_read(TEMP_ALERT)) {
-    overTemp();
-  }
   PORTA.INTFLAGS = 0xFF;
 }
 
 ISR(PORTB_PORT_vect) {
-  if (gpio_read_intflag(SOFT_SHUT) || gpio_read(SOFT_SHUT)) {
-    softShutdown();
+  if (gpio_read_intflag(TEMP_ALERT) || !gpio_read(TEMP_ALERT)) {
+    overTemp();
+  }
+  if (gpio_read_intflag(HPD)) {
+    checkHPDstatus();
   }
   PORTB.INTFLAGS = 0xFF;
 }
