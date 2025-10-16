@@ -9,17 +9,21 @@
 #include <util/delay.h>
 
 #include "aled.h"         // Include several of loopj's useful utility libraries
-#include "i2c_target.h"   // Partially modified to suit Cafebara
-#include "button.h"
+#include "button.h"       // Partially modified to suit Cafebara
 #include "console.h"
 #include "rtc.h"
 #include "gpio.h"
+#include "i2c.h"
+//#include "i2c_target.h" 
 
 #include "bq25895.h"      // Based on jefflongo's BQ24292i driver
+#include "bq25895/bq25895_regs.h"
 
 #define BAUD_RATE 115200
 
-#define CAFEBARA_I2C 0x50
+//#define CAFEBARA_I2C 0x50
+
+#define PI_I2C_ADDR 0x20
 
 //#define HUSB238A_ADDR 0x42
 
@@ -40,13 +44,16 @@ TODO:
 - Adjust pins
 */
 
-const uint8_t ver = 0x03;   // v0.3 (ver / 10)
+const uint8_t ver = 0x01;   // v0.3 (ver / 10)
 
 bool isPowered = false;     // Is the Wii U powered?
 bool isCharging = false;    // Is the BQ charging the batteries?
 bool isOverTemp = false;    // Is the Wii U (or an IC) too hot?
+bool isFault = false;       // Is there a fault?
 
-bool isUSBCVideo = false;
+bool isUSBCVideo = false;   // Is MelonHD active and outputting video over USBC?
+
+bool isBusMaster = true;    // Is the ATtiny the master of the I2C bus?
 
 uint8_t battCharge = 0x00;  // 0x00-0xFF, representing 0-100% charge
 uint16_t battVolt = 3700;
@@ -56,11 +63,13 @@ const uint16_t battChrgLevels[9] = {2684, 2864, 3064, 3264, 3444, 3644, 3824, 40
 bq25895_fault_t pwrErrorStatus = BQ_FAULT_NONE;
 bq25895_charge_state_t chargeStatus = BQ_STATE_NOT_CHARGING;
 
-uint16_t chrgCurrent  = 4096;   // 4096mA
-uint16_t preCurrent   = 128;    // 128mA
-uint16_t termCurrent  = 256;    // 256mA
-uint16_t chrgVoltage  = 4208;   // 4.208V
-uint8_t fanSpeed      = 0xFF;   // 100% speed
+uint32_t baudRate = 115200;
+
+uint16_t  chrgCurrent = 4096;   // 4096mA
+uint16_t  preCurrent  = 128;    // 128mA
+uint16_t  termCurrent = 256;    // 256mA
+uint16_t  chrgVoltage = 4208;   // 4.208V
+uint8_t   fanSpeed    = 0xFF;   // 100% speed
 
 const bool ilimEnabled = false;
 
@@ -81,165 +90,40 @@ void getEEPROM() {
   }
 }
 
-// Bitbanged I2C write
-bool i2c_bitbang_write(uint8_t addr, uint8_t reg, void const* buf, size_t len, void* context) {
+// BQ I2C write
+bool i2c_bq_write(uint8_t addr, uint8_t reg, void const* buf, size_t len, void* context) {
   uint8_t *byte_buf = (uint8_t *)buf;
-  if (i2c_bb_reg_write_byte(addr, reg, byte_buf[0]) != 0) {
+  if (i2c_reg_write_byte(addr, reg, byte_buf[0]) != 0) {
     return false;
   }
   return true;
 }
-// Bitbanged I2C read
-bool i2c_bitbang_read(uint8_t addr, uint8_t reg, void const* buf, size_t len, void* context) {
-  if (i2c_bb_reg_read_byte(addr, reg, buf) != 0) {
+// BQ I2C read
+bool i2c_bq_read(uint8_t addr, uint8_t reg, void const* buf, size_t len, void* context) {
+  if (i2c_reg_read_byte(addr, reg, buf) != 0) {
     return false;
   }
   return true;
 }
 
 bq25895_t bq = {
-  .write = i2c_bitbang_write,
-  .read = i2c_bitbang_read,
+  .write = i2c_bq_write,
+  .read = i2c_bq_read,
 };
-
-// Hardware I2C read
-/*
-int handle_register_read(uint8_t reg_addr, uint8_t *value) {
-  switch (reg_addr) {
-    case 0x00: // Get version
-      *value = ver;
-    break;
-
-    case 0x02:
-      applyChanges(); // Apply and store current settings
-    break;
-
-    case 0x04:
-      *value = fanSpeed;
-    break;
-
-    case 0x0B:
-      enableShipping(); // Don't need to bother doing anything, we'll be losing power soon anyway
-      _delay_ms(1000);
-    break;
-
-    case 0x10:
-      *value = chrgCurrent & 0xFF;
-    break;
-    case 0x11:
-      *value = chrgCurrent >> 8;
-    break;
-
-    case 0x12:
-      *value = termCurrent & 0xFF;
-    break;
-    case 0x13:
-      *value = termCurrent >> 8;
-    break;
-
-    case 0x14:
-      *value = preCurrent & 0xFF;
-    break;
-    case 0x15:
-      *value = preCurrent >> 8;
-    break;
-
-    case 0x16:
-      *value = chrgVoltage & 0xFF;
-    break;
-    case 0x17:
-      *value = chrgVoltage >> 8;
-    break;
-
-    case 0x18:
-      chargingStatus();
-      *value = chargeStatus;
-    break;
-
-    case 0x24:
-      battChargeStatus();
-      *value = battCharge;
-    break;
-
-    case 0x26:
-      getBattVoltage();
-      *value = battVolt & 0xFF;
-    break;
-    case 0x27:
-      *value = battVolt >> 8;
-    break;
-
-    default:
-      *value = 0x00; // Invalid register address, return nothing.
-    break;
-  }
-  return 0;
-}
-
-// Hardware I2C write
-int handle_register_write(uint8_t reg_addr, uint8_t value) {
-  switch (reg_addr) {
-    case 0x02:
-      applyChanges(); // Apply and store current settings
-    break;
-
-    case 0x04:
-      fanSpeed = value;
-      setFan(true, fanSpeed);
-    break;
-
-    case 0x0B:
-      enableShipping(); // Don't need to bother doing anything, we'll be losing power soon anyway
-      _delay_ms(1000);
-    break;
-
-    case 0x10:
-      chrgCurrent = (chrgCurrent & 0xFF00) + value;
-    break;
-    case 0x11:
-      chrgCurrent = (chrgCurrent & 0x00FF) + (value << 8);
-    break;
-
-    case 0x12:
-      termCurrent = (termCurrent & 0xFF00) + value;
-    break;
-    case 0x13:
-      termCurrent = (termCurrent & 0x00FF) + (value << 8);
-    break;
-
-    case 0x14:
-      preCurrent = (preCurrent & 0xFF00) + value;
-    break;
-    case 0x15:
-      preCurrent = (preCurrent & 0x00FF) + (value << 8);
-    break;
-
-    case 0x16:
-      chrgVoltage = (chrgVoltage & 0xFF00) + value;
-    break;
-    case 0x17:
-      chrgVoltage = (chrgVoltage & 0x00FF) + (value << 8);
-    break;
-
-    default:
-      // Invalid register address, do nothing
-    break;
-  }
-  return 0;
-}
-*/
 
 bool setup() {
   button_init(&pwr_button, BUTTON.port, BUTTON.num, NULL, buttonHeld);
   rtc_init();
-  console_init(BAUD_RATE);
   set_sleep_mode(SLEEP_MODE_PWR_DOWN); // Set sleep to low power mode
   sleep_enable(); // Enable sleeping, don't activate sleep yet though
 
+  setupUSART();
+
+  sei(); // Enable interrupts
+
   // Set unused pins to outputs
-  PORTA.DIRSET |= (1 << 3) + (1 << 4) + (1 << 6); // PA3, PA4, PA6
-  PORTB.DIRSET |= (1 << 5);   // PB5
-  PORTC.DIRSET |= (1 << 1);   // PC1
+  PORTA.DIRSET |= (1 << 3) + (1 << 4) + (1 << 5) + (1 << 6) + (1 << 7); // PA3, PA4, PA5, PA6, PA7
+  PORTC.DIRSET |= (1 << 1) + (1 << 2);   // PC1, PC2
 
   getEEPROM(); // Get settings from EEPROM
 
@@ -264,10 +148,10 @@ bool setup() {
   gpio_output(PWR_EN);
 
   //i2c_target_init(CAFEBARA_I2C, handle_register_read, handle_register_write);  // Init hardware I2C
+  i2c_configure(I2C_MODE_STANDARD); // Setup I2C
 
   led_init();
-
-  if (!bq25895_is_present(&bq)) {  // Check that both the HUSB and BQ are present on the bus
+  if (!i2c_detect(BQ_ADDR) || !bq25895_is_present(&bq)) {  // Check that the BQ is present on the bus
     return false;
   }
   setupBQ();
@@ -277,12 +161,17 @@ bool setup() {
 
 void loop() {
   button_update(&pwr_button, rtc_millis());
-  chargingStatus();
   if (gpio_read(BUTTON) != false) {
     rtc_deinit();
     sleep_cpu(); // The console isn't on, nor is it charging. Enter sleep to save power.
   }
+  monitorBatt();
   _delay_ms(500);
+}
+
+void setupUSART() {
+  PORTMUX_CTRLB |= PORTMUX_USART0_ALTERNATE_gc;
+  console_init(BAUD_RATE);
 }
 
 void overTemp() {
@@ -290,7 +179,9 @@ void overTemp() {
   setFan(true, 0xff); // Fan at full-speed, to cool down console
   powerLED(5);
   isOverTemp = true;
-  _delay_ms(2 * 60 * 1000); // 2 minutes to cool down
+  for (int i; i < (2 * 60); i++) {
+    _delay_ms(1000);  // 2 minutes to cool down
+  }
   isOverTemp = false;
   setFan(false, 0x00); // disable cooling fan
 }
@@ -322,6 +213,7 @@ void chargingStatus() {
   bq25895_get_charge_state(&bq, &chargeStatus);
   bq25895_check_faults(&bq, &pwrErrorStatus);
   if (pwrErrorStatus != BQ_FAULT_NONE) { // Uh oh, *something* is wrong
+    isFault = true;
     consoleOff();
     powerLED(5);
     if (pwrErrorStatus & BQ_FAULT_THERM) { // oh jeez stuff is hot this is really bad
@@ -330,16 +222,16 @@ void chargingStatus() {
     }
     else if (pwrErrorStatus & BQ_FAULT_BAT) { // ???? the battery is TOO charged????
       enableShipping();
-      return; // Unnecessary since the console's gonna power off anyway
+      return; // Unnecessary since the board's gonna power off anyway
     }
+  }
+  else {
+    isFault = false;
   }
 
   if (chargeStatus == BQ_STATE_NOT_CHARGING) {
     isCharging = false;
-    if (isPowered) {
-      monitorBatt();
-    }
-    else {
+    if (!isPowered) {
       powerLED(0); // Not on, not charging
     }
   }
@@ -530,12 +422,11 @@ void battChargeStatus() {
 }
 
 void monitorBatt() {
-  getBattVoltage();
+  battChargeStatus();
   _delay_ms(100);
   if (isCharging || !isPowered) { 
     // If not turned on, or if charging, let the chargingStatus function handle it
     powerLED(0);
-    chargingStatus();
     return;
   }
   if (battVolt < minBattVolt) {
@@ -561,6 +452,21 @@ void checkHPDstatus() {
   isUSBCVideo = gpio_read(HPD);
 }
 
+void communicateWithPi() {
+  /*
+  Register key:
+  - 0x01: Status flags, uint8_t. Bits 0-3 represent isPowered, isCharging, isFault, and isUSBCVideo respectively. Bits 4-5 represent chargeStatus.
+  - 0x02: Power error status, pwrErrorStatus. 8-bit unsigned int.
+  - 0x03: Fan speed, fanSpeed. 8-bit unsigned int.
+  - 0x04: Battery charge percentage, battCharge. 8-bit unsigned int.
+  - 0x05: Battery voltage (mV), battVolt. 16-bit word.
+  - 0x06: Charging current, chrgCurrent. 16-bit word.
+  - 0x07: Pre-charge current, preCurrent. 16-bit word.
+  - 0x08: Termination charge current, termCurrent. 16-bit word.
+  - 0x09: Charging voltage, chrgVoltage. 16-bit word.
+  */
+}
+
 int main() {
   if (!setup()) {
     return 0;
@@ -575,6 +481,7 @@ ISR(PORTA_PORT_vect) {
   rtc_init();
   button_update(&pwr_button, rtc_millis());
   PORTA.INTFLAGS = 0xFF;
+  loop();
 }
 
 ISR(PORTB_PORT_vect) {
@@ -585,11 +492,13 @@ ISR(PORTB_PORT_vect) {
     checkHPDstatus();
   }
   PORTB.INTFLAGS = 0xFF;
+  loop();
 }
 
 ISR(PORTC_PORT_vect) {
   if (gpio_read_intflag(BQ_INT) || !gpio_read(BQ_INT)) {
-    chargingStatus();
+    monitorBatt();
   }
   PORTC.INTFLAGS = 0xFF;
+  loop();
 }
