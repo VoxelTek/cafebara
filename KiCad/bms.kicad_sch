@@ -1455,6 +1455,188 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Device:R_Shunt"
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at -2.032 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R_Shunt"
+				(at 0 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Shunt resistor with Kelvin connections"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "R res shunt resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "R_*Shunt*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "R_Shunt_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -2.54) (xy 1.27 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 2.54) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_Shunt_1_1"
+				(pin passive line
+					(at 0 5.08 270)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -5.08 90)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 2.54 180)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -2.54 180)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:R_Small"
 			(pin_numbers
 				(hide yes)
@@ -1582,7 +1764,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "NMOS_1"
+		(symbol "NMOS_2"
 			(pin_numbers
 				(hide yes)
 			)
@@ -1592,25 +1774,23 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "Q"
-				(at 5.08 1.27 0)
+			(property "Reference" "Q11"
+				(at 8.89 0 90)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
-			(property "Value" "NMOS"
-				(at 5.08 -1.27 0)
+			(property "Value" "DMT3006"
+				(at 6.35 0 90)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
-			(property "Footprint" ""
+			(property "Footprint" "Package_DFN_QFN:Diodes_UDFN2020-6_Type-F"
 				(at 5.08 2.54 0)
 				(effects
 					(font
@@ -1619,7 +1799,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_MOSFETs"
+			(property "Datasheet" "https://www.diodes.com/assets/Datasheets/DMT3006LFDF.pdf"
 				(at 0 -12.7 0)
 				(effects
 					(font
@@ -1637,26 +1817,8 @@
 					(hide yes)
 				)
 			)
-			(property "Sim.Device" "NMOS"
-				(at 0 -17.145 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Sim.Type" "VDMOS"
-				(at 0 -19.05 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Sim.Pins" "1=D 2=G 3=S"
-				(at 0 -15.24 0)
+			(property "Digikey" "https://www.digikey.com.au/en/products/detail/diodes-incorporated/DMT3006LFDF-7/6187333"
+				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1673,7 +1835,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "NMOS_1_0_1"
+			(symbol "NMOS_2_0_1"
 				(polyline
 					(pts
 						(xy 0.254 1.905) (xy 0.254 -1.905)
@@ -1840,7 +2002,7 @@
 					)
 				)
 			)
-			(symbol "NMOS_1_1_1"
+			(symbol "NMOS_2_1_1"
 				(pin input line
 					(at -5.08 0 0)
 					(length 2.54)
@@ -1851,7 +2013,7 @@
 							)
 						)
 					)
-					(number "2"
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1878,6 +2040,82 @@
 					)
 				)
 				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(hide yes)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(hide yes)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(hide yes)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(hide yes)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
 					(at 2.54 -5.08 90)
 					(length 2.54)
 					(name "S"
@@ -1887,7 +2125,26 @@
 							)
 						)
 					)
-					(number "3"
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(hide yes)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2196,6 +2453,342 @@
 				(pin passive line
 					(at 2.54 -5.08 90)
 					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Transistor_FET:DMT6008LFG"
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "Q"
+				(at 5.08 1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "DMT6008LFG"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_SON:Diodes_PowerDI3333-8"
+				(at 5.08 -1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.diodes.com/assets/Datasheets/DMT6008LFG.pdf"
+				(at 5.08 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Description" "60A Id, 60V Vds, N-Channel Enhancement Mode MOSFET, 7.5mOhm Ron, 50.4nC Qg(typ), PowerDI-3333-8"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "Power MOSFET N-MOS"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Diodes*PowerDI3333*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "DMT6008LFG_0_1"
+				(polyline
+					(pts
+						(xy 0.254 1.905) (xy 0.254 -1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.254 0) (xy -2.54 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 2.286) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 0.508) (xy 0.762 -0.508)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.27) (xy 0.762 -2.286)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.778) (xy 3.302 -1.778) (xy 3.302 1.778) (xy 0.762 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 0) (xy 2.032 0.381) (xy 2.032 -0.381) (xy 1.016 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 1.651 0)
+					(radius 2.794)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy 2.54 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.54 1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 2.54 -1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.794 0.508) (xy 2.921 0.381) (xy 3.683 0.381) (xy 3.81 0.254)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.302 0.381) (xy 2.921 -0.254) (xy 3.683 -0.254) (xy 3.302 0.381)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "DMT6008LFG_1_1"
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "G"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(hide yes)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(hide yes)
 					(name "S"
 						(effects
 							(font
@@ -2567,13 +3160,25 @@
 		)
 	)
 	(junction
+		(at 222.25 143.51)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "09bd820d-e212-40aa-a012-5dcfa03cb891")
+	)
+	(junction
+		(at 222.25 153.67)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0d73199f-b7ab-46ca-ab5b-a193fba1fefa")
+	)
+	(junction
 		(at 96.52 24.13)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "0de05e8b-aef2-45c7-a8a1-c0840e10de9d")
 	)
 	(junction
-		(at 135.89 120.65)
+		(at 135.89 115.57)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "0eb67495-100e-4421-b758-76decee5cc00")
@@ -2585,28 +3190,40 @@
 		(uuid "2308c29b-72c3-4862-abc2-3284defcbf97")
 	)
 	(junction
-		(at 34.29 100.33)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "281f66dc-4dc8-495a-a1cc-a5fff81cfba7")
-	)
-	(junction
 		(at 45.72 60.96)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2c75cad2-5f0a-45fc-8f9d-89d9fed8c625")
 	)
 	(junction
-		(at 229.87 153.67)
+		(at 91.44 105.41)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "30a57317-5e68-4ddd-a832-14a04510bc7d")
+		(uuid "2f1d7700-8a57-4722-9b9a-4c4257db6a57")
+	)
+	(junction
+		(at 101.6 100.33)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "346d4250-6917-4dfa-ad00-ceb08f8e36e7")
+	)
+	(junction
+		(at 101.6 105.41)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3ca8ac47-c8c5-4345-b0e4-21fa94844ad0")
 	)
 	(junction
 		(at 63.5 24.13)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "42d617c6-0106-4d39-ad15-733d67af6e94")
+	)
+	(junction
+		(at 86.36 105.41)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4ca9116f-15cf-4959-b364-a8cda70b9bdb")
 	)
 	(junction
 		(at 163.83 30.48)
@@ -2651,10 +3268,28 @@
 		(uuid "73fa0747-2be6-4f5d-8521-85ec960858bb")
 	)
 	(junction
+		(at 86.36 115.57)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7c7ac250-927a-41b1-a9ad-33e172a466a4")
+	)
+	(junction
+		(at 111.76 100.33)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7d22a21e-08fb-4680-8d56-8e1110667e30")
+	)
+	(junction
 		(at 231.14 35.56)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "96c4d2b0-178b-4cb0-bad5-ebbefd15a198")
+	)
+	(junction
+		(at 34.29 100.33)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a2fa7f03-ea3f-488b-93a5-4a47998b62f3")
 	)
 	(junction
 		(at 26.67 60.96)
@@ -2675,16 +3310,16 @@
 		(uuid "c8088e5d-30e9-4fb3-b5a7-0e308e52a390")
 	)
 	(junction
-		(at 222.25 148.59)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "cb0ffb1d-fb87-492d-b584-5a4ed26eb686")
-	)
-	(junction
 		(at 36.83 69.85)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d381dc8c-6a1c-4d4b-adfe-eeadb0b1b9a3")
+	)
+	(junction
+		(at 229.87 148.59)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d44dc42b-b1aa-4d21-8563-cd0446c5a78b")
 	)
 	(junction
 		(at 163.83 40.64)
@@ -2710,11 +3345,15 @@
 		(color 0 0 0 0)
 		(uuid "f2f0f971-6ad3-4d5b-b4ec-ca09dbe6b18c")
 	)
-	(junction
-		(at 222.25 158.75)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f888569c-9674-42ee-b631-ba15f088162e")
+	(wire
+		(pts
+			(xy 82.55 115.57) (xy 86.36 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "01716849-e5f3-415f-87ec-af3d841dc441")
 	)
 	(wire
 		(pts
@@ -2728,6 +3367,16 @@
 	)
 	(wire
 		(pts
+			(xy 82.55 120.65) (xy 82.55 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "01e2ea33-7e61-4112-a4ce-3331e45c2684")
+	)
+	(wire
+		(pts
 			(xy 45.72 60.96) (xy 54.61 60.96)
 		)
 		(stroke
@@ -2738,7 +3387,7 @@
 	)
 	(wire
 		(pts
-			(xy 229.87 158.75) (xy 229.87 153.67)
+			(xy 229.87 153.67) (xy 229.87 148.59)
 		)
 		(stroke
 			(width 0)
@@ -2788,13 +3437,23 @@
 	)
 	(wire
 		(pts
-			(xy 19.05 100.33) (xy 34.29 100.33)
+			(xy 101.6 105.41) (xy 111.76 105.41)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "21e1d2ec-7846-434d-be97-3a2d0727ea8d")
+		(uuid "1b28b3f2-78d0-4b4c-a54e-4e639903d7cb")
+	)
+	(wire
+		(pts
+			(xy 101.6 100.33) (xy 111.76 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "221c61f7-4495-4e9d-a29d-c698cee6f086")
 	)
 	(wire
 		(pts
@@ -2838,6 +3497,16 @@
 	)
 	(wire
 		(pts
+			(xy 93.98 100.33) (xy 101.6 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "36014051-0e01-4f70-8d45-b85990b7d5a1")
+	)
+	(wire
+		(pts
 			(xy 36.83 68.58) (xy 36.83 69.85)
 		)
 		(stroke
@@ -2878,7 +3547,7 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 120.65) (xy 166.37 120.65)
+			(xy 182.88 115.57) (xy 166.37 115.57)
 		)
 		(stroke
 			(width 0)
@@ -2908,7 +3577,7 @@
 	)
 	(wire
 		(pts
-			(xy 156.21 137.16) (xy 156.21 130.81)
+			(xy 156.21 132.08) (xy 156.21 125.73)
 		)
 		(stroke
 			(width 0)
@@ -2928,7 +3597,7 @@
 	)
 	(wire
 		(pts
-			(xy 172.72 129.54) (xy 172.72 125.73)
+			(xy 172.72 124.46) (xy 172.72 120.65)
 		)
 		(stroke
 			(width 0)
@@ -2948,7 +3617,7 @@
 	)
 	(wire
 		(pts
-			(xy 241.3 93.98) (xy 237.49 93.98)
+			(xy 241.3 76.2) (xy 237.49 76.2)
 		)
 		(stroke
 			(width 0)
@@ -2978,7 +3647,7 @@
 	)
 	(wire
 		(pts
-			(xy 156.21 137.16) (xy 167.64 137.16)
+			(xy 156.21 132.08) (xy 167.64 132.08)
 		)
 		(stroke
 			(width 0)
@@ -3048,6 +3717,16 @@
 	)
 	(wire
 		(pts
+			(xy 86.36 115.57) (xy 86.36 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "69426340-2b8a-4a38-b797-f3d49eb461b1")
+	)
+	(wire
+		(pts
 			(xy 54.61 24.13) (xy 63.5 24.13)
 		)
 		(stroke
@@ -3068,7 +3747,7 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 129.54) (xy 182.88 120.65)
+			(xy 182.88 124.46) (xy 182.88 115.57)
 		)
 		(stroke
 			(width 0)
@@ -3098,7 +3777,7 @@
 	)
 	(wire
 		(pts
-			(xy 220.98 101.6) (xy 228.6 101.6)
+			(xy 220.98 83.82) (xy 228.6 83.82)
 		)
 		(stroke
 			(width 0)
@@ -3108,7 +3787,17 @@
 	)
 	(wire
 		(pts
-			(xy 172.72 125.73) (xy 166.37 125.73)
+			(xy 86.36 105.41) (xy 86.36 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7de0580a-f4ad-4dbc-bc12-5ed4da60761c")
+	)
+	(wire
+		(pts
+			(xy 172.72 120.65) (xy 166.37 120.65)
 		)
 		(stroke
 			(width 0)
@@ -3118,7 +3807,7 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 109.22) (xy 135.89 115.57)
+			(xy 135.89 104.14) (xy 135.89 110.49)
 		)
 		(stroke
 			(width 0)
@@ -3128,7 +3817,7 @@
 	)
 	(wire
 		(pts
-			(xy 222.25 158.75) (xy 224.79 158.75)
+			(xy 222.25 153.67) (xy 224.79 153.67)
 		)
 		(stroke
 			(width 0)
@@ -3158,7 +3847,7 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 120.65) (xy 146.05 120.65)
+			(xy 135.89 115.57) (xy 146.05 115.57)
 		)
 		(stroke
 			(width 0)
@@ -3178,7 +3867,7 @@
 	)
 	(wire
 		(pts
-			(xy 205.74 137.16) (xy 205.74 143.51)
+			(xy 205.74 132.08) (xy 205.74 138.43)
 		)
 		(stroke
 			(width 0)
@@ -3188,7 +3877,47 @@
 	)
 	(wire
 		(pts
+			(xy 86.36 120.65) (xy 86.36 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9e2f256d-51a1-43b2-8900-7418d043917b")
+	)
+	(wire
+		(pts
+			(xy 91.44 105.41) (xy 91.44 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a36c8cbd-01fa-4af7-a9f6-8505077f0e78")
+	)
+	(wire
+		(pts
 			(xy 34.29 100.33) (xy 50.8 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a4e69a9f-5ba0-4258-a272-8a4aa3bc6de7")
+	)
+	(wire
+		(pts
+			(xy 78.74 120.65) (xy 82.55 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a53b3a0a-10da-44d4-a5c8-c19ae95cb7e8")
+	)
+	(wire
+		(pts
+			(xy 19.05 100.33) (xy 34.29 100.33)
 		)
 		(stroke
 			(width 0)
@@ -3208,6 +3937,26 @@
 	)
 	(wire
 		(pts
+			(xy 78.74 121.92) (xy 78.74 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b4c3d125-ce0d-4c5e-862b-3bb2f8e9ba97")
+	)
+	(wire
+		(pts
+			(xy 111.76 100.33) (xy 120.65 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b62c1098-5295-4995-a545-d5948452f6f8")
+	)
+	(wire
+		(pts
 			(xy 148.59 40.64) (xy 156.21 40.64)
 		)
 		(stroke
@@ -3218,7 +3967,7 @@
 	)
 	(wire
 		(pts
-			(xy 220.98 111.76) (xy 228.6 111.76)
+			(xy 220.98 93.98) (xy 228.6 93.98)
 		)
 		(stroke
 			(width 0)
@@ -3358,7 +4107,7 @@
 	)
 	(wire
 		(pts
-			(xy 229.87 153.67) (xy 237.49 153.67)
+			(xy 229.87 148.59) (xy 237.49 148.59)
 		)
 		(stroke
 			(width 0)
@@ -3378,7 +4127,7 @@
 	)
 	(wire
 		(pts
-			(xy 213.36 148.59) (xy 222.25 148.59)
+			(xy 213.36 143.51) (xy 222.25 143.51)
 		)
 		(stroke
 			(width 0)
@@ -3398,7 +4147,7 @@
 	)
 	(wire
 		(pts
-			(xy 187.96 137.16) (xy 205.74 137.16)
+			(xy 187.96 132.08) (xy 205.74 132.08)
 		)
 		(stroke
 			(width 0)
@@ -3418,7 +4167,27 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 125.73) (xy 135.89 132.08)
+			(xy 91.44 115.57) (xy 91.44 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f25f4364-4984-492a-81e0-d2497e2d19bc")
+	)
+	(wire
+		(pts
+			(xy 91.44 120.65) (xy 91.44 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f3c984d0-bbf7-4ee6-8ded-6650e8d99118")
+	)
+	(wire
+		(pts
+			(xy 135.89 120.65) (xy 135.89 127)
 		)
 		(stroke
 			(width 0)
@@ -3487,7 +4256,7 @@
 		(uuid "1750e1f9-405c-4fa4-8179-396196eff0d7")
 	)
 	(label "BATT-"
-		(at 135.89 132.08 90)
+		(at 135.89 127 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3517,7 +4286,7 @@
 		(uuid "4ebef4e7-b8e2-4331-89a2-a315464ffdc8")
 	)
 	(label "BATT+"
-		(at 135.89 109.22 270)
+		(at 135.89 104.14 270)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3577,7 +4346,7 @@
 		(uuid "845fcd47-34df-4f5c-b728-e097b2cf7c7e")
 	)
 	(label "BATT-"
-		(at 220.98 111.76 0)
+		(at 220.98 93.98 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3587,7 +4356,7 @@
 		(uuid "8773a375-6d51-4862-a40f-f37e2c41566a")
 	)
 	(label "BATT-"
-		(at 156.21 137.16 0)
+		(at 156.21 132.08 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3627,7 +4396,7 @@
 		(uuid "ad115ef6-adbc-4e78-84d7-fd520b58182a")
 	)
 	(label "BATT+"
-		(at 220.98 101.6 0)
+		(at 220.98 83.82 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3635,6 +4404,16 @@
 			(justify left bottom)
 		)
 		(uuid "bbbc845c-3da8-4fc2-a747-20c493621d3a")
+	)
+	(label "BATT+"
+		(at 120.65 100.33 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "c506bb52-48f0-49a2-8b59-909fdfb50c25")
 	)
 	(label "ACP"
 		(at 105.41 31.75 0)
@@ -3666,6 +4445,16 @@
 		)
 		(uuid "e4ca6f7e-be9d-4847-bffb-984c7c354bac")
 	)
+	(label "SRN"
+		(at 91.44 125.73 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e87fa087-636f-49df-ba3e-9fa4f28f763a")
+	)
 	(label "LODRV2"
 		(at 156.21 43.18 180)
 		(effects
@@ -3695,6 +4484,16 @@
 			(justify left bottom)
 		)
 		(uuid "ec8231a0-a129-4e5c-a6b2-80d6fd80cfab")
+	)
+	(label "SRP"
+		(at 86.36 125.73 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "eeb4e677-bf3e-44d3-9cc9-ff28a05d6de8")
 	)
 	(label "SW2"
 		(at 153.67 49.53 180)
@@ -3740,7 +4539,7 @@
 	)
 	(global_label "SHIP"
 		(shape input)
-		(at 237.49 153.67 0)
+		(at 237.49 148.59 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3750,7 +4549,7 @@
 		)
 		(uuid "d6c3e57b-753c-4a6d-8534-d6519462e0b8")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 244.89 153.67 0)
+			(at 244.89 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3847,107 +4646,6 @@
 			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca/85ca6140-16ff-4c0a-be4e-27c5939d67ef"
 					(reference "C17")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_name "NMOS_1")
-		(lib_id "Simulation_SPICE:NMOS")
-		(at 31.75 105.41 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "081a5e80-41ca-4a16-8b88-fea7daf440f0")
-		(property "Reference" "Q4"
-			(at 39.37 104.1399 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "NMOS"
-			(at 39.37 106.6799 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 36.83 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_MOSFETs"
-			(at 31.75 118.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "N-MOSFET transistor, drain/source/gate"
-			(at 31.75 105.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "NMOS"
-			(at 31.75 122.555 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Type" "VDMOS"
-			(at 31.75 124.46 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=D 2=G 3=S"
-			(at 31.75 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "1476d923-c68f-4755-9fbe-11078fbc4225")
-		)
-		(pin "1"
-			(uuid "8a419302-63c2-473a-8dff-eab3435d4327")
-		)
-		(pin "2"
-			(uuid "9e573ac8-be3e-4ce9-8dd6-a4adaeb216bd")
-		)
-		(instances
-			(project "cafebara"
-				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca/85ca6140-16ff-4c0a-be4e-27c5939d67ef"
-					(reference "Q4")
 					(unit 1)
 				)
 			)
@@ -4103,8 +4801,130 @@
 		)
 	)
 	(symbol
+		(lib_name "NMOS_2")
+		(lib_id "Simulation_SPICE:NMOS")
+		(at 64.77 63.5 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0d0d8bae-08be-4ff2-98ff-91515c816566")
+		(property "Reference" "Q2"
+			(at 64.77 54.61 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "DMT3006"
+			(at 64.77 57.15 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_DFN_QFN:Diodes_UDFN2020-6_Type-F"
+			(at 62.23 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/DMT3006LFDF.pdf"
+			(at 77.47 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "N-MOSFET transistor, drain/source/gate"
+			(at 64.77 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "NMOS"
+			(at 81.915 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" "VDMOS"
+			(at 83.82 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=D 2=G 3=S"
+			(at 80.01 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "https://www.digikey.com.au/en/products/detail/diodes-incorporated/DMT3006LFDF-7/6187333"
+			(at 64.77 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "8d10d55a-6a35-49da-8c3d-ae54d0a0dcdd")
+		)
+		(pin "1"
+			(uuid "9ac4777f-ac86-44ce-a0e4-e1ca9d463e54")
+		)
+		(pin "2"
+			(uuid "6ba58411-5518-4439-ad1b-87ad20570941")
+		)
+		(pin "7"
+			(uuid "0818704f-0a3d-4728-850a-8b580bda82c4")
+		)
+		(pin "6"
+			(uuid "05781824-1e03-449b-8a8f-275f08c8d050")
+		)
+		(pin "5"
+			(uuid "33b1faff-2127-4c1a-ae51-a766ccc23405")
+		)
+		(pin "4"
+			(uuid "7dfc2c6c-b6b7-41d4-83a7-b4e0de985385")
+		)
+		(pin "8"
+			(uuid "7665d2af-7632-4f13-a147-6b08e110205e")
+		)
+		(instances
+			(project "cafebara"
+				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca/85ca6140-16ff-4c0a-be4e-27c5939d67ef"
+					(reference "Q2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 228.6 101.6 270)
+		(at 228.6 83.82 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4112,7 +4932,7 @@
 		(dnp no)
 		(uuid "10c3dc6d-aa58-4f4d-b64f-945bc725e776")
 		(property "Reference" "TP5"
-			(at 230.6319 99.06 0)
+			(at 230.6319 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4121,7 +4941,7 @@
 			)
 		)
 		(property "Value" "BATT+"
-			(at 233.1719 99.06 0)
+			(at 233.1719 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4130,7 +4950,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Plated_Hole_D2.0mm"
-			(at 228.6 106.68 0)
+			(at 228.6 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4139,7 +4959,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 228.6 106.68 0)
+			(at 228.6 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4148,7 +4968,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 228.6 101.6 0)
+			(at 228.6 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4163,6 +4983,81 @@
 			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca/85ca6140-16ff-4c0a-be4e-27c5939d67ef"
 					(reference "TP5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Shunt")
+		(at 88.9 100.33 90)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "14b0c30a-c1c1-4d5d-ab8c-6fbb2e36ef13")
+		(property "Reference" "R15"
+			(at 88.9 93.98 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "5m"
+			(at 88.9 96.52 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 88.9 98.552 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 88.9 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Shunt resistor with Kelvin connections"
+			(at 88.9 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3f49d4a7-34f2-4bab-b44e-6d7b2b436a63")
+		)
+		(pin "4"
+			(uuid "226cc96a-7519-4b87-a77c-02ffd2eb036d")
+		)
+		(pin "3"
+			(uuid "27aa7ece-2865-48ee-9084-91e3ac53fe92")
+		)
+		(pin "2"
+			(uuid "306ee9c3-7eba-43a2-989a-0d3f7182026f")
+		)
+		(instances
+			(project ""
+				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca/85ca6140-16ff-4c0a-be4e-27c5939d67ef"
+					(reference "R15")
 					(unit 1)
 				)
 			)
@@ -4236,7 +5131,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 227.33 158.75 270)
+		(at 227.33 153.67 270)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -4245,7 +5140,7 @@
 		(dnp no)
 		(uuid "1abd2753-e152-4901-8154-8262bd216ed1")
 		(property "Reference" "R13"
-			(at 226.0599 162.56 0)
+			(at 226.0599 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4254,7 +5149,7 @@
 			)
 		)
 		(property "Value" "100k"
-			(at 228.5999 162.56 0)
+			(at 228.5999 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4263,7 +5158,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 227.33 158.75 0)
+			(at 227.33 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4272,7 +5167,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 227.33 158.75 0)
+			(at 227.33 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4281,7 +5176,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 227.33 158.75 0)
+			(at 227.33 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4299,6 +5194,128 @@
 			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca/85ca6140-16ff-4c0a-be4e-27c5939d67ef"
 					(reference "R13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "NMOS_2")
+		(lib_id "Simulation_SPICE:NMOS")
+		(at 172.72 129.54 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1ae81d9f-e97c-4af8-a51d-57ff720faf53")
+		(property "Reference" "Q7"
+			(at 172.72 138.43 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "DMT3006"
+			(at 172.72 135.89 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_DFN_QFN:Diodes_UDFN2020-6_Type-F"
+			(at 175.26 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/DMT3006LFDF.pdf"
+			(at 160.02 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "N-MOSFET transistor, drain/source/gate"
+			(at 172.72 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "NMOS"
+			(at 155.575 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" "VDMOS"
+			(at 153.67 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=D 2=G 3=S"
+			(at 157.48 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "https://www.digikey.com.au/en/products/detail/diodes-incorporated/DMT3006LFDF-7/6187333"
+			(at 172.72 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "35c2b730-a1d6-4783-8b63-f1bd528096e1")
+		)
+		(pin "1"
+			(uuid "41967cce-3cc3-462a-a546-b21d430a471c")
+		)
+		(pin "2"
+			(uuid "1ce268ea-83bd-4718-a750-f2e4d4bce500")
+		)
+		(pin "7"
+			(uuid "0145336c-18a2-454a-b924-10644c2766f4")
+		)
+		(pin "6"
+			(uuid "a71fd945-da19-4f51-b480-6cf6efd0a8d4")
+		)
+		(pin "5"
+			(uuid "b560d3bc-97a9-4cd9-8b5d-3ae31b760d96")
+		)
+		(pin "4"
+			(uuid "a85d3fd2-b4a5-4562-8045-0bf5e6c28008")
+		)
+		(pin "8"
+			(uuid "a011ca52-4df2-492e-a005-0e5a14a98a00")
+		)
+		(instances
+			(project "cafebara"
+				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca/85ca6140-16ff-4c0a-be4e-27c5939d67ef"
+					(reference "Q7")
 					(unit 1)
 				)
 			)
@@ -4507,107 +5524,6 @@
 		)
 	)
 	(symbol
-		(lib_name "NMOS_1")
-		(lib_id "Simulation_SPICE:NMOS")
-		(at 82.55 66.04 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "27548110-082e-4c30-9ef0-70c9a1404667")
-		(property "Reference" "Q3"
-			(at 90.17 64.7699 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "NMOS"
-			(at 90.17 67.3099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 87.63 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_MOSFETs"
-			(at 82.55 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "N-MOSFET transistor, drain/source/gate"
-			(at 82.55 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "NMOS"
-			(at 82.55 83.185 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Type" "VDMOS"
-			(at 82.55 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=D 2=G 3=S"
-			(at 82.55 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "a8764e5c-4928-4006-bf38-d0696d44325b")
-		)
-		(pin "1"
-			(uuid "6559268e-f3b8-4272-a451-5484052f1fa5")
-		)
-		(pin "2"
-			(uuid "c30494e7-16cb-41d5-a260-c0da3310f406")
-		)
-		(instances
-			(project "cafebara"
-				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca/85ca6140-16ff-4c0a-be4e-27c5939d67ef"
-					(reference "Q3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_name "BQ25895RTW_1")
 		(lib_id "Battery_Management:BQ25895RTW")
 		(at 130.81 48.26 0)
@@ -4780,7 +5696,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 146.05 128.27 0)
+		(at 146.05 123.19 0)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -4789,7 +5705,7 @@
 		(dnp no)
 		(uuid "2cbae863-75bc-4614-a186-5d3daa38a385")
 		(property "Reference" "R14"
-			(at 142.24 126.9999 0)
+			(at 142.24 121.9199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4798,7 +5714,7 @@
 			)
 		)
 		(property "Value" "2.2k"
-			(at 142.24 129.5399 0)
+			(at 142.24 124.4599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4807,7 +5723,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 146.05 128.27 0)
+			(at 146.05 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4816,7 +5732,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 146.05 128.27 0)
+			(at 146.05 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4825,7 +5741,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 146.05 128.27 0)
+			(at 146.05 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4849,8 +5765,78 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C_Small")
+		(at 111.76 102.87 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "301287a7-86b6-4cc6-8f57-092b18e4ccd3")
+		(property "Reference" "C27"
+			(at 109.22 101.6062 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10uF"
+			(at 109.22 104.1462 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 111.76 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 111.76 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 111.76 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "27a38e97-090a-4737-88a7-51a8a2b84b8e")
+		)
+		(pin "2"
+			(uuid "096db43a-8a2a-4d52-a621-d9cb3d034086")
+		)
+		(instances
+			(project "cafebara"
+				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca/85ca6140-16ff-4c0a-be4e-27c5939d67ef"
+					(reference "C27")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:VCC")
-		(at 222.25 143.51 0)
+		(at 222.25 138.43 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4859,7 +5845,7 @@
 		(fields_autoplaced yes)
 		(uuid "33ec0124-2e31-4908-8d4c-195aec328feb")
 		(property "Reference" "#PWR0103"
-			(at 222.25 147.32 0)
+			(at 222.25 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4868,7 +5854,7 @@
 			)
 		)
 		(property "Value" "VCC"
-			(at 222.25 138.43 0)
+			(at 222.25 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4876,7 +5862,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 222.25 143.51 0)
+			(at 222.25 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4885,7 +5871,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 222.25 143.51 0)
+			(at 222.25 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4894,7 +5880,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 222.25 143.51 0)
+			(at 222.25 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5008,104 +5994,6 @@
 			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca/85ca6140-16ff-4c0a-be4e-27c5939d67ef"
 					(reference "Q6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_name "NMOS_1")
-		(lib_id "Simulation_SPICE:NMOS")
-		(at 172.72 134.62 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "3a29f2bf-dce9-438d-b586-96d5cc64a52e")
-		(property "Reference" "Q7"
-			(at 172.72 143.51 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "NMOS"
-			(at 172.72 140.97 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 175.26 139.7 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_MOSFETs"
-			(at 160.02 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "N-MOSFET transistor, drain/source/gate"
-			(at 172.72 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "NMOS"
-			(at 155.575 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Type" "VDMOS"
-			(at 153.67 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=D 2=G 3=S"
-			(at 157.48 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "e502d9ed-45c9-4d3e-878f-612ad9ca331a")
-		)
-		(pin "1"
-			(uuid "56e518c4-1e43-445b-a0c6-b4d5cf7aa79b")
-		)
-		(pin "2"
-			(uuid "eb669fcd-9fbf-4612-b1af-3a102eb03425")
-		)
-		(instances
-			(project "cafebara"
-				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca/85ca6140-16ff-4c0a-be4e-27c5939d67ef"
-					(reference "Q7")
 					(unit 1)
 				)
 			)
@@ -5311,7 +6199,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 241.3 93.98 270)
+		(at 241.3 76.2 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5319,7 +6207,7 @@
 		(dnp no)
 		(uuid "43fbd844-eecb-4c33-89e4-bddcb53a01e8")
 		(property "Reference" "TP8"
-			(at 243.3319 91.44 0)
+			(at 243.3319 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5328,7 +6216,7 @@
 			)
 		)
 		(property "Value" "VCC"
-			(at 245.8719 91.44 0)
+			(at 245.8719 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5337,7 +6225,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Plated_Hole_D2.0mm"
-			(at 241.3 99.06 0)
+			(at 241.3 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5346,7 +6234,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 241.3 99.06 0)
+			(at 241.3 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5355,7 +6243,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 241.3 93.98 0)
+			(at 241.3 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5370,6 +6258,128 @@
 			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca/85ca6140-16ff-4c0a-be4e-27c5939d67ef"
 					(reference "TP8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "NMOS_2")
+		(lib_id "Simulation_SPICE:NMOS")
+		(at 82.55 66.04 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "554fedd8-142b-4605-a7dd-568b5c2af444")
+		(property "Reference" "Q3"
+			(at 91.44 66.04 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "DMT3006"
+			(at 88.9 66.04 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_DFN_QFN:Diodes_UDFN2020-6_Type-F"
+			(at 87.63 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/DMT3006LFDF.pdf"
+			(at 82.55 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "N-MOSFET transistor, drain/source/gate"
+			(at 82.55 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "NMOS"
+			(at 82.55 83.185 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" "VDMOS"
+			(at 82.55 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=D 2=G 3=S"
+			(at 82.55 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "https://www.digikey.com.au/en/products/detail/diodes-incorporated/DMT3006LFDF-7/6187333"
+			(at 82.55 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "1ea99c3a-1f3d-4f7c-b5ae-1558d69aff0f")
+		)
+		(pin "1"
+			(uuid "58d17d6e-4571-4c02-bcd4-b8a869fbfc0d")
+		)
+		(pin "2"
+			(uuid "b486b6da-5ccc-478f-b9e7-94098a97ce3b")
+		)
+		(pin "7"
+			(uuid "0b8d7b8f-cbf1-4195-b0fc-d5b82bf06b66")
+		)
+		(pin "6"
+			(uuid "30091e6a-4e2c-400c-a566-16bf1349bb66")
+		)
+		(pin "5"
+			(uuid "b1c805d4-7fc6-41d9-80e1-241a3132c258")
+		)
+		(pin "4"
+			(uuid "d543632f-a01f-41b6-b965-9dfb2cac9e88")
+		)
+		(pin "8"
+			(uuid "81d6b289-cff5-45e3-b81c-e43368547317")
+		)
+		(instances
+			(project "cafebara"
+				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca/85ca6140-16ff-4c0a-be4e-27c5939d67ef"
+					(reference "Q3")
 					(unit 1)
 				)
 			)
@@ -5518,7 +6528,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 146.05 130.81 0)
+		(at 146.05 125.73 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5527,7 +6537,7 @@
 		(fields_autoplaced yes)
 		(uuid "57e85bb5-96e3-4a68-bb3d-d1ea52d3ead8")
 		(property "Reference" "#PWR0101"
-			(at 146.05 137.16 0)
+			(at 146.05 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5536,7 +6546,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 146.05 135.89 0)
+			(at 146.05 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5544,7 +6554,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 146.05 130.81 0)
+			(at 146.05 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5553,7 +6563,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 146.05 130.81 0)
+			(at 146.05 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5562,7 +6572,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 146.05 130.81 0)
+			(at 146.05 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5584,7 +6594,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 135.89 123.19 0)
+		(at 135.89 118.11 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -5593,7 +6603,7 @@
 		(dnp no)
 		(uuid "5971b330-e77d-4ac5-9e3b-6e46c965a7aa")
 		(property "Reference" "C23"
-			(at 133.35 121.9262 0)
+			(at 133.35 116.8462 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5602,7 +6612,7 @@
 			)
 		)
 		(property "Value" "0.1uF"
-			(at 133.35 124.4662 0)
+			(at 133.35 119.3862 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5611,7 +6621,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 135.89 123.19 0)
+			(at 135.89 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5620,7 +6630,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 135.89 123.19 0)
+			(at 135.89 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5629,7 +6639,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 135.89 123.19 0)
+			(at 135.89 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5653,8 +6663,131 @@
 		)
 	)
 	(symbol
+		(lib_name "NMOS_2")
+		(lib_id "Simulation_SPICE:NMOS")
+		(at 182.88 129.54 90)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5bd940be-34ae-4c8a-afad-ecae33b3b323")
+		(property "Reference" "Q8"
+			(at 182.88 138.43 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "DMT3006"
+			(at 182.88 135.89 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_DFN_QFN:Diodes_UDFN2020-6_Type-F"
+			(at 180.34 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/DMT3006LFDF.pdf"
+			(at 195.58 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "N-MOSFET transistor, drain/source/gate"
+			(at 182.88 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "NMOS"
+			(at 200.025 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" "VDMOS"
+			(at 201.93 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=D 2=G 3=S"
+			(at 198.12 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "https://www.digikey.com.au/en/products/detail/diodes-incorporated/DMT3006LFDF-7/6187333"
+			(at 182.88 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "22477619-8786-4fd9-8b3a-c75ca4970cfc")
+		)
+		(pin "1"
+			(uuid "fa5d3a95-82c3-43bc-b2ba-299eb63c00b3")
+		)
+		(pin "2"
+			(uuid "dfe62cf5-e449-4997-a0f9-9bd9407e5fc0")
+		)
+		(pin "7"
+			(uuid "2b4a6e1d-60ee-4411-ad36-d68fb7280b38")
+		)
+		(pin "6"
+			(uuid "8a935ac6-3e50-4a32-8cd0-dab752be439e")
+		)
+		(pin "5"
+			(uuid "ff01e718-6f45-42ca-8fc3-a257b9214a66")
+		)
+		(pin "4"
+			(uuid "7f3fddd8-595e-4cf5-9e17-6b33cceaf1dc")
+		)
+		(pin "8"
+			(uuid "44b0a1eb-0f11-427e-a57a-aff15c3ab6b9")
+		)
+		(instances
+			(project "cafebara"
+				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca/85ca6140-16ff-4c0a-be4e-27c5939d67ef"
+					(reference "Q8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
-		(at 222.25 158.75 0)
+		(at 222.25 153.67 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5663,7 +6796,7 @@
 		(fields_autoplaced yes)
 		(uuid "5ef58f99-1a9c-4325-a30e-85ef8feeda51")
 		(property "Reference" "#PWR0102"
-			(at 222.25 165.1 0)
+			(at 222.25 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5672,7 +6805,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 222.25 163.83 0)
+			(at 222.25 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5680,7 +6813,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 222.25 158.75 0)
+			(at 222.25 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5689,7 +6822,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 222.25 158.75 0)
+			(at 222.25 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5698,7 +6831,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 222.25 158.75 0)
+			(at 222.25 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5788,6 +6921,167 @@
 		)
 	)
 	(symbol
+		(lib_id "Transistor_FET:DMT6008LFG")
+		(at 64.77 149.86 0)
+		(unit 1)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board no)
+		(dnp yes)
+		(fields_autoplaced yes)
+		(uuid "5f4bf5dd-2d22-4de0-a17a-59c3b4a07198")
+		(property "Reference" "Q12"
+			(at 71.12 148.5899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "BSZ060"
+			(at 71.12 151.1299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SO:Vishay_PowerPAK_1212-8_Single"
+			(at 69.85 151.765 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.infineon.com/assets/row/public/documents/24/49/infineon-bsz060ne2ls-datasheet-en.pdf"
+			(at 69.85 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "60A Id, 60V Vds, N-Channel Enhancement Mode MOSFET, 7.5mOhm Ron, 50.4nC Qg(typ), PowerDI-3333-8"
+			(at 64.77 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "https://www.digikey.com.au/en/products/detail/infineon-technologies/BSZ060NE2LSATMA1/2783243"
+			(at 64.77 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "f07e1ca8-9a4c-49e0-8a44-9f7021f7aaf9")
+		)
+		(pin "2"
+			(uuid "ba55d726-97d9-4018-9e9b-b9ba876f1a66")
+		)
+		(pin "5"
+			(uuid "60fb7652-8415-4301-a5e7-1d7a0cd0cb02")
+		)
+		(pin "4"
+			(uuid "a8a5185a-b26b-41ce-b8df-82241178c2c2")
+		)
+		(pin "1"
+			(uuid "3b1138aa-ce9f-4e6f-bbe7-7f1ec54d6d95")
+		)
+		(instances
+			(project ""
+				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca/85ca6140-16ff-4c0a-be4e-27c5939d67ef"
+					(reference "Q12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 101.6 102.87 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "65d3d481-9800-4d40-a8cf-7d16710eeea6")
+		(property "Reference" "C26"
+			(at 99.06 101.6062 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10uF"
+			(at 99.06 104.1462 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 101.6 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 101.6 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 101.6 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7cff8e44-b59b-4b32-be76-e1fcc499a2a0")
+		)
+		(pin "2"
+			(uuid "f9d47e7e-b7f3-4e77-a76c-a3227e65036f")
+		)
+		(instances
+			(project "cafebara"
+				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca/85ca6140-16ff-4c0a-be4e-27c5939d67ef"
+					(reference "C26")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Small")
 		(at 161.29 40.64 270)
 		(unit 1)
@@ -5851,6 +7145,265 @@
 			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca/85ca6140-16ff-4c0a-be4e-27c5939d67ef"
 					(reference "C13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 101.6 105.41 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6e1dbced-4ae5-439d-a007-eb537c2f3e15")
+		(property "Reference" "#PWR055"
+			(at 101.6 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 101.6 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 101.6 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 101.6 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 101.6 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "25fa416b-e907-40ba-bc71-1be7b4eaf80b")
+		)
+		(instances
+			(project "cafebara"
+				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca/85ca6140-16ff-4c0a-be4e-27c5939d67ef"
+					(reference "#PWR055")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "NMOS_2")
+		(lib_id "Simulation_SPICE:NMOS")
+		(at 224.79 148.59 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "702a1974-3d94-4b84-bcb3-0691875a14f4")
+		(property "Reference" "Q10"
+			(at 215.9 148.59 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "DMT3006"
+			(at 218.44 148.59 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_DFN_QFN:Diodes_UDFN2020-6_Type-F"
+			(at 219.71 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/DMT3006LFDF.pdf"
+			(at 224.79 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "N-MOSFET transistor, drain/source/gate"
+			(at 224.79 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "NMOS"
+			(at 224.79 165.735 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" "VDMOS"
+			(at 224.79 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=D 2=G 3=S"
+			(at 224.79 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "https://www.digikey.com.au/en/products/detail/diodes-incorporated/DMT3006LFDF-7/6187333"
+			(at 224.79 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "b9b14b18-6690-4a32-a3f2-7bb92b284214")
+		)
+		(pin "1"
+			(uuid "074034b8-4836-449a-9536-3800e2d32fc0")
+		)
+		(pin "2"
+			(uuid "8961bccd-6a61-485a-a75d-79154cea3705")
+		)
+		(pin "7"
+			(uuid "7d97fe92-addc-48a5-9949-f5e3f4933ae7")
+		)
+		(pin "6"
+			(uuid "a4f1e59f-8362-4573-b9cf-1bf37753823e")
+		)
+		(pin "5"
+			(uuid "87605e6c-5ef0-4f86-be1d-9ad8c25b6dcf")
+		)
+		(pin "4"
+			(uuid "19516492-4dd1-48eb-9f94-d48c40b826c3")
+		)
+		(pin "8"
+			(uuid "16dfdf4c-8521-4ea7-9687-7a514a3928a7")
+		)
+		(instances
+			(project "cafebara"
+				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca/85ca6140-16ff-4c0a-be4e-27c5939d67ef"
+					(reference "Q10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 88.9 105.41 90)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "72472412-1432-4f5c-89f6-03ebef1a3108")
+		(property "Reference" "C24"
+			(at 87.6362 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0.1uF"
+			(at 90.1762 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 88.9 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 88.9 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 88.9 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7c0701f5-10fd-48a0-9afe-2614e05e0678")
+		)
+		(pin "2"
+			(uuid "ed701a3e-0f6d-4cde-9295-69bb77f6e9fd")
+		)
+		(instances
+			(project "cafebara"
+				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca/85ca6140-16ff-4c0a-be4e-27c5939d67ef"
+					(reference "C24")
 					(unit 1)
 				)
 			)
@@ -5924,7 +7477,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 228.6 111.76 270)
+		(at 228.6 93.98 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5932,7 +7485,7 @@
 		(dnp no)
 		(uuid "8fef6cb1-580a-42cd-9092-d3560ebd8ff3")
 		(property "Reference" "TP12"
-			(at 230.6319 109.22 0)
+			(at 230.6319 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5941,7 +7494,7 @@
 			)
 		)
 		(property "Value" "BATT-"
-			(at 233.1719 109.22 0)
+			(at 233.1719 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5950,7 +7503,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Plated_Hole_D2.0mm"
-			(at 228.6 116.84 0)
+			(at 228.6 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5959,7 +7512,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 228.6 116.84 0)
+			(at 228.6 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5968,7 +7521,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 228.6 111.76 0)
+			(at 228.6 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6053,6 +7606,129 @@
 			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca/85ca6140-16ff-4c0a-be4e-27c5939d67ef"
 					(reference "R6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "NMOS_2")
+		(lib_id "Simulation_SPICE:NMOS")
+		(at 55.88 102.87 270)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "916c537a-49ec-42ca-9314-d7dc821645bf")
+		(property "Reference" "Q5"
+			(at 55.88 93.98 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "DMT3006"
+			(at 55.88 96.52 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_DFN_QFN:Diodes_UDFN2020-6_Type-F"
+			(at 58.42 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/DMT3006LFDF.pdf"
+			(at 43.18 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "N-MOSFET transistor, drain/source/gate"
+			(at 55.88 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "NMOS"
+			(at 38.735 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" "VDMOS"
+			(at 36.83 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=D 2=G 3=S"
+			(at 40.64 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "https://www.digikey.com.au/en/products/detail/diodes-incorporated/DMT3006LFDF-7/6187333"
+			(at 55.88 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "553c903b-9ff6-49f5-b22d-83354b5cd56c")
+		)
+		(pin "1"
+			(uuid "2fedfcf8-3f8b-4127-93be-47fd01d297a2")
+		)
+		(pin "2"
+			(uuid "be5f3c90-4984-47df-968c-9af6c4d35270")
+		)
+		(pin "7"
+			(uuid "a9c2a779-0634-4818-ac83-355af027b103")
+		)
+		(pin "6"
+			(uuid "44483794-4408-4806-b438-4e4ca9b27c6f")
+		)
+		(pin "5"
+			(uuid "52631740-4c9b-4231-803b-2255686c74b3")
+		)
+		(pin "4"
+			(uuid "db666e29-9c5d-40fa-8fc5-09e493c6f099")
+		)
+		(pin "8"
+			(uuid "159463e2-c806-4082-8cea-9000b72101f9")
+		)
+		(instances
+			(project "cafebara"
+				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca/85ca6140-16ff-4c0a-be4e-27c5939d67ef"
+					(reference "Q5")
 					(unit 1)
 				)
 			)
@@ -6486,7 +8162,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 135.89 118.11 0)
+		(at 135.89 113.03 0)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -6495,7 +8171,7 @@
 		(dnp no)
 		(uuid "a9bbd186-011f-471a-9ace-776ae5c5c1bd")
 		(property "Reference" "R11"
-			(at 132.08 116.8399 0)
+			(at 132.08 111.7599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6504,7 +8180,7 @@
 			)
 		)
 		(property "Value" "330"
-			(at 132.08 119.3799 0)
+			(at 132.08 114.2999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6513,7 +8189,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 135.89 118.11 0)
+			(at 135.89 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6522,7 +8198,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 135.89 118.11 0)
+			(at 135.89 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6531,7 +8207,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 135.89 118.11 0)
+			(at 135.89 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6621,6 +8297,146 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R_Small")
+		(at 91.44 118.11 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ad919cf6-b5a4-4d5d-b996-d48b45bb121f")
+		(property "Reference" "R17"
+			(at 93.98 116.8399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10"
+			(at 93.98 119.3799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 91.44 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 91.44 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 91.44 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "482f0f71-91d9-41a6-aff3-3f0c34241687")
+		)
+		(pin "1"
+			(uuid "6767a7a5-f909-4d64-b56f-b3dd112e97ba")
+		)
+		(instances
+			(project "cafebara"
+				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca/85ca6140-16ff-4c0a-be4e-27c5939d67ef"
+					(reference "R17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 86.36 118.11 0)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b6aa056d-9cdc-4125-99da-9b4e195bbab1")
+		(property "Reference" "R16"
+			(at 83.82 116.8399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10"
+			(at 83.82 119.3799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 86.36 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 86.36 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 86.36 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "83cbc0a9-9af0-4728-90f9-32a88c1c441d")
+		)
+		(pin "1"
+			(uuid "7ea499c7-2cf0-4536-b0a6-0cdb9a89c23c")
+		)
+		(instances
+			(project "cafebara"
+				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca/85ca6140-16ff-4c0a-be4e-27c5939d67ef"
+					(reference "R16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:VBUS")
 		(at 21.59 60.96 0)
 		(unit 1)
@@ -6681,6 +8497,128 @@
 			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca/85ca6140-16ff-4c0a-be4e-27c5939d67ef"
 					(reference "#PWR037")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "NMOS_2")
+		(lib_id "Simulation_SPICE:NMOS")
+		(at 208.28 143.51 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c39024ed-8fef-4810-bfa4-a26a0052edcd")
+		(property "Reference" "Q9"
+			(at 199.39 143.51 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "DMT3006"
+			(at 201.93 143.51 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_DFN_QFN:Diodes_UDFN2020-6_Type-F"
+			(at 203.2 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/DMT3006LFDF.pdf"
+			(at 208.28 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "N-MOSFET transistor, drain/source/gate"
+			(at 208.28 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "NMOS"
+			(at 208.28 126.365 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" "VDMOS"
+			(at 208.28 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=D 2=G 3=S"
+			(at 208.28 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "https://www.digikey.com.au/en/products/detail/diodes-incorporated/DMT3006LFDF-7/6187333"
+			(at 208.28 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "466f8814-baaf-4142-abca-1c3a55bf7d6e")
+		)
+		(pin "1"
+			(uuid "41156e23-9b0e-45a8-9d5e-ad2868c36250")
+		)
+		(pin "2"
+			(uuid "8447d6b5-ecf8-4bb8-bbe4-b71cad4f509e")
+		)
+		(pin "7"
+			(uuid "5501e286-de03-4e78-8718-979ccb9a5c58")
+		)
+		(pin "6"
+			(uuid "403c3eda-ef16-49ea-bc75-298d46c729d4")
+		)
+		(pin "5"
+			(uuid "072dd9aa-6f6e-401a-a46e-66e17e33a9da")
+		)
+		(pin "4"
+			(uuid "ff8518d7-8e07-4c05-ac3a-620ed4e20d1b")
+		)
+		(pin "8"
+			(uuid "a88dfec4-415f-4e9f-822e-09791784686c")
+		)
+		(instances
+			(project "cafebara"
+				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca/85ca6140-16ff-4c0a-be4e-27c5939d67ef"
+					(reference "Q9")
 					(unit 1)
 				)
 			)
@@ -6820,7 +8758,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 222.25 146.05 0)
+		(at 222.25 140.97 0)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -6829,7 +8767,7 @@
 		(dnp no)
 		(uuid "cc70b85c-8aec-44da-a330-dec03db5ce57")
 		(property "Reference" "R12"
-			(at 218.44 144.7799 0)
+			(at 218.44 139.6999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6838,7 +8776,7 @@
 			)
 		)
 		(property "Value" "100k"
-			(at 218.44 147.3199 0)
+			(at 218.44 142.2399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6847,7 +8785,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 222.25 146.05 0)
+			(at 222.25 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6856,7 +8794,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 222.25 146.05 0)
+			(at 222.25 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6865,7 +8803,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 222.25 146.05 0)
+			(at 222.25 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6883,204 +8821,6 @@
 			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca/85ca6140-16ff-4c0a-be4e-27c5939d67ef"
 					(reference "R12")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_name "NMOS_1")
-		(lib_id "Simulation_SPICE:NMOS")
-		(at 64.77 63.5 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "cf925069-95cc-4a73-bbb3-1f798d5eefd2")
-		(property "Reference" "Q2"
-			(at 64.77 54.61 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "NMOS"
-			(at 64.77 57.15 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 62.23 58.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_MOSFETs"
-			(at 77.47 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "N-MOSFET transistor, drain/source/gate"
-			(at 64.77 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "NMOS"
-			(at 81.915 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Type" "VDMOS"
-			(at 83.82 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=D 2=G 3=S"
-			(at 80.01 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "3ff4742f-11e6-49af-b196-dd9c9f76687d")
-		)
-		(pin "1"
-			(uuid "e9b734b8-c7e1-423f-8793-5c531fe85737")
-		)
-		(pin "2"
-			(uuid "d11f5758-1506-4bed-a5c2-fbf0bce4ab53")
-		)
-		(instances
-			(project "cafebara"
-				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca/85ca6140-16ff-4c0a-be4e-27c5939d67ef"
-					(reference "Q2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_name "NMOS_1")
-		(lib_id "Simulation_SPICE:NMOS")
-		(at 182.88 134.62 90)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "cffd9b3f-5d51-4a28-b606-1511f4bf4a01")
-		(property "Reference" "Q8"
-			(at 182.88 143.51 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "NMOS"
-			(at 182.88 140.97 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 180.34 139.7 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_MOSFETs"
-			(at 195.58 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "N-MOSFET transistor, drain/source/gate"
-			(at 182.88 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "NMOS"
-			(at 200.025 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Type" "VDMOS"
-			(at 201.93 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=D 2=G 3=S"
-			(at 198.12 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "3902f9f1-19e8-4b7f-a2a7-4b14f061347f")
-		)
-		(pin "1"
-			(uuid "1d06e9b4-63a8-48e6-b786-b038fbdc6236")
-		)
-		(pin "2"
-			(uuid "fa716e97-5dfb-4a42-bf5f-7422ea0826a8")
-		)
-		(instances
-			(project "cafebara"
-				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca/85ca6140-16ff-4c0a-be4e-27c5939d67ef"
-					(reference "Q8")
 					(unit 1)
 				)
 			)
@@ -7229,7 +8969,7 @@
 	)
 	(symbol
 		(lib_id "Battery_Management:BQ297xy")
-		(at 156.21 123.19 0)
+		(at 156.21 118.11 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7238,7 +8978,7 @@
 		(fields_autoplaced yes)
 		(uuid "d3c38613-fb05-4de9-b56b-513773b7ae74")
 		(property "Reference" "U6"
-			(at 156.21 113.03 0)
+			(at 156.21 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7246,7 +8986,7 @@
 			)
 		)
 		(property "Value" "BQ297xy"
-			(at 156.21 115.57 0)
+			(at 156.21 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7254,7 +8994,7 @@
 			)
 		)
 		(property "Footprint" "Package_SON:WSON-6_1.5x1.5mm_P0.5mm"
-			(at 156.21 114.3 0)
+			(at 156.21 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7263,7 +9003,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/bq2970.pdf"
-			(at 149.86 118.11 0)
+			(at 149.86 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7272,7 +9012,7 @@
 			)
 		)
 		(property "Description" "Voltage and Current Protection for Single-Cell Li-Ion and Li-Polymer Batteries"
-			(at 156.21 123.19 0)
+			(at 156.21 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7444,6 +9184,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 78.74 127 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d62ad497-0ce3-45ae-8b98-43c5fb089329")
+		(property "Reference" "#PWR042"
+			(at 78.74 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 78.74 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 78.74 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 78.74 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 78.74 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7c96816a-82a7-437f-a7d0-081b2fee7a68")
+		)
+		(instances
+			(project "cafebara"
+				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca/85ca6140-16ff-4c0a-be4e-27c5939d67ef"
+					(reference "#PWR042")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Small")
 		(at 45.72 63.5 0)
 		(mirror y)
@@ -7514,107 +9320,8 @@
 		)
 	)
 	(symbol
-		(lib_name "NMOS_1")
-		(lib_id "Simulation_SPICE:NMOS")
-		(at 224.79 153.67 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "dcbcbcdc-8bc7-4385-b9d1-4c88888da152")
-		(property "Reference" "Q10"
-			(at 215.9 153.67 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "NMOS"
-			(at 218.44 153.67 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 219.71 151.13 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_MOSFETs"
-			(at 224.79 166.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "N-MOSFET transistor, drain/source/gate"
-			(at 224.79 153.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "NMOS"
-			(at 224.79 170.815 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Type" "VDMOS"
-			(at 224.79 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=D 2=G 3=S"
-			(at 224.79 168.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "e204da3e-161d-41d8-a51a-34bdd125d335")
-		)
-		(pin "1"
-			(uuid "7cd77295-9815-424f-96a7-91e1efb4d53f")
-		)
-		(pin "2"
-			(uuid "4e2d8b24-ef23-4d88-8308-5aa09bc387d3")
-		)
-		(instances
-			(project "cafebara"
-				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca/85ca6140-16ff-4c0a-be4e-27c5939d67ef"
-					(reference "Q10")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:VCC")
-		(at 237.49 93.98 0)
+		(at 237.49 76.2 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7623,7 +9330,7 @@
 		(fields_autoplaced yes)
 		(uuid "e35eec2f-acb8-4e24-bd60-aa6633379190")
 		(property "Reference" "#PWR044"
-			(at 237.49 97.79 0)
+			(at 237.49 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7632,7 +9339,7 @@
 			)
 		)
 		(property "Value" "VCC"
-			(at 237.49 88.9 0)
+			(at 237.49 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7640,7 +9347,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 237.49 93.98 0)
+			(at 237.49 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7649,7 +9356,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 237.49 93.98 0)
+			(at 237.49 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7658,7 +9365,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 237.49 93.98 0)
+			(at 237.49 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7881,6 +9588,76 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C_Small")
+		(at 78.74 124.46 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "eb8e8d45-d926-451d-a95c-fe40ff1fd7e4")
+		(property "Reference" "C25"
+			(at 76.2 123.1962 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1uF"
+			(at 76.2 125.7362 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 78.74 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 78.74 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 78.74 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6a008e59-3a05-4a39-a051-371535607c49")
+		)
+		(pin "2"
+			(uuid "9dac3a5c-194f-445d-9e8c-ce490d3d4a74")
+		)
+		(instances
+			(project "cafebara"
+				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca/85ca6140-16ff-4c0a-be4e-27c5939d67ef"
+					(reference "C25")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_Small")
 		(at 31.75 60.96 270)
 		(mirror x)
@@ -8021,7 +9798,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 205.74 153.67 0)
+		(at 205.74 148.59 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8030,7 +9807,7 @@
 		(fields_autoplaced yes)
 		(uuid "f550f61e-4a6d-4648-adec-28adc7124d9f")
 		(property "Reference" "#PWR0104"
-			(at 205.74 160.02 0)
+			(at 205.74 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8039,7 +9816,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 205.74 158.75 0)
+			(at 205.74 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8047,7 +9824,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 205.74 153.67 0)
+			(at 205.74 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8056,7 +9833,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 205.74 153.67 0)
+			(at 205.74 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8065,7 +9842,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 205.74 153.67 0)
+			(at 205.74 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8156,69 +9933,32 @@
 		)
 	)
 	(symbol
-		(lib_name "NMOS_1")
+		(lib_name "NMOS_2")
 		(lib_id "Simulation_SPICE:NMOS")
-		(at 55.88 102.87 270)
-		(mirror x)
+		(at 31.75 105.41 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "f98fd598-008d-4b20-8fb1-7f4fc1798d0a")
-		(property "Reference" "Q5"
-			(at 55.88 93.98 90)
+		(uuid "fa5ea672-0da6-4ad2-b9f5-b87adbf6d030")
+		(property "Reference" "Q4"
+			(at 40.64 105.41 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "NMOS"
-			(at 55.88 96.52 90)
+		(property "Value" "DMT3006"
+			(at 38.1 105.41 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at 58.42 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_MOSFETs"
-			(at 43.18 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "N-MOSFET transistor, drain/source/gate"
-			(at 55.88 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "NMOS"
-			(at 38.735 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Type" "VDMOS"
+		(property "Footprint" "Package_DFN_QFN:Diodes_UDFN2020-6_Type-F"
 			(at 36.83 102.87 0)
 			(effects
 				(font
@@ -8227,70 +9967,8 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Pins" "1=D 2=G 3=S"
-			(at 40.64 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "b3d28df0-b2bd-4edf-b2ca-74108fef0b20")
-		)
-		(pin "1"
-			(uuid "c43f47ee-8e01-4ec8-8077-3b52d82993d6")
-		)
-		(pin "2"
-			(uuid "6b877bb1-9e9f-4bcf-8990-5c2b84ae1dab")
-		)
-		(instances
-			(project "cafebara"
-				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca/85ca6140-16ff-4c0a-be4e-27c5939d67ef"
-					(reference "Q5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_name "NMOS_1")
-		(lib_id "Simulation_SPICE:NMOS")
-		(at 208.28 148.59 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "fb4c0c22-a489-41ad-a84f-26687f0b4aa3")
-		(property "Reference" "Q9"
-			(at 199.39 148.59 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "NMOS"
-			(at 201.93 148.59 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 203.2 151.13 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_MOSFETs"
-			(at 208.28 135.89 0)
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/DMT3006LFDF.pdf"
+			(at 31.75 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8299,7 +9977,7 @@
 			)
 		)
 		(property "Description" "N-MOSFET transistor, drain/source/gate"
-			(at 208.28 148.59 0)
+			(at 31.75 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8308,7 +9986,7 @@
 			)
 		)
 		(property "Sim.Device" "NMOS"
-			(at 208.28 131.445 0)
+			(at 31.75 122.555 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8317,7 +9995,7 @@
 			)
 		)
 		(property "Sim.Type" "VDMOS"
-			(at 208.28 129.54 0)
+			(at 31.75 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8326,7 +10004,16 @@
 			)
 		)
 		(property "Sim.Pins" "1=D 2=G 3=S"
-			(at 208.28 133.35 0)
+			(at 31.75 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "https://www.digikey.com.au/en/products/detail/diodes-incorporated/DMT3006LFDF-7/6187333"
+			(at 31.75 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8335,18 +10022,33 @@
 			)
 		)
 		(pin "3"
-			(uuid "07f60cb5-9624-42bd-a04b-fbc52979bc9b")
+			(uuid "1b3fe63d-873a-464e-a9dc-c0e976bdc758")
 		)
 		(pin "1"
-			(uuid "11564865-2bbc-4c7f-ac13-183a0e759268")
+			(uuid "941c5931-5646-487b-b3e2-ab5f46e73c9a")
 		)
 		(pin "2"
-			(uuid "eb163539-e7fc-4e03-9901-91316b09ceb7")
+			(uuid "b64b4d9b-d603-48a7-961d-7a525bc1f9dc")
+		)
+		(pin "7"
+			(uuid "0cdd18a1-539c-4636-8bee-315651b02cd0")
+		)
+		(pin "6"
+			(uuid "e107a02e-467d-45bf-8ea7-1127a8195758")
+		)
+		(pin "5"
+			(uuid "48f05b7a-42ae-4cf1-ac59-e0bbcb5c8b14")
+		)
+		(pin "4"
+			(uuid "24130ffd-bd1d-44d9-b36e-9eccf89f69ce")
+		)
+		(pin "8"
+			(uuid "f7befce5-ecd9-43b4-9849-3479b59e3826")
 		)
 		(instances
 			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca/85ca6140-16ff-4c0a-be4e-27c5939d67ef"
-					(reference "Q9")
+					(reference "Q4")
 					(unit 1)
 				)
 			)
