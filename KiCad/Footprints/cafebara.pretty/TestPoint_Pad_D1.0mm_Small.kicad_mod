@@ -17,7 +17,7 @@
 			)
 		)
 	)
-	(property "Value" "D-"
+	(property "Value" "REF**"
 		(at 0 1.06066 0)
 		(layer "F.SilkS")
 		(uuid "d18eb979-29aa-4f93-a7ae-c625d1cd5659")

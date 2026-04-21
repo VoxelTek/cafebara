@@ -5557,10 +5557,22 @@
 		(uuid "5b2d9cbc-03f2-4044-bd1b-3c856447c323")
 	)
 	(junction
+		(at 22.86 95.25)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5bc87cca-9fbb-4cac-b325-b907279013c2")
+	)
+	(junction
 		(at 62.23 156.21)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6154a989-ef80-47f9-830e-437ce0251577")
+	)
+	(junction
+		(at 22.86 100.33)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "676e74e1-af57-4053-b846-94d7fd61a7d2")
 	)
 	(junction
 		(at 24.13 21.59)
@@ -5629,6 +5641,12 @@
 		(uuid "cbe67234-1f88-4a17-850a-942fe7cdab34")
 	)
 	(junction
+		(at 33.02 100.33)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "dea4a9f8-7d0b-4c5b-a014-acc246668875")
+	)
+	(junction
 		(at 49.53 87.63)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5651,6 +5669,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f5b1aaaf-ec3c-4225-9293-d49f73b4a68a")
+	)
+	(junction
+		(at 33.02 95.25)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ff5c201d-2927-40fe-9304-ea19630f1b96")
 	)
 	(no_connect
 		(at 217.17 55.88)
@@ -6196,6 +6220,16 @@
 	)
 	(wire
 		(pts
+			(xy 22.86 100.33) (xy 33.02 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "68b1a8ce-1e31-4691-877c-778622e0e219")
+	)
+	(wire
+		(pts
 			(xy 194.31 151.13) (xy 204.47 151.13)
 		)
 		(stroke
@@ -6403,6 +6437,16 @@
 			(type default)
 		)
 		(uuid "8c947545-60b0-48a8-8844-96cec79a0531")
+	)
+	(wire
+		(pts
+			(xy 33.02 100.33) (xy 41.91 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8d815efe-f89a-40e4-8f99-bb5e1af06e1e")
 	)
 	(wire
 		(pts
@@ -6646,6 +6690,16 @@
 	)
 	(wire
 		(pts
+			(xy 33.02 95.25) (xy 41.91 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c0122091-8b2c-4763-93c7-fd650b3701ae")
+	)
+	(wire
+		(pts
 			(xy 45.72 152.4) (xy 80.01 152.4)
 		)
 		(stroke
@@ -6693,6 +6747,16 @@
 			(type default)
 		)
 		(uuid "cd7d49f7-fbb7-4885-b52c-e1e5bce70f19")
+	)
+	(wire
+		(pts
+			(xy 22.86 95.25) (xy 33.02 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cdd12eff-5402-48cc-b65d-7621e3265654")
 	)
 	(wire
 		(pts
@@ -7196,6 +7260,28 @@
 			)
 		)
 	)
+	(global_label "SCL"
+		(shape input)
+		(at 33.02 182.88 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "1617e885-c025-4693-863f-1ea0cefa5ab1")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 33.02 176.3872 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "SD_DECT"
 		(shape input)
 		(at 113.03 175.26 0)
@@ -7654,6 +7740,28 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "SDA"
+		(shape bidirectional)
+		(at 30.48 182.88 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "6351f191-b9c8-4d33-83b3-2cfbddafcaff")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 30.48 176.3872 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -8847,6 +8955,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:VCC")
+		(at 31.75 113.03 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0bf98b5b-d239-4c55-8c6a-7e8d0535836f")
+		(property "Reference" "#PWR036"
+			(at 31.75 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC"
+			(at 31.75 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 31.75 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 31.75 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCC\""
+			(at 31.75 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3a7bf91d-5aca-4aa4-939b-cd3fa4870091")
+		)
+		(instances
+			(project "cafebara"
+				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
+					(reference "#PWR036")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 45.72 160.02 0)
 		(unit 1)
@@ -8904,9 +9078,76 @@
 			(uuid "cc8f404b-f6bd-484f-92b2-5f193ecbde57")
 		)
 		(instances
-			(project "Stormbreaker"
+			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "#PWR010")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 31.75 113.03 0)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0e93e957-2389-4f56-8ade-fdadda22e50c")
+		(property "Reference" "TP5"
+			(at 29.21 115.0619 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "VCC"
+			(at 29.21 117.6019 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Plated_Hole_D2.0mm"
+			(at 36.83 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 36.83 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 31.75 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "abd1e51b-f9b5-4c35-bb3f-1f5e25ddd20c")
+		)
+		(instances
+			(project "cafebara"
+				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
+					(reference "TP5")
 					(unit 1)
 				)
 			)
@@ -8974,7 +9215,7 @@
 			(uuid "9a7b45b4-e9c5-41d0-b5e1-065aba704f2e")
 		)
 		(instances
-			(project "Stormbreaker"
+			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "R3")
 					(unit 1)
@@ -9040,7 +9281,7 @@
 			(uuid "9324f70c-6f84-4104-bb6b-4a9a5d73fdaa")
 		)
 		(instances
-			(project "Stormbreaker"
+			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "#PWR018")
 					(unit 1)
@@ -9110,7 +9351,7 @@
 			(uuid "c3222ec8-bbfe-4bba-bc07-512ca17f5d98")
 		)
 		(instances
-			(project "Stormbreaker"
+			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "C3")
 					(unit 1)
@@ -9176,7 +9417,7 @@
 			(uuid "d31f2cdc-3d60-4dd0-bd14-4d2290e0d1c9")
 		)
 		(instances
-			(project "Stormbreaker"
+			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "#PWR09")
 					(unit 1)
@@ -9242,7 +9483,7 @@
 			(uuid "8ac4de1a-e714-4ae7-a7af-381eaa4262fe")
 		)
 		(instances
-			(project "Stormbreaker"
+			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "#PWR024")
 					(unit 1)
@@ -9374,9 +9615,76 @@
 			(uuid "b5d83f05-246c-47bf-b0b0-71f10352b36e")
 		)
 		(instances
-			(project "Stormbreaker"
+			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "#PWR057")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 33.02 182.88 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "27084713-0aed-496b-a8dc-51c34003de45")
+		(property "Reference" "TP9"
+			(at 35.56 184.9119 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "SCL"
+			(at 35.56 187.4519 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "cafebara:TestPoint_Hole_D1.5mm_Small"
+			(at 27.94 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 27.94 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 33.02 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c01a46f4-9b7b-46ea-9cbf-0aca4af1ef6c")
+		)
+		(instances
+			(project "cafebara"
+				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
+					(reference "TP9")
 					(unit 1)
 				)
 			)
@@ -9514,7 +9822,7 @@
 			(uuid "edc14c4d-603c-4112-95ad-60e98d6016d0")
 		)
 		(instances
-			(project ""
+			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "J3")
 					(unit 1)
@@ -9581,7 +9889,7 @@
 			(uuid "831bea6f-7927-4889-88f0-ac9daa46bc9a")
 		)
 		(instances
-			(project "Stormbreaker"
+			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "#PWR016")
 					(unit 1)
@@ -9650,7 +9958,7 @@
 			(uuid "fdfcd8f9-7086-4875-a2df-2ab870548858")
 		)
 		(instances
-			(project "Stormbreaker"
+			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "C6")
 					(unit 1)
@@ -9782,7 +10090,7 @@
 			(uuid "79640dfb-8695-4cdd-a8fd-39c7770e4036")
 		)
 		(instances
-			(project "Stormbreaker"
+			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "#PWR025")
 					(unit 1)
@@ -9928,7 +10236,7 @@
 			(uuid "170bb7f6-f1f5-4f1d-9033-2f05ef94349e")
 		)
 		(instances
-			(project ""
+			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "SW1")
 					(unit 1)
@@ -9994,7 +10302,7 @@
 			(uuid "ad89c47e-ad6b-4cb4-8a09-306ddffd4d20")
 		)
 		(instances
-			(project "Stormbreaker"
+			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "#PWR026")
 					(unit 1)
@@ -10060,7 +10368,7 @@
 			(uuid "dcfa888c-0015-4719-8f40-f6cf37b0a204")
 		)
 		(instances
-			(project "Stormbreaker"
+			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "#PWR012")
 					(unit 1)
@@ -10130,7 +10438,7 @@
 			(uuid "dd7b544c-1bdd-4e62-ba70-a84b6666eb64")
 		)
 		(instances
-			(project "Stormbreaker"
+			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "R2")
 					(unit 1)
@@ -10266,7 +10574,7 @@
 			(uuid "4853ed70-4b7c-465b-b801-5adf3094e244")
 		)
 		(instances
-			(project "Stormbreaker"
+			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "R1")
 					(unit 1)
@@ -10398,7 +10706,7 @@
 			(uuid "e224435b-7f3f-4c87-80a8-6ceec29b0fa8")
 		)
 		(instances
-			(project "Stormbreaker"
+			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "#PWR07")
 					(unit 1)
@@ -10526,7 +10834,7 @@
 			(uuid "9c3cd864-57de-4285-879f-ee53331fdc2d")
 		)
 		(instances
-			(project ""
+			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "U3")
 					(unit 1)
@@ -10724,9 +11032,79 @@
 			(uuid "43696159-7af7-470a-b6d2-f37ad24a97a7")
 		)
 		(instances
-			(project "Stormbreaker"
+			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "#PWR06")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 22.86 97.79 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "57c8b914-7c74-42d0-ab59-91596eec0476")
+		(property "Reference" "C9"
+			(at 20.32 96.5262 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10uF"
+			(at 20.32 99.0662 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 22.86 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 22.86 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 22.86 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e94d9863-39b7-44d3-939f-b5bfdefc120e")
+		)
+		(pin "2"
+			(uuid "38e1e839-2def-46b7-8055-71a674b2236f")
+		)
+		(instances
+			(project "cafebara"
+				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
+					(reference "C9")
 					(unit 1)
 				)
 			)
@@ -10791,9 +11169,79 @@
 			(uuid "b3520664-e5d6-479b-8d79-8dc2a0bb8367")
 		)
 		(instances
-			(project "Stormbreaker"
+			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "TP4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 33.02 97.79 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "602b11ff-e4a9-4216-92e1-1996899c24ca")
+		(property "Reference" "C10"
+			(at 30.48 96.5262 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10uF"
+			(at 30.48 99.0662 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 33.02 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 33.02 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 33.02 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "06a56a37-05a9-472b-b911-65986abace72")
+		)
+		(pin "2"
+			(uuid "57038e10-5903-43ad-aecf-87618955c42e")
+		)
+		(instances
+			(project "cafebara"
+				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
+					(reference "C10")
 					(unit 1)
 				)
 			)
@@ -10857,7 +11305,7 @@
 			(uuid "ae0efe4c-60e7-4b97-adb4-d2bf3d3296cc")
 		)
 		(instances
-			(project "Stormbreaker"
+			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "TP3")
 					(unit 1)
@@ -10937,6 +11385,76 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
+		(at 41.91 97.79 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6858a882-ceeb-4c16-b087-4f56ff77e9b5")
+		(property "Reference" "C15"
+			(at 39.37 96.5262 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10uF"
+			(at 39.37 99.0662 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 41.91 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 41.91 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 41.91 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9b7e8a16-aeba-4ebd-928d-5e0e3d76c938")
+		)
+		(pin "2"
+			(uuid "455f6e96-d895-4ee9-be18-840c618d8bb2")
+		)
+		(instances
+			(project "cafebara"
+				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
+					(reference "C15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
 		(at 59.69 160.02 0)
 		(mirror y)
 		(unit 1)
@@ -10997,7 +11515,7 @@
 			(uuid "c94d5afb-712a-4574-9644-fa19149e18e8")
 		)
 		(instances
-			(project "Stormbreaker"
+			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "C4")
 					(unit 1)
@@ -11063,7 +11581,7 @@
 			(uuid "b1b3d111-5ca4-4318-bea9-64601ac46197")
 		)
 		(instances
-			(project ""
+			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "#PWR021")
 					(unit 1)
@@ -11130,7 +11648,7 @@
 			(uuid "f09e4b3b-b6d9-4dea-8c4b-bceeb33c20e7")
 		)
 		(instances
-			(project ""
+			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "H1")
 					(unit 1)
@@ -11248,7 +11766,7 @@
 			(uuid "816a88a8-ce8f-437e-a7e0-4083e297457d")
 		)
 		(instances
-			(project ""
+			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "Q1")
 					(unit 1)
@@ -11314,7 +11832,7 @@
 			(uuid "696334b4-b3a1-4375-be1e-20d0e6842701")
 		)
 		(instances
-			(project "Stormbreaker"
+			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "#PWR029")
 					(unit 1)
@@ -11350,7 +11868,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "cafebara:TestPoint_Pad_D1.0mm_Small"
+		(property "Footprint" "cafebara:TestPoint_Hole_D1.5mm_Small"
 			(at 57.15 176.53 0)
 			(effects
 				(font
@@ -11381,7 +11899,7 @@
 			(uuid "352be12f-f3be-4928-8805-e6613d1a3c59")
 		)
 		(instances
-			(project "Stormbreaker"
+			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "TP2")
 					(unit 1)
@@ -11447,7 +11965,7 @@
 			(uuid "421f3013-f1f0-4f91-95f9-e246a774198e")
 		)
 		(instances
-			(project "Stormbreaker"
+			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "#PWR028")
 					(unit 1)
@@ -11513,7 +12031,7 @@
 			(uuid "3cdac8fd-0497-40e9-86b2-eb1b2f2518b9")
 		)
 		(instances
-			(project "Stormbreaker"
+			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "#PWR020")
 					(unit 1)
@@ -11582,6 +12100,73 @@
 			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "TP6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 30.48 182.88 0)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7fbbb03d-f336-450a-af2b-0375e1525c72")
+		(property "Reference" "TP8"
+			(at 27.94 184.9119 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "SDA"
+			(at 27.94 187.4519 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "cafebara:TestPoint_Hole_D1.5mm_Small"
+			(at 35.56 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 35.56 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 30.48 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ea27302d-3fb3-41a4-982d-96aa718887f4")
+		)
+		(instances
+			(project "cafebara"
+				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
+					(reference "TP8")
 					(unit 1)
 				)
 			)
@@ -11683,7 +12268,7 @@
 			(uuid "194a7106-27ff-4ec0-98fb-e01fd9449017")
 		)
 		(instances
-			(project ""
+			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "J1")
 					(unit 1)
@@ -11749,7 +12334,7 @@
 			(uuid "986d28f6-42c4-4af2-a487-4835ba672d3d")
 		)
 		(instances
-			(project "Stormbreaker"
+			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "#PWR022")
 					(unit 1)
@@ -11814,7 +12399,7 @@
 			(uuid "f40cdac8-42d5-4b35-9c1d-bc643be391ac")
 		)
 		(instances
-			(project "Stormbreaker"
+			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "#PWR011")
 					(unit 1)
@@ -11887,7 +12472,7 @@
 			(uuid "83ff7701-358a-405e-aa6a-ec193539999d")
 		)
 		(instances
-			(project ""
+			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "J6")
 					(unit 1)
@@ -11953,7 +12538,7 @@
 			(uuid "8b13a536-6c91-4d26-b1b3-2ac70f4f3898")
 		)
 		(instances
-			(project "Stormbreaker"
+			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "#PWR013")
 					(unit 1)
@@ -12218,7 +12803,7 @@
 			(uuid "be5ba281-d5a3-4276-9f3c-ca663f9129ff")
 		)
 		(instances
-			(project "Stormbreaker"
+			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "#PWR033")
 					(unit 1)
@@ -12284,7 +12869,7 @@
 			(uuid "47b0f19b-df0e-402d-8cca-be375de973fe")
 		)
 		(instances
-			(project "Stormbreaker"
+			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "#PWR034")
 					(unit 1)
@@ -12354,9 +12939,75 @@
 			(uuid "1de16023-5cb9-4a60-ac58-fc2752c06d8a")
 		)
 		(instances
-			(project "Stormbreaker"
+			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "R5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VBUS")
+		(at 22.86 95.25 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a30dd6aa-f226-4926-b050-3e938f2612c6")
+		(property "Reference" "#PWR038"
+			(at 22.86 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VBUS"
+			(at 22.86 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 22.86 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 22.86 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VBUS\""
+			(at 22.86 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d63fec50-b5c6-4f7b-8094-5889f16ae004")
+		)
+		(instances
+			(project "cafebara"
+				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
+					(reference "#PWR038")
 					(unit 1)
 				)
 			)
@@ -12489,9 +13140,75 @@
 			(uuid "08972fac-0560-4384-93bc-32252ecc98e3")
 		)
 		(instances
-			(project "Stormbreaker"
+			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "C5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VBUS")
+		(at 40.64 113.03 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b193682a-be31-49b7-a067-098a00e9ea5e")
+		(property "Reference" "#PWR037"
+			(at 40.64 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VBUS"
+			(at 40.64 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 40.64 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 40.64 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VBUS\""
+			(at 40.64 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "47ec3b96-5aa3-4711-b758-1d92e357caf9")
+		)
+		(instances
+			(project "cafebara"
+				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
+					(reference "#PWR037")
 					(unit 1)
 				)
 			)
@@ -12525,7 +13242,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "cafebara:TestPoint_Pad_D1.0mm_Small"
+		(property "Footprint" "cafebara:TestPoint_Hole_D1.5mm_Small"
 			(at 64.77 176.53 0)
 			(effects
 				(font
@@ -12556,7 +13273,7 @@
 			(uuid "39645f40-e824-4868-ae4c-d583840e9738")
 		)
 		(instances
-			(project "Stormbreaker"
+			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "TP1")
 					(unit 1)
@@ -12762,7 +13479,7 @@
 			(uuid "a617ef58-633e-496c-b4a1-c5723e249687")
 		)
 		(instances
-			(project ""
+			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "J2")
 					(unit 1)
@@ -12832,7 +13549,7 @@
 			(uuid "061446d5-e7db-4ea3-ad68-ae6eecde80f4")
 		)
 		(instances
-			(project "Stormbreaker"
+			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "C1")
 					(unit 1)
@@ -12897,7 +13614,7 @@
 			(uuid "2b0bcf2d-a6bc-4f70-9d99-a7a6afac2976")
 		)
 		(instances
-			(project "Stormbreaker"
+			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "#PWR027")
 					(unit 1)
@@ -12963,7 +13680,7 @@
 			(uuid "deac59cb-de28-4fcc-9a0f-9b8b9e0149d1")
 		)
 		(instances
-			(project "Stormbreaker"
+			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "#PWR015")
 					(unit 1)
@@ -13029,7 +13746,7 @@
 			(uuid "980ad855-c47f-4bcb-87c2-ee8ea8023d79")
 		)
 		(instances
-			(project "Stormbreaker"
+			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "#PWR030")
 					(unit 1)
@@ -13098,6 +13815,72 @@
 			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "TP7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 22.86 100.33 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d7a928e5-a3a4-455b-896f-b1fc24c6ebc3")
+		(property "Reference" "#PWR019"
+			(at 22.86 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 22.86 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 22.86 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 22.86 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 22.86 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "abb7577e-2970-4681-a964-896d12a09556")
+		)
+		(instances
+			(project "cafebara"
+				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
+					(reference "#PWR019")
 					(unit 1)
 				)
 			)
@@ -13211,7 +13994,7 @@
 			(uuid "43f97315-2bb0-4617-91d7-52dc91fa1ea1")
 		)
 		(instances
-			(project "Stormbreaker"
+			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "U2")
 					(unit 1)
@@ -13277,9 +14060,76 @@
 			(uuid "bd6ef218-9f83-45b8-91af-c47f22cff438")
 		)
 		(instances
-			(project "Stormbreaker"
+			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "#PWR014")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 40.64 113.03 0)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "deb5d7ec-c71a-404c-84ea-93923bc2bbd8")
+		(property "Reference" "TP15"
+			(at 38.1 115.0619 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "VBUS"
+			(at 38.1 117.6019 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Plated_Hole_D2.0mm"
+			(at 45.72 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 45.72 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 40.64 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "40048cca-df90-4bdb-90bf-45e1f9abdedc")
+		)
+		(instances
+			(project "cafebara"
+				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
+					(reference "TP15")
 					(unit 1)
 				)
 			)
@@ -13414,7 +14264,7 @@
 			(uuid "6ca7a3b5-4289-48ed-9cc9-f3588c52ab02")
 		)
 		(instances
-			(project "Stormbreaker"
+			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "R4")
 					(unit 1)
@@ -13670,7 +14520,7 @@
 			(uuid "bd14b291-eeda-4aad-93d1-b6ce1615de93")
 		)
 		(instances
-			(project "Stormbreaker"
+			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "#PWR017")
 					(unit 1)
@@ -13825,7 +14675,7 @@
 			(uuid "d07dc731-01a6-47b1-8cdb-19719c90885f")
 		)
 		(instances
-			(project ""
+			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "U1")
 					(unit 1)
@@ -14031,7 +14881,7 @@
 			(uuid "71f20dbc-ecd4-4846-a937-dd1c25130718")
 		)
 		(instances
-			(project "Stormbreaker"
+			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "C2")
 					(unit 1)
@@ -14188,52 +15038,10 @@
 			(uuid "7f603125-6c85-44e1-a4eb-f063a7a659a3")
 		)
 		(instances
-			(project ""
+			(project "cafebara"
 				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
 					(reference "U4")
 					(unit 1)
-				)
-			)
-		)
-	)
-	(sheet
-		(at 134.62 127)
-		(size 24.13 13.97)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "85ca6140-16ff-4c0a-be4e-27c5939d67ef")
-		(property "Sheetname" "BMS"
-			(at 134.62 126.2884 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "bms.kicad_sch"
-			(at 134.62 141.5546 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(instances
-			(project "cafebara"
-				(path "/dcc89f95-4ae4-4756-aa81-33bf4d3c86ca"
-					(page "2")
 				)
 			)
 		)

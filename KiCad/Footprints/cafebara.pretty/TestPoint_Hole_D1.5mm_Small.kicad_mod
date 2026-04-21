@@ -1,15 +1,15 @@
-(footprint "TestPoint_Pad_D0.75mm_Small"
+(footprint "TestPoint_Hole_D1.5mm_Small"
 	(version 20241229)
 	(generator "pcbnew")
 	(generator_version "9.0")
 	(layer "F.Cu")
 	(descr "SMD pad as test Point, diameter 1.0mm")
 	(tags "test point SMD pad")
-	(property "Reference" "TP10"
-		(at 0 -1.448 0)
+	(property "Reference" "TP2"
+		(at 0 -1.448001 180)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "3d22e433-7475-4c66-b8cf-21d6e9aa8f86")
+		(uuid "67a1af8a-398e-4880-90a8-079a541b6927")
 		(effects
 			(font
 				(size 1 1)
@@ -18,22 +18,22 @@
 		)
 	)
 	(property "Value" "REF**"
-		(at 0 1 0)
+		(at 0 1.25 180)
 		(layer "F.SilkS")
-		(uuid "d2cb64cf-842f-4b17-95db-4ac140fd05f5")
+		(uuid "52e1f3db-c3b4-4dec-bc4f-164bb9327eda")
 		(effects
 			(font
-				(size 0.5 0.5)
-				(thickness 0.0625)
+				(size 0.75 0.75)
+				(thickness 0.09375)
 			)
 		)
 	)
-	(property "Datasheet" ""
+	(property "Datasheet" "~"
 		(at 0 0 0)
 		(unlocked yes)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "4d6a2c2f-9fa7-47a0-9ba2-10ef2854be9b")
+		(uuid "1cbc6c81-5dd4-4dc2-8c58-43c703daacd8")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -46,7 +46,7 @@
 		(unlocked yes)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "772d354b-8c5f-41cf-a540-136ab1bdba11")
+		(uuid "cd3443c5-3c91-4769-9fb9-9b647c60dcb0")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -57,30 +57,32 @@
 	(attr exclude_from_pos_files)
 	(fp_circle
 		(center 0 0)
-		(end 0 0.5)
+		(end 0.75 0)
 		(stroke
 			(width 0.1)
 			(type solid)
 		)
 		(fill no)
 		(layer "F.SilkS")
-		(uuid "e9fcdc6f-a11a-467a-a974-b4a5ff0c6d26")
+		(uuid "fd7ec448-172a-4cee-96d9-5839e764e7a1")
 	)
 	(fp_circle
 		(center 0 0)
-		(end 0.6 0)
+		(end 1 0)
 		(stroke
 			(width 0.05)
 			(type solid)
 		)
 		(fill no)
 		(layer "F.CrtYd")
-		(uuid "4772e465-f87b-40a2-b762-1ea033901cd2")
+		(uuid "1fb5831f-3d69-4e59-a49d-66230305b7db")
 	)
-	(pad "1" smd circle
+	(pad "1" thru_hole circle
 		(at 0 0)
-		(size 0.75 0.75)
-		(layers "F.Cu" "F.Mask")
+		(size 1.5 1.5)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
 		(teardrops
 			(best_length_ratio 0.5)
 			(max_length 1)
@@ -92,7 +94,7 @@
 			(allow_two_segments yes)
 			(prefer_zone_connections yes)
 		)
-		(uuid "a3da4f1f-7a9f-4eab-90a6-6ea45c3622d9")
+		(uuid "3b286ca1-d1d8-4a07-b205-9b15e975ecf2")
 	)
 	(embedded_fonts no)
 )

@@ -45,10 +45,11 @@
       "conflict_shadows",
       "shapes"
     ],
-    "visible_layers": "ffffffff_ffffffff_ffffffff_ffffffff",
+    "visible_layers": "ffffffff_ffffffff_ffffffff_fff7ffff",
     "zone_display_mode": 0
   },
   "git": {
+    "integration_disabled": false,
     "repo_password": "",
     "repo_type": "",
     "repo_username": "",
